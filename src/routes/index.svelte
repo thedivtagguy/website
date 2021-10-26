@@ -4,8 +4,8 @@
 
 <script>
   import Meta from "$components/Meta.svelte";
-  import App from "$components/App.svelte";
+  import Home from "$components/Home.svelte";
 </script>
 
 <Meta />
-<App />
+<Home />

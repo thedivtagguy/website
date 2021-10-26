@@ -15,12 +15,12 @@
 		"@sveltejs/adapter-static": "1.0.0-next.21",
 		"@sveltejs/kit": "1.0.0-next.189",
 		"archieml": "0.4.2",
-		"autoprefixer": "10.3.7",
+		"autoprefixer": "^9.8.8",
 		"d3": "7.1.1",
 		"feather-icons": "4.28.0",
 		"lodash.debounce": "4.0.8",
 		"node-fetch": "2.6.2",
-		"postcss": "8.3.11",
+		"postcss": "^7.0.39",
 		"prettier": "2.4.1",
 		"prettier-plugin-svelte": "2.4.0",
 		"rollup-plugin-svg": "2.0.0",
@@ -36,5 +36,8 @@
 	"browserslist": "> 0.5%, last 4 versions, not ie <= 11, not ie_mob <= 11",
 	"pudding": {
 		"subdirectory": ""
+	},
+	"dependencies": {
+		"tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
 	}
 }

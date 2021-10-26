@@ -23,8 +23,8 @@ const config = {
 	kit: {
 		adapter: adapterStatic({
 			// default options are shown
-			pages: 'build',
-			assets: 'build',
+			pages: 'public',
+			assets: 'public',
 			fallback: null
 		}),
 		target: "#svelte",

@@ -5,7 +5,7 @@
 
 
 	export async function load({ page, fetch, session, stuff }) {
-    const keys = ["url","date","heading","desc","cat","author","keyword","published", "img", "path", "slug"]
+    const keys = ["url","date","heading","desc","cat","author","keyword","published", "img", "path", "slug", "month", "date"]
 		const stories = parseStories({data: storiesData, keys });
 		return {
 				props: {stories}

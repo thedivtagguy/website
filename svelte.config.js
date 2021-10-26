@@ -21,7 +21,12 @@ const preprocess = sveltePreprocess({
 const config = {
 	preprocess,
 	kit: {
-		adapter: adapterStatic(),
+		adapter: adapterStatic({
+			// default options are shown
+			pages: 'build',
+			assets: 'build',
+			fallback: null
+		}),
 		target: "#svelte",
 		vite: {
 			resolve: {

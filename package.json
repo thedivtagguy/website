@@ -3,10 +3,14 @@
 	"version": "3.0.0",
 	"scripts": {
 		"gdoc": "node tasks/fetch-google.cjs",
+		"dev:only": "svelte-kit dev",
+		"build:only": "svelte-kit build",
+		"preview": "svelte-kit preview",
+		"tailwind:watch": "cross-env TAILWIND_MODE=watch cross-env NODE_ENV=development  postcss src/styles/tailwind.css -o static/app.css -w",
+		"tailwind:build": "cross-env TAILWIND_MODE=build cross-env NODE_ENV=production  postcss src/styles/tailwind.css -o static/app.css",
+		"dev": "concurrently \"npm run dev:only\" \"npm run tailwind:watch\"",
+		"build": "npm run tailwind:build && npm run build:only",
 		"style": "node tasks/style-dictionary.cjs",
-		"dev": "svelte-kit dev",
-		"build": "svelte-kit build",
-		"thumbnail": "node tasks/thumbnail-stories.cjs",
 		"start": "svelte-kit start",
 		"lint": "prettier --check .",
 		"format": "prettier --write ."
@@ -21,7 +25,6 @@
 		"feather-icons": "4.28.0",
 		"jimp": "^0.16.1",
 		"lodash.debounce": "4.0.8",
-		"mkdirp": "^1.0.4",
 		"node-fetch": "2.6.2",
 		"postcss": "^7.0.39",
 		"prettier": "2.4.1",
@@ -41,7 +44,8 @@
 		"subdirectory": ""
 	},
 	"dependencies": {
-		"makedir": "0.0.11",
+		"make": "^0.8.1",
+		"mkdirp": "^1.0.4",
 		"tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
 	}
 }

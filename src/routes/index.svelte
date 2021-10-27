@@ -1,4 +1,6 @@
+
 <script context="module">
+  import "../styles/tailwind.css";
   export const prerender = true;
   import storiesData from '$data/stories.csv'
   import parseStories from '$utils/parseStories';

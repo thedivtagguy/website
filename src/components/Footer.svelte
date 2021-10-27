@@ -6,7 +6,7 @@
   let stories = [];
 
   const v = Date.now();
-  const url = `https://thedivtagguy.cool/assets/data/stories.json?v=${v}`;
+  const url = `https://thedivtagguy.com/assets/data/stories.json?v=${v}`;
 
   const links = [
     { name: "about", url: "https://thedivtagguy.cool/about" },
@@ -14,12 +14,8 @@
     { name: "twitter", url: "https://twitter.com/thedivtagguyviz/" },
     {
       name: "instagram",
-      url: "https://www.instagram.com/the.thedivtagguy"
+      url: "https://www.instagram.com/thedivtagguy"
     },
-    { name: "patreon", url: "https://patreon.com/thethedivtagguy/" },
-    { name: "privacy", url: "https://thedivtagguy.cool/privacy/" },
-    { name: "newsletter", url: "http://eepurl.com/czym6f" },
-    { name: "rss", url: "https://thedivtagguy.cool/feed/index.xml" }
   ];
 
   onMount(async () => {

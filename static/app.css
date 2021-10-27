@@ -1,0 +1,19 @@
+/* Injects Tailwind's base styles & any base styles registered by plugins. */
+@tailwind base;
+
+@layer base { /* custom CSS goes here */ }
+
+/* Injects Tailwind's component classes & any component classes registered by plugins. */
+@tailwind components;
+
+@layer components { /* custom CSS goes here */ }
+
+/* Injects Tailwind's utility classes & any utility classes registered by plugins. */
+@tailwind utilities;
+
+@layer utilities { /* custom CSS goes here */ }
+
+/* Directive controlling where Tailwind injects responsive variations of utilities.
+   By default Tailwind normally append these at the end of your stylesheet. */
+@tailwind screens;
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3NyYy9zdHlsZXMvdGFpbHdpbmQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDRFQUE0RTtBQUM1RSxjQUFjOztBQUVkLGNBQWMseUJBQXlCLEVBQUU7O0FBRXpDLHdGQUF3RjtBQUN4RixvQkFBb0I7O0FBRXBCLG9CQUFvQix5QkFBeUIsRUFBRTs7QUFFL0Msb0ZBQW9GO0FBQ3BGLG1CQUFtQjs7QUFFbkIsbUJBQW1CLHlCQUF5QixFQUFFOztBQUU5Qzs2RUFDNkU7QUFDN0UsaUJBQWlCIiwiZmlsZSI6ImFwcC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBJbmplY3RzIFRhaWx3aW5kJ3MgYmFzZSBzdHlsZXMgJiBhbnkgYmFzZSBzdHlsZXMgcmVnaXN0ZXJlZCBieSBwbHVnaW5zLiAqL1xyXG5AdGFpbHdpbmQgYmFzZTtcclxuXHJcbkBsYXllciBiYXNlIHsgLyogY3VzdG9tIENTUyBnb2VzIGhlcmUgKi8gfVxyXG5cclxuLyogSW5qZWN0cyBUYWlsd2luZCdzIGNvbXBvbmVudCBjbGFzc2VzICYgYW55IGNvbXBvbmVudCBjbGFzc2VzIHJlZ2lzdGVyZWQgYnkgcGx1Z2lucy4gKi9cclxuQHRhaWx3aW5kIGNvbXBvbmVudHM7XHJcblxyXG5AbGF5ZXIgY29tcG9uZW50cyB7IC8qIGN1c3RvbSBDU1MgZ29lcyBoZXJlICovIH1cclxuXHJcbi8qIEluamVjdHMgVGFpbHdpbmQncyB1dGlsaXR5IGNsYXNzZXMgJiBhbnkgdXRpbGl0eSBjbGFzc2VzIHJlZ2lzdGVyZWQgYnkgcGx1Z2lucy4gKi9cclxuQHRhaWx3aW5kIHV0aWxpdGllcztcclxuXHJcbkBsYXllciB1dGlsaXRpZXMgeyAvKiBjdXN0b20gQ1NTIGdvZXMgaGVyZSAqLyB9XHJcblxyXG4vKiBEaXJlY3RpdmUgY29udHJvbGxpbmcgd2hlcmUgVGFpbHdpbmQgaW5qZWN0cyByZXNwb25zaXZlIHZhcmlhdGlvbnMgb2YgdXRpbGl0aWVzLlxyXG4gICBCeSBkZWZhdWx0IFRhaWx3aW5kIG5vcm1hbGx5IGFwcGVuZCB0aGVzZSBhdCB0aGUgZW5kIG9mIHlvdXIgc3R5bGVzaGVldC4gKi9cclxuQHRhaWx3aW5kIHNjcmVlbnM7Il19 */

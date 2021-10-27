@@ -5,6 +5,6 @@
 <!-- Iterate and show all story headings -->
 <ul>
 {#each stories as story}
-    <li class="font-bold">{story.img}</li>
+    <li class="text-5xl font-bold text-indigo-500">{story.img}</li>
 {/each}
 </ul>

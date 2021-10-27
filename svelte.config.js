@@ -12,7 +12,6 @@ const dir = thedivtagguy ? thedivtagguy.subdirectory : "";
 const prefix = dir.startsWith("/") ? "" : "/";
 const base = dev || !dir ? "" : `${prefix}${dir}`;
 
-
 const preprocess = sveltePreprocess({
 	postcss: {
 		plugins: [autoprefixer]
@@ -22,7 +21,12 @@ const preprocess = sveltePreprocess({
 const config = {
 	preprocess,
 	kit: {
-		adapter: adapterStatic(),
+		adapter: adapterStatic({
+			// default options are shown
+			pages: 'public',
+			assets: 'public',
+			fallback: null
+		}),
 		target: "#svelte",
 		vite: {
 			resolve: {

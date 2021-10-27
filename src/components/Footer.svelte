@@ -6,20 +6,20 @@
   let stories = [];
 
   const v = Date.now();
-  const url = `https://pudding.cool/assets/data/stories.json?v=${v}`;
+  const url = `https://thedivtagguy.cool/assets/data/stories.json?v=${v}`;
 
   const links = [
-    { name: "about", url: "https://pudding.cool/about" },
-    { name: "facebook", url: "https://facebook.com/pudding.viz/" },
-    { name: "twitter", url: "https://twitter.com/puddingviz/" },
+    { name: "about", url: "https://thedivtagguy.cool/about" },
+    { name: "facebook", url: "https://facebook.com/thedivtagguy.viz/" },
+    { name: "twitter", url: "https://twitter.com/thedivtagguyviz/" },
     {
       name: "instagram",
-      url: "https://www.instagram.com/the.pudding"
+      url: "https://www.instagram.com/the.thedivtagguy"
     },
-    { name: "patreon", url: "https://patreon.com/thepudding/" },
-    { name: "privacy", url: "https://pudding.cool/privacy/" },
+    { name: "patreon", url: "https://patreon.com/thethedivtagguy/" },
+    { name: "privacy", url: "https://thedivtagguy.cool/privacy/" },
     { name: "newsletter", url: "http://eepurl.com/czym6f" },
-    { name: "rss", url: "https://pudding.cool/feed/index.xml" }
+    { name: "rss", url: "https://thedivtagguy.cool/feed/index.xml" }
   ];
 
   onMount(async () => {
@@ -44,9 +44,9 @@
   <section class="stories">
     {#each stories as { hed, url, image }}
       <div class="story">
-        <a href="https://pudding.cool/{url}">
+        <a href="https://thedivtagguy.cool/{url}">
           <img
-            src="https://pudding.cool/common/assets/thumbnails/640/{image}.jpg"
+            src="https://thedivtagguy.cool/common/assets/thumbnails/640/{image}.jpg"
             alt="thumbnail"
           />
           <span>{hed}</span>
@@ -60,7 +60,7 @@
       {@html wordmark}
     </div>
     <p>
-      <a href="https://pudding.cool">The Pudding</a>
+      <a href="https://thedivtagguy.cool">The thedivtagguy</a>
       is a digital publication that explains ideas debated in culture with visual essays.
     </p>
   </section>

@@ -6,6 +6,7 @@
 		"style": "node tasks/style-dictionary.cjs",
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",
+		"thumbnail": "node tasks/thumbnail-stories.cjs",
 		"start": "svelte-kit start",
 		"lint": "prettier --check .",
 		"format": "prettier --write ."
@@ -18,7 +19,9 @@
 		"autoprefixer": "^9.8.8",
 		"d3": "7.1.1",
 		"feather-icons": "4.28.0",
+		"jimp": "^0.16.1",
 		"lodash.debounce": "4.0.8",
+		"mkdirp": "^1.0.4",
 		"node-fetch": "2.6.2",
 		"postcss": "^7.0.39",
 		"prettier": "2.4.1",
@@ -34,11 +37,11 @@
 		"node": ">= 14.17.3"
 	},
 	"browserslist": "> 0.5%, last 4 versions, not ie <= 11, not ie_mob <= 11",
-	"pudding": {
+	"thedivtagguy": {
 		"subdirectory": ""
 	},
 	"dependencies": {
-		"make": "^0.8.1",
+		"makedir": "0.0.11",
 		"tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
 	}
 }

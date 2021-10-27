@@ -1,7 +1,7 @@
 <script>
   export let title = "Title TK";
   export let description = "Description TK";
-  export let url = "https://pudding.cool";
+  export let url = "https://thedivtagguy.cool";
 </script>
 
 <svelte:head>
@@ -10,11 +10,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="description" content={description} />
-  <meta name="author" content="The Pudding" />
+  <meta name="author" content="The thedivtagguy" />
   <meta name="news_keywords" content="" />
 
   <meta property="og:title" content={title} />
-  <meta property="og:site_name" content="The Pudding" />
+  <meta property="og:site_name" content="The thedivtagguy" />
   <meta property="og:url" content={url} />
   <meta property="og:description" content={description} />
   <meta property="og:type" content="article" />
@@ -26,8 +26,8 @@
   <meta property="og:image:height" content="600" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="https://pudding.cool" />
-  <meta name="twitter:creator" content="@puddingviz" />
+  <meta name="twitter:site" content="https://thedivtagguy.cool" />
+  <meta name="twitter:creator" content="@thedivtagguyviz" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image:src" content="{url}/assets/social-twitter.jpg" />

@@ -8,6 +8,10 @@ const makeSlug = (str) => {
     return str.toLowerCase().replace(/\s/g, '_');
 };
 
+const imgName = (str) => {
+    return str.toLowerCase().replace(/[-,/]/g, '_');
+}
+
 export default function parseStories( { data, keys } ){
 
     const parseDate = timeParse('%d/%m/%Y');
@@ -21,7 +25,7 @@ export default function parseStories( { data, keys } ){
     month: formatMonth(parseDate(d.date)),
     author: strToArray(d.author),
     slug: makeSlug(d.url),
-    img: makeSlug(d.url),
+    img: imgName(d.url),
     keyword: strToArray(d.keyword),
     cat: strToArray(d.cat),
     }));

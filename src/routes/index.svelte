@@ -3,12 +3,21 @@
   import "../styles/tailwind.css";
   export const prerender = true;
   import storiesData from '$data/stories.csv'
-  import parseStories from '$utils/parseStories';
+  import parseStories from '$utils/cleanStories';
 
 
 	export async function load({ page, fetch, session, stuff }) {
     const keys = ["url","date","heading","desc","cat","author","keyword","published", "img", "path", "slug", "month", "date"]
-		const stories = parseStories({data: storiesData, keys });
+
+    const url = "api/stories"
+    const response = await fetch(url);
+    if (response.ok) {
+      const data = await response.json()
+    }		
+    
+
+    const stories = parseStories(storiesData, keys)
+    console.log(stories)
 		return {
 				props: {stories}
 			};

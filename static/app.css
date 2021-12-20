@@ -559,9 +559,9 @@ video {
 .font-bold {
 	font-weight: 700;
 }
-.text-indigo-500 {
+.text-red-500 {
 	--tw-text-opacity: 1;
-	color: rgba(99, 102, 241, var(--tw-text-opacity));
+	color: rgba(239, 68, 68, var(--tw-text-opacity));
 }
 .filter {
 	-webkit-filter: var(--tw-filter);

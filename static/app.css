@@ -539,8 +539,30 @@ video {
 	white-space: nowrap;
 	border-width: 0;
 }
+.z-20 {
+	z-index: 20;
+}
+.mx-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+.mb-2 {
+	margin-bottom: 0.5rem;
+}
 .contents {
 	display: contents;
+}
+.w-5\/6 {
+	width: 83.333333%;
+}
+.max-w-7xl {
+	max-width: 80rem;
+}
+.max-w-6xl {
+	max-width: 72rem;
+}
+.max-w-5xl {
+	max-width: 64rem;
 }
 .transform {
 	-webkit-transform: var(--tw-transform);
@@ -552,16 +574,45 @@ video {
 .border {
 	border-width: 1px;
 }
-.text-5xl {
-	font-size: 3rem;
-	line-height: 1;
+.border-b-4 {
+	border-bottom-width: 4px;
+}
+.border-gray-900 {
+	--tw-border-opacity: 1;
+	border-color: rgba(17, 24, 39, var(--tw-border-opacity));
+}
+.bg-gradient-to-l {
+	background-image: -webkit-gradient(linear, right top, left top, from(var(--tw-gradient-stops)));
+	background-image: -o-linear-gradient(right, var(--tw-gradient-stops));
+	background-image: linear-gradient(to left, var(--tw-gradient-stops));
+}
+.from-purple-800 {
+	--tw-gradient-from: #5b21b6;
+	--tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(91, 33, 182, 0));
+}
+.to-purple-800 {
+	--tw-gradient-to: #5b21b6;
+}
+.bg-clip-text {
+	-webkit-background-clip: text;
+	        background-clip: text;
+}
+.py-4 {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+.font-serif {
+	font-family: "Playfair Display", serif;
+}
+.text-2xl {
+	font-size: 1.5rem;
+	line-height: 2rem;
 }
 .font-bold {
 	font-weight: 700;
 }
-.text-red-500 {
-	--tw-text-opacity: 1;
-	color: rgba(239, 68, 68, var(--tw-text-opacity));
+.text-transparent {
+	color: transparent;
 }
 .filter {
 	-webkit-filter: var(--tw-filter);
@@ -570,3 +621,18 @@ video {
 /* custom CSS goes here */
 /* Directive controlling where Tailwind injects responsive variations of utilities.
    By default Tailwind normally append these at the end of your stylesheet. */
+@media (min-width: 640px) {
+	.sm\:text-4xl {
+		font-size: 2.25rem;
+		line-height: 2.5rem;
+	}
+}
+@media (min-width: 1024px) {
+	.lg\:pb-8 {
+		padding-bottom: 2rem;
+	}
+	.lg\:text-5xl {
+		font-size: 3rem;
+		line-height: 1;
+	}
+}

@@ -4,6 +4,6 @@
 </script>
 
 <!-- <Header /> -->
-<main id="content">
+<main class="max-w-6xl mx-auto" id="content">
   <slot />
 </main>

@@ -3,9 +3,11 @@
     console.log(stories);
 </script>
 <!-- Iterate and show all story headings -->
-<ul>
-{#each stories as story}
-    <li class="text-5xl font-bold text-red-500">{story.heading}</li>
-    <li class="text-5xl font-bold text-red-500">{story.keyword}</li>
-{/each}
-</ul>
+<div class="lg:pb-8 py-4 mb-2  border-b-4 border-gray-900">
+    <div class="z-20">
+        <h2 class="lg:text-5xl w-5/6 text-2xl font-serif font-bold dark:text-white sm:text-4xl">
+             A whole sort of general mishmash of <span class="bg-clip-text text-transparent bg-gradient-to-l from-purple-800 via-violet-900 to-purple-800">code, data & art</span>
+            
+        </h2>
+    </div>
+</div>

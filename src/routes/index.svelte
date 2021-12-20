@@ -4,7 +4,7 @@
   export const prerender = true;
   import storiesData from '$data/stories.csv'
   import parseStories from '$utils/cleanStories';
-
+  import Footer from "$components/Footer.svelte";
 
 	export async function load({ page, fetch, session, stuff }) {
     const keys = ["url","date","heading","desc","cat","author","keyword","published", "img", "path", "slug", "month", "date"]
@@ -33,3 +33,4 @@
 
 <Meta />
 <Home {stories} />
+<Footer/>

@@ -1,6 +1,6 @@
 
 body {
-	background-color: var(--background-body);
+	background-color: var(--);
   color: var(--color-body);
 	line-height: 1.4;
 	font-family: var(--font-body);

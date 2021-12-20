@@ -6,7 +6,7 @@
   let stories = [];
 
   const v = Date.now();
-  const url = `https://thedivtagguy.com/assets/data/stories.json?v=${v}`;
+  const url = `/data/stories.json`;
 
   const links = [
     { name: "about", url: "https://thedivtagguy.cool/about" },
@@ -17,35 +17,40 @@
       url: "https://www.instagram.com/thedivtagguy"
     },
   ];
+  export const prerender = true;
+  import storiesData from '$data/stories.csv'
+  import parseStories from '$utils/cleanStories';
 
   onMount(async () => {
-    localURL = window.location.href;
-    const response = await fetch(url);
-    const data = await response.json();
-    const story = data.find((d) => localURL.includes(d.url));
-    const topic = story ? story.topic : "culture";
-    const others = data.filter((d) => !localURL.includes(d.url));
+  
+    const keys = ["url","date","heading","desc","cat","author","keyword","published", "img", "path", "slug", "month", "date"]
 
-    const diff = others.filter((d) => d.topic !== topic);
-    const same = others.filter((d) => d.topic === topic);
-
-    stories.push(...diff.slice(0, 2));
-    stories.push(same[0]);
-    stories.push(same[Math.ceil(Math.random() * (same.length - 1))]);
+    stories = parseStories(storiesData, keys)
+		
+   // Find stories that are not the current page
+    const storiesToShow = stories.filter(story => story.slug !== location.pathname.split("/")[2]);
+    // From the stories that are not the current page, find the one where the category matches 'data'
+    // Category is an array
+    const dataStories = storiesToShow.filter(story => story.category.includes("data"));
+   // Choose two random stories from dataStories
+    stories = dataStories.sort(() => 0.5 - Math.random()).slice(0, 2);
+    console.log(stories)
     stories = stories;
+   
   });
+
 </script>
 
 <footer>
   <section class="stories">
-    {#each stories as { hed, url, image }}
+    {#each stories as { heading }}
       <div class="story">
-        <a href="https://thedivtagguy.cool/{url}">
+        <a href="https://thedivtagguy.cool/{heading}">
           <img
-            src="https://thedivtagguy.cool/common/assets/thumbnails/640/{image}.jpg"
+            src="https://thedivtagguy.cool/common/assets/thumbnails/640/{heading}.jpg"
             alt="thumbnail"
           />
-          <span>{hed}</span>
+          <span>{heading}</span>
         </a>
       </div>
     {/each}
@@ -55,10 +60,10 @@
     <div class="wordmark">
       {@html wordmark}
     </div>
-    <p>
-      <a href="https://thedivtagguy.cool">The thedivtagguy</a>
-      is a digital publication that explains ideas debated in culture with visual essays.
-    </p>
+    <p class="whitespace-pre text-center">
+      And Now! At Last!
+      Another Website Almost But Not Completely Different From
+      Some Of The Other Websites Which Aren't Quite The Same As This One Is.
   </section>
 
   <section class="links">
@@ -73,93 +78,3 @@
     </ul>
   </section>
 </footer>
-
-<style>
-  footer {
-    background-color: var(--color-body);
-    color: var(--background-body);
-    font-family: var(--sans);
-    padding: 3em 1em;
-    margin-top: 3em;
-  }
-
-  a,
-  a:visited,
-  a:hover {
-    color: var(--background-body);
-  }
-
-  .stories {
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 70em;
-  }
-
-  .story {
-    display: block;
-    width: 100%;
-    border: none;
-    margin-bottom: 3rem;
-  }
-
-  .story a {
-    display: block;
-    font-weight: 700;
-    text-decoration: none;
-  }
-
-  .story span {
-    display: block;
-    margin-top: 1em;
-    line-height: 1.2;
-  }
-
-  .wordmark {
-    max-width: 10em;
-    margin: 1em auto;
-  }
-
-  .about {
-    margin: 3rem auto;
-    margin-top: 0;
-    text-align: center;
-  }
-
-  .links ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .links li {
-    display: flex;
-    padding: 0.5em 1em;
-  }
-
-  .links a {
-    display: flex;
-    border: none;
-    align-items: center;
-    text-decoration: none;
-  }
-
-  .links span {
-    margin-left: 0.5em;
-  }
-
-  @media only screen and (min-width: 30em) {
-    .story {
-      width: 50%;
-      padding: 0 1em;
-    }
-  }
-
-  @media only screen and (min-width: 50em) {
-    .story {
-      width: 25%;
-      padding: 0 1em;
-    }
-  }
-</style>

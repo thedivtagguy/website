@@ -8,9 +8,9 @@
   
   const links = [
     {name: 'Home', link: '/'},
-    {name: 'Projects', link: '/projects'},
-    {name: 'Gallery', link: '/gallery'},
-    {name: 'Contact', link: '/contact'},
+    {name: 'Projects', link: '/'},
+    {name: 'Gallery', link: '/'},
+    {name: 'Contact', link: '/'},
   ]
   </script>
   <div class="flex flex-wrap py-2">

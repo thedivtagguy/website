@@ -1,9 +1,12 @@
 <script>
   import "$styles/app.css";
-  // import Header from "$components/Header.svelte";
+  import Header from "$components/Header.svelte";
+  import Menu from "$components/Menu.svelte";
 </script>
 
-<!-- <Header /> -->
-<main class="max-w-6xl mx-auto" id="content">
+
+<main class="max-w-5xl mx-auto px-6" id="content">
+  <Menu />
+<Header />
   <slot />
 </main>

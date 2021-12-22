@@ -9,13 +9,14 @@
   const url = `/data/stories.json`;
 
   const links = [
-    { name: "about", url: "https://thedivtagguy.cool/about" },
-    { name: "facebook", url: "https://facebook.com/thedivtagguy.viz/" },
-    { name: "twitter", url: "https://twitter.com/thedivtagguyviz/" },
+    { name: "contact", url: "https://thedivtagguy.cool/contact" },
+    { name: "twitter", url: "https://twitter.com/thedivtagguy/" },
     {
       name: "instagram",
       url: "https://www.instagram.com/thedivtagguy"
     },
+    { name: "github", url: "https://github.com/thedivtagguy/" },
+
   ];
   export const prerender = true;
   import storiesData from '$data/stories.csv'
@@ -41,7 +42,7 @@
 
 </script>
 
-<footer>
+<footer class="max-w-5xl">
   <section class="stories">
     {#each stories as { heading }}
       <div class="story">
@@ -56,25 +57,21 @@
     {/each}
   </section>
 
-  <section class="about">
-    <div class="wordmark">
-      {@html wordmark}
-    </div>
-    <p class="whitespace-pre text-center">
-      And Now! At Last!
+  <section class="about py-6">
+    
+    <p class="text-center text-sm font-sans font-semibold italic text-gray-600 whitespace-pre-wrap">
       Another Website Almost But Not Completely Different From
       Some Of The Other Websites Which Aren't Quite The Same As This One Is.
+      </p>
   </section>
 
-  <section class="links">
-    <ul>
+  <section class="flex mx-auto font-sans font-bold gap-6 text-xs justify-center items-center ">
       {#each links as link}
-        <li>
-          <a href={link.url}>
+        <div>
+          <a href={link.url} class="hover:underline underline-offset-2  decoration-dashed hover:text-purple-800">
             <span>{link.name.toUpperCase()}</span>
           </a>
-        </li>
+        </div>
       {/each}
-    </ul>
   </section>
 </footer>

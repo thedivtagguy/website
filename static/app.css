@@ -448,9 +448,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   -webkit-box-pack: justify;
           justify-content: space-between;
 }
-.justify-items-center {
-  justify-items: center;
-}
 .gap-6 {
   gap: 1.5rem;
 }
@@ -498,6 +495,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   -webkit-background-clip: text;
           background-clip: text;
 }
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -526,21 +527,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
 .text-center {
   text-align: center;
-}
-.font-serif {
-  font-family: "Playfair Display", serif;
 }
 .font-sans {
   font-family: "Source Sans Pro", sans-serif;
 }
-.font-mono {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+.font-serif {
+  font-family: "Playfair Display", serif;
+}
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 .text-2xl {
   font-size: 1.5rem;
@@ -550,22 +552,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+.font-semibold {
+  font-weight: 600;
 }
 .font-bold {
   font-weight: 700;
-}
-.font-medium {
-  font-weight: 500;
-}
-.font-semibold {
-  font-weight: 600;
 }
 .uppercase {
   text-transform: uppercase;
@@ -579,6 +570,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 .leading-snug {
   line-height: 1.375;
 }
+.leading-loose {
+  line-height: 2;
+}
+.leading-9 {
+  line-height: 2.25rem;
+}
+.text-gray-600 {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
+}
 .text-transparent {
   color: transparent;
 }
@@ -586,37 +587,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
-.text-slate-500 {
-  --tw-text-opacity: 1;
-  color: rgb(100 116 139 / var(--tw-text-opacity));
-}
-.text-gray-500 {
-  --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
-}
-.text-gray-200 {
-  --tw-text-opacity: 1;
-  color: rgb(229 231 235 / var(--tw-text-opacity));
-}
-.text-gray-400 {
-  --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity));
-}
-.text-gray-600 {
-  --tw-text-opacity: 1;
-  color: rgb(75 85 99 / var(--tw-text-opacity));
-}
-.decoration-double {
-  -webkit-text-decoration-style: double;
-          text-decoration-style: double;
-}
 .decoration-dashed {
   -webkit-text-decoration-style: dashed;
           text-decoration-style: dashed;
-}
-.decoration-wavy {
-  -webkit-text-decoration-style: wavy;
-          text-decoration-style: wavy;
 }
 .underline-offset-2 {
   text-underline-offset: 2px;
@@ -635,10 +608,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 /* custom CSS goes here */
 /* Directive controlling where Tailwind injects responsive variations of utilities.
    By default Tailwind normally append these at the end of your stylesheet. */
-.hover\:text-purple-500:hover {
-  --tw-text-opacity: 1;
-  color: rgb(168 85 247 / var(--tw-text-opacity));
-}
 .hover\:text-purple-800:hover {
   --tw-text-opacity: 1;
   color: rgb(107 33 168 / var(--tw-text-opacity));

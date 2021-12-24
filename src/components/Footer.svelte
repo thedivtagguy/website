@@ -48,7 +48,7 @@
       <div class="story">
         <a href="https://thedivtagguy.cool/{heading}">
           <img
-            src="https://thedivtagguy.cool/common/assets/thumbnails/640/{heading}.jpg"
+            src="/common/assets/thumbnails/640/2021_08_abstract.jpg"
             alt="thumbnail"
           />
           <span>{heading}</span>

@@ -10,7 +10,7 @@
     {name: 'Home', link: '/'},
     {name: 'Projects', link: '/'},
     {name: 'Gallery', link: '/'},
-    {name: 'Contact', link: '/'},
+    {name: 'Amanaaan', link: '/'},
   ]
   </script>
   <div class="flex flex-wrap py-2">

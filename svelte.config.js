@@ -5,10 +5,9 @@ import svg from "vite-plugin-svgstring";
 import dsv from "@rollup/plugin-dsv";
 import sveltePreprocess from "svelte-preprocess";
 import autoprefixer from "autoprefixer";
-
-const { thedivtagguy } = JSON.parse(fs.readFileSync("package.json", "utf8"));
+const { pudding } = JSON.parse(fs.readFileSync("package.json", "utf8"));
 const dev = process.env.NODE_ENV === "development";
-const dir = thedivtagguy ? thedivtagguy.subdirectory : "";
+const dir = pudding ? pudding.subdirectory : "";
 const prefix = dir.startsWith("/") ? "" : "/";
 const base = dev || !dir ? "" : `${prefix}${dir}`;
 
@@ -21,12 +20,7 @@ const preprocess = sveltePreprocess({
 const config = {
 	preprocess,
 	kit: {
-		adapter: adapterStatic({
-			// default options are shown
-			pages: 'public',
-			assets: 'public',
-			fallback: null
-		}),
+		adapter: adapterStatic(),
 		target: "#svelte",
 		vite: {
 			resolve: {

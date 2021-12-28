@@ -20,14 +20,19 @@
 <section>
     <div class="flex justify-between items-center">
         <div>
-            <img src="/commons/thumbnails/960/{slug}.jpg" alt="{heading}" />
+            <img src="/common/assets/thumbnails/960/{slug}.jpg" alt="{heading}" />
         </div>
+        <div>
+            <h1>{heading}</h1>
+            <p>{description}</p>
+            <a href="/{category}/{slug}">Read more</a>
+        </div>  
     </div>
 </section>
     <h1 class="text-blue-500">{heading}</h1>
     {:else}
     <div>
-        <img src="/commons/thumbnails/960/{slug}.jpg" alt="{heading}" />
+        <img src="/common/assets/thumbnails/960/{slug}.jpg" alt="{heading}" />
     </div>
 {/if}
 

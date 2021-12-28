@@ -1,59 +1,65 @@
 {
-	"name": "svelte-starter",
-	"version": "3.0.0",
-	"scripts": {
-		"gdoc": "node tasks/fetch-google.cjs",
-		"dev:only": "svelte-kit dev",
-		"build:only": "svelte-kit build",
-		"preview": "svelte-kit preview",
-		"tailwind:watch": "cross-env TAILWIND_MODE=watch cross-env NODE_ENV=development  postcss src/styles/tailwind.css -o static/app.css -w",
-		"tailwind:build": "cross-env TAILWIND_MODE=build cross-env NODE_ENV=production  postcss src/styles/tailwind.css -o static/app.css",
-		"dev": "concurrently \"npm run dev:only\" \"npm run tailwind:watch\"",
-		"build": "npm run tailwind:build && npm run build:only cross-env NODE_ENV=production",
-		"style": "node tasks/style-dictionary.cjs",
-		"start": "svelte-kit start",
-		"lint": "prettier --check .",
-		"format": "prettier --write ."
-	},
-	"devDependencies": {
-		"@rollup/plugin-dsv": "2.0.2",
-		"@sveltejs/adapter-static": "1.0.0-next.21",
-		"@sveltejs/kit": "1.0.0-next.190",
-		"archieml": "0.4.2",
-		"autoprefixer": "^10.4.0",
-		"d3": "7.1.1",
-		"feather-icons": "4.28.0",
-		"jimp": "^0.16.1",
-		"lodash.debounce": "4.0.8",
-		"node-fetch": "2.6.2",
-		"postcss": "^8.4.5",
-		"postcss-import": "^14.0.2",
-		"prettier": "2.4.1",
-		"prettier-plugin-svelte": "2.4.0",
-		"rollup-plugin-svg": "2.0.0",
-		"style-dictionary": "3.0.3",
-		"svelte": "3.44.0",
-		"svelte-preprocess": "4.9.8",
-		"tailwindcss": "^3.0.7",
-		"vite-plugin-svgstring": "1.0.0"
-	},
-	"type": "module",
-	"engines": {
-		"node": ">= 14.17.3"
-	},
-	"browserslist": "> 0.5%, last 4 versions, not ie <= 11, not ie_mob <= 11",
-	"thedivtagguy": {
-		"subdirectory": ""
-	},
-	"dependencies": {
-		"alpinejs": "^3.7.1",
-		"concurrently": "^6.3.0",
-		"cross-env": "^7.0.3",
-		"make": "^0.8.1",
-		"mkdirp": "^1.0.4",
-		"postcss-cli": "^9.0.1",
-		"postcss-nesting": "^8.0.1",
-		"typeface-playfair-display": "^1.1.13",
-		"typeface-source-sans-pro": "^1.1.13"
-	}
+  "name": "svelte-starter",
+  "version": "3.0.0",
+  "scripts": {
+    "gdoc": "node tasks/fetch-google.cjs",
+    "thumbnail-stories": "node tasks/thumbnail-stories.cjs",
+    "thumbnail-resources": "node tasks/thumbnail-resources.cjs",
+    "thumbnail-colour": "node tasks/thumbnail-colour.cjs",
+    "dev:only": "svelte-kit dev",
+    "build:only": "svelte-kit build",
+    "preview": "svelte-kit preview",
+    "tailwind:watch": "cross-env TAILWIND_MODE=watch cross-env NODE_ENV=development  postcss src/styles/tailwind.css -o static/app.css -w",
+    "tailwind:build": "cross-env TAILWIND_MODE=build cross-env NODE_ENV=production  postcss src/styles/tailwind.css -o static/app.css",
+    "dev": "concurrently \"npm run dev:only\" \"npm run tailwind:watch\"",
+    "build": "npm run tailwind:build && npm run build:only cross-env NODE_ENV=production && npm run gdoc && npm run thumbnail-stories && npm run thumbnail-resources && npm run thumbnail-color",
+    "style": "node tasks/style-dictionary.cjs",
+    "start": "svelte-kit start",
+    "lint": "prettier --check .",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@rollup/plugin-dsv": "2.0.2",
+    "@sveltejs/adapter-static": "1.0.0-next.21",
+    "@sveltejs/kit": "1.0.0-next.190",
+    "archieml": "0.4.2",
+    "autoprefixer": "^10.4.0",
+    "d3": "7.1.1",
+    "feather-icons": "4.28.0",
+    "jimp": "^0.16.1",
+    "lodash.debounce": "4.0.8",
+    "node-fetch": "2.6.2",
+    "postcss": "^8.4.5",
+    "postcss-import": "^14.0.2",
+    "prettier": "2.4.1",
+    "prettier-plugin-svelte": "2.4.0",
+    "rollup-plugin-svg": "2.0.0",
+    "style-dictionary": "3.0.3",
+    "svelte": "3.44.0",
+    "svelte-preprocess": "4.9.8",
+    "tailwindcss": "^3.0.7",
+    "vite-plugin-svgstring": "1.0.0"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">= 14.17.3"
+  },
+  "browserslist": "> 0.5%, last 4 versions, not ie <= 11, not ie_mob <= 11",
+  "thedivtagguy": {
+    "subdirectory": ""
+  },
+  "dependencies": {
+    "alpinejs": "^3.7.1",
+    "color": "^4.1.0",
+    "colorthief": "^2.3.2",
+    "concurrently": "^6.3.0",
+    "cross-env": "^7.0.3",
+    "make": "^0.8.1",
+    "mkdirp": "^1.0.4",
+    "node-vibrant": "^3.2.1-alpha.1",
+    "postcss-cli": "^9.0.1",
+    "postcss-nesting": "^8.0.1",
+    "typeface-playfair-display": "^1.1.13",
+    "typeface-source-sans-pro": "^1.1.13"
+  }
 }

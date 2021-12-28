@@ -4,9 +4,8 @@
   import Menu from "$components/Menu.svelte";
 </script>
 
-
 <main class="max-w-5xl mx-auto px-6" id="content">
   <Menu />
-<Header />
+  <Header />
   <slot />
 </main>

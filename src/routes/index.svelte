@@ -1,27 +1,39 @@
-
 <script context="module">
   import "../styles/tailwind.css";
   export const prerender = true;
-  import storiesData from '$data/stories.csv'
-  import parseStories from '$utils/cleanStories';
+  import storiesData from "$data/stories.csv";
+  import parseStories from "$utils/cleanStories";
   import Footer from "$components/Footer.svelte";
 
-	export async function load({ page, fetch, session, stuff }) {
-    const keys = ["url","date","heading","desc","cat","author","keyword","published", "img", "path", "slug", "month", "date"]
+  export async function load({ page, fetch, session, stuff }) {
+    const keys = [
+      "url",
+      "date",
+      "heading",
+      "desc",
+      "cat",
+      "author",
+      "keyword",
+      "published",
+      "img",
+      "path",
+      "slug",
+      "month",
+      "date"
+    ];
 
-    const url = "api/stories"
+    const url = "api/stories";
     const response = await fetch(url);
     if (response.ok) {
-      const data = await response.json()
-    }		
-    
+      const data = await response.json();
+    }
 
-    const stories = parseStories(storiesData, keys)
-    console.log(stories)
-		return {
-				props: {stories}
-			};
-	}
+    const stories = parseStories(storiesData, keys);
+    console.log(stories);
+    return {
+      props: { stories }
+    };
+  }
 </script>
 
 <script>
@@ -33,4 +45,4 @@
 
 <Meta />
 <Home {stories} />
-<Footer/>
+<Footer />

@@ -8,7 +8,7 @@
 
   const links = [
     { name: "Home", link: "/" },
-    { name: "Projects", link: "/" },
+    { name: "Projects", link: "/projects" },
     { name: "Arey O", link: "/" },
     { name: "Amanaaan", link: "/" }
   ];

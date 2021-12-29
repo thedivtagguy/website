@@ -37,7 +37,13 @@
 <main class="py-2">
 {#if featured}
 <section>
-    <div class="flex flex-col items-start  md:flex-row">
+  <div class="relative w-1/2 h-1/2">
+    <aside>
+      <img src="/common/assets/resources/hand.png" alt="hand" width="120" class="hand">
+        </aside>
+  </div>
+    <div class="flex  flex-col items-start  md:flex-row">
+    
         <div class="w-full">
                 <img
                 width="640"
@@ -91,5 +97,15 @@
   height: auto;
   aspect-ratio: 16 / 9;
 
+}
+
+
+
+aside
+{
+    position: absolute;
+    left:-6rem;
+    top:2rem;
+    max-width: 200px;
 }
 </style>

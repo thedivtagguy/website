@@ -1,26 +1,26 @@
 [
-    {
-        "slug": "2020_manifesto",
-        "light": "hsl(221, 43%, 80%)",
-        "dark": "hsl(221, 43%, 46%)",
-        "darker": "hsl(221, 43%, 35%)"
-    },
-    {
-        "slug": "2020_whatsapp",
-        "light": "hsl(21, 90%, 80%)",
-        "dark": "hsl(21, 90%, 38%)",
-        "darker": "hsl(21, 90%, 29%)"
-    },
-    {
-        "slug": "2021_abstracts",
-        "light": "hsl(2, 47%, 80%)",
-        "dark": "hsl(2, 47%, 46%)",
-        "darker": "hsl(2, 47%, 34%)"
-    },
-    {
-        "slug": "2021_food_apps",
-        "light": "hsl(42, 85%, 80%)",
-        "dark": "hsl(42, 85%, 33%)",
-        "darker": "hsl(42, 85%, 26%)"
-    }
+  {
+    "slug": "2020_manifesto",
+    "light": "hsl(221, 43%, 80%)",
+    "dark": "hsl(221, 43%, 46%)",
+    "darker": "hsl(221, 43%, 35%)"
+  },
+  {
+    "slug": "2020_whatsapp",
+    "light": "hsl(21, 90%, 80%)",
+    "dark": "hsl(21, 90%, 38%)",
+    "darker": "hsl(21, 90%, 29%)"
+  },
+  {
+    "slug": "2021_abstracts",
+    "light": "hsl(2, 47%, 80%)",
+    "dark": "hsl(2, 47%, 46%)",
+    "darker": "hsl(2, 47%, 34%)"
+  },
+  {
+    "slug": "2021_food_apps",
+    "light": "hsl(42, 85%, 80%)",
+    "dark": "hsl(42, 85%, 33%)",
+    "darker": "hsl(42, 85%, 26%)"
+  }
 ]

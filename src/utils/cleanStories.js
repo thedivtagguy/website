@@ -1,10 +1,12 @@
 import { timeParse, timeFormat } from "d3";
 import filterStoryProps from "./filterStoryProps";
 
-const strToArray = (str) => {
-  str.split(",").map((s) => s.trim());
-  // Replace ',' with ', ' 
-  return str.replace(/,/g, ', ')
+const makeArray = (str) => {
+  if (str) {
+    // Split and trim 
+    return str.split(",").map((d) => d.trim()); 
+  }
+  return [];
 };
 
 const makeSlug = (str) => {
@@ -30,7 +32,7 @@ const parseStories = (story, key) => {
     const output = {};
     output.heading = d.heading;
     output.slug = makeSlug(d.url);
-    output.author = strToArray(d.author);
+    output.author = makeArray(d.author);
     // Clean date
     output.date = timeParse("%d/%m/%Y")(d.date);
     // Convert date to d, month and year
@@ -43,9 +45,9 @@ const parseStories = (story, key) => {
       output.date = null;
     }
     output.description = d.desc;
-    output.keyword = strToArray(d.keyword);
+    output.keyword = makeArray(d.keyword);
     output.published = d.published;
-    output.category = strToArray(d.cat);
+    output.category = makeArray(d.cat);
     output.thumbnail = makeSlug(d.url);
     output.featured = d.featured;
     return output;

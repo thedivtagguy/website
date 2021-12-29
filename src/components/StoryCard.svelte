@@ -47,7 +47,7 @@
             <div>
                 <p>{description}</p>
             </div>
-            <div><a href="/{category}/{slug}">Read more</a></div>
+            <div>Read more</div>
         </div>  
     </div>
 </section>

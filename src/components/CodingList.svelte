@@ -71,7 +71,7 @@
     }
 
     #code {
-        background-image:  url("common/assets/resources/adventures.png");
+        background-image:  url("/common/assets/resources/adventures.png");
         background-repeat: no-repeat;
         background-size: 30%;
         background-position: 11.8rem;

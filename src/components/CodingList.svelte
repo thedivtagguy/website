@@ -17,7 +17,7 @@
    
     // Filter where story category contains "story" and published is true
     refined = stories.filter(story => {
-      return story.category.includes("story") && story.published === "TRUE";
+      return story.category.includes("development")// && story.published === "TRUE";
     });
     mostRecent = refined.sort((a, b) => {
       return new Date(b.date) - new Date(a.date);
@@ -29,14 +29,8 @@
     });
   });
 </script>
-
-<section class=" border-b-[3px] pb-4 border-dashed border-slate-300">
-    <StoryCard {...mostRecent} featured />
-    <div class="flex flex-col lg:flex-row xl:flex-row md:flex-row gap-4">
-      {#each refined as story}
-      <div>
-        <StoryCard {...story} />
-      </div>
-      {/each}
-    </div>
-</section>
+<main>
+    {#each refined as project}
+    {project.heading}
+    {/each}
+</main>

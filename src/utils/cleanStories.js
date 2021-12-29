@@ -2,7 +2,9 @@ import { timeParse, timeFormat } from "d3";
 import filterStoryProps from "./filterStoryProps";
 
 const strToArray = (str) => {
-  return str.split(",").map((s) => s.trim());
+  str.split(",").map((s) => s.trim());
+  // Replace ',' with ', ' 
+  return str.replace(/,/g, ', ')
 };
 
 const makeSlug = (str) => {

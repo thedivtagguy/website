@@ -3,71 +3,82 @@
   export let slug;
   export let heading;
   export let description;
-  export let month;
-  export let category;
-  export let keyword;
   export let featured;
+  export let keyword;
 
+
+  // Choose first item from category
   const DEFAULT_COLOR = {
     light: "hsl(0, 0%, 80%)",
     dark: "hsl(0, 0%, 44%)",
     darker: "red"
   };
 
-  // Get matching color data from colors.json
-    const getColor = () => {
-        const match = colors.find(c => c.slug === slug);
-        return match ? match : DEFAULT_COLOR;
-    };
+  const lookupColor = (version) => {
+    const match = colors.find((d) => d.slug === slug);
+    return match ? match[version] : DEFAULT_COLOR;
+  };
+  const style = `
+  --name: ${slug}
+	--light: ${lookupColor("light")};
+	--dark: ${lookupColor("dark")};
+	--darker: ${lookupColor("darker")};
+	--default-light: ${DEFAULT_COLOR["light"]};
+	--default-dark: ${DEFAULT_COLOR["dark"]};
+	--default-darker: ${DEFAULT_COLOR["darker"]};
+  `;
 
-    // Export the color data
-    export const color = getColor();
+  console.log(style)
+
+
 
 </script>
 
-<main>
+<main class="py-2">
 {#if featured}
 <section>
-    <div class="flex justify-between items-center">
-        <div>
-            <img
-            width="640"
-            height="720"
-            src="/common/assets/thumbnails/32/{slug}.jpg"
-            alt="thumbnail for story"
-            srcset="/common/assets/thumbnails/1280/{slug}.jpg 1280w,
-                  /common/assets/thumbnails/960/{slug}.jpg 960w,
-                  /common/assets/thumbnails/640/{slug}.jpg 640w"
-            sizes="(max-width: 320px) 640px, (max-width: 480px) 960px, 1280px"
-            loading="lazy"
-          />
+    <div class="flex flex-col items-start  md:flex-row">
+        <div class="w-full">
+                <img
+                width="580"
+                height="500"
+                src="/common/assets/thumbnails/32/{slug}.jpg"
+                alt="thumbnail for story"
+                srcset="/common/assets/thumbnails/1280/{slug}.jpg 1280w,
+                      /common/assets/thumbnails/960/{slug}.jpg 960w,
+                      /common/assets/thumbnails/640/{slug}.jpg 640w"
+                sizes="(max-width: 320px) 640px, (max-width: 480px) 960px, 1280px"
+              />
         </div>
-        <div class="flex flex-col justify-between items-stretch bg-[{color.light}]">
-            <div>
-                <h1>{heading}</h1>
+        <div class="flex flex-col items-start justify-start w-full h-full  md:mb-0 md:w-1/2">
+            <div class="flex flex-col items-start justify-start h-full space-y-3 transform   md:space-y-5">
+                
+                <h4 class="text-4xl font-sans font-bold leading-none lg:text-5xl xl:text-5xl">{heading}</h4>
+                <p class="pt-2 text-xl font-medium">{description}</p>
+                <button class="text-center font-bold uppercase bg-[{DEFAULT_COLOR.darker}] w-full py-4 rounded-none">Read Story</button>
             </div>
-            <div>
-                <p>{description}</p>
-            </div>
-            <div>Read more</div>
-        </div>  
+        </div>
     </div>
 </section>
-    <h1 class="text-blue-500">{heading}</h1>
-    {:else}
-    <div>
-        <img
-        width="640"
-        height="720"
-        src="/common/assets/thumbnails/32/{slug}.jpg"
-        alt="thumbnail for story"
-        srcset="/common/assets/thumbnails/1280/{slug}.jpg 1280w,
-              /common/assets/thumbnails/960/{slug}.jpg 960w,
-              /common/assets/thumbnails/640/{slug}.jpg 640w"
-        sizes="(max-width: 320px) 640px, (max-width: 480px) 960px, 1280px"
-        loading="lazy"
-      />
-    </div>
+   {:else}
+    <section class="basis-1/2">
+      <div class="flex flex-col justify-items-start gap-2 items-start">
+          <img
+          width="600"
+          height="720"
+          src="/common/assets/thumbnails/32/{slug}.jpg"
+          alt="thumbnail for story"
+          srcset="/common/assets/thumbnails/1280/{slug}.jpg 1280w,
+                /common/assets/thumbnails/960/{slug}.jpg 960w,
+                /common/assets/thumbnails/640/{slug}.jpg 640w"
+          sizes="(max-width: 320px) 640px, (max-width: 480px) 960px, 1280px"
+          loading="lazy"
+        />
+        <h4 class="font-bold font-sans text-2xl">{heading}</h4>
+        <p class="font-sans">{description}</p>
+        <h6 class="text-sm font-mono capitalize">{keyword}</h6>
+      </div>
+    </section>
 {/if}
 
 </main>
@@ -76,7 +87,7 @@
     img {
   max-width: 100%;
   height: auto;
-  aspect-ratio: 3 / 1.8;
+  aspect-ratio: 16 / 9;
 
 }
 </style>

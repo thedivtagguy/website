@@ -51,17 +51,16 @@
   });
 </script>
 
-<footer class="max-w-5xl">
-  <section class="stories">
+<footer class="max-w-5xl py-6">
+  <!-- <section class="stories">
     {#each stories as { heading }}
       <div class="story">
         <a href="https://thedivtagguy.cool/{heading}">
-          <img src="/common/assets/thumbnails/640/2021_08_abstract.jpg" alt="thumbnail" />
           <span>{heading}</span>
         </a>
       </div>
     {/each}
-  </section>
+  </section> -->
 
   <section class="about py-6">
     <p class="text-center text-sm font-sans font-semibold italic text-gray-600 whitespace-pre-wrap">

@@ -29,7 +29,6 @@
     }
 
     const stories = parseStories(storiesData, keys);
-    console.log(stories);
     return {
       props: { stories }
     };

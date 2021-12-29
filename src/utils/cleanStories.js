@@ -47,7 +47,6 @@ const parseStories = (story, key) => {
     output.thumbnail = makeSlug(d.url);
     return output;
   });
-  console.log("hello", storiesData);
 
   return storiesData;
 };

@@ -31,6 +31,8 @@
     <div class="flex justify-between items-center">
         <div>
             <img
+            width="640"
+            height="720"
             src="/common/assets/thumbnails/32/{slug}.jpg"
             alt="thumbnail for story"
             srcset="/common/assets/thumbnails/1280/{slug}.jpg 1280w,
@@ -55,6 +57,8 @@
     {:else}
     <div>
         <img
+        width="640"
+        height="720"
         src="/common/assets/thumbnails/32/{slug}.jpg"
         alt="thumbnail for story"
         srcset="/common/assets/thumbnails/1280/{slug}.jpg 1280w,
@@ -67,3 +71,12 @@
 {/if}
 
 </main>
+
+<style>
+    img {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 1.8;
+
+}
+</style>

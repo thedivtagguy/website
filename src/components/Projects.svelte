@@ -8,7 +8,6 @@
   let refined = [];
   let mostRecent = [];
 
-  onMount(async () => {
     const keys = [
       "url",
       "date",
@@ -39,7 +38,6 @@
     refined = refined.filter((story) => {
       return story.heading !== mostRecent.heading;
     });
-  });
 </script>
 
 <section class="">

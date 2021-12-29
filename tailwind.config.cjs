@@ -6,6 +6,11 @@ module.exports = {
       fontFamily: {
         serif: ['"Playfair Display"', "serif"],
         sans: ['"Source Sans Pro"', "sans-serif"]
+      },
+      colors: {
+        divpurple: '#623cea',
+        divorange: '#f85e00',
+        // ...
       }
     }
   },

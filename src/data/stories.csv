@@ -1,12 +1,12 @@
-url,date,heading,desc,cat,author,keyword,last_update,needs_fixing,published,netlifyURL
-2020/whatsapp,15/12/2020,Srishti '23: Unwrapped,"Text Data of 20,000+ messages in the Srishti '23 Whatsapp group, visualized.","data, story",aman,"r, whatsapp",05/09/2021,FALSE,TRUE,google.com
-2020/manifesto,18/10/2020,A Critical News Consumer's Starter Manifesto,"4.5 Lakh tweets by three major Indian news channels, analysed.","data, story","aman, malay","r, python,news,twitter",21/09/2021,TRUE,TRUE,google.com
-2021/abstracts,16/08/2021,This Studio Looks at Bellybuttons...,Generating design school courses for anything with GPT-3,"humour, nlp, story",aman,"python, ai, nlp",16/08/2021,FALSE,TRUE,google.com
-2021/food-apps,9/10/2021,The People in the Food Apps,Examining food delivery platforms & how much they can earn you,"data, story",aman,"r, research, modelling",9/10/2021,TRUE,TRUE,google.com
-2021/desidata,10/12/2021,Desidata Package for R,This is a description,"data, r, open source, project, development",aman,"r, data, development",12/12/2021,FALSE,TRUE,google.com
-,,"You're a Wizard, Harry",,"random, project",aman,,,,,
-,,Lyrics by Michael Styles and Harry Scott,,"nlp, humour, project, development",aman,,,,,
-,,Your Fate Depends on Which Newspaper You Read,,"nlp, data, humour, story",aman,,,,,
-,,Srishti Archive,,"design, development, project",aman,,,,,
-,,The Yelli Pages,,"design, development, project",aman,,,,,
-,,SongscrapR Package for R,,"data, project, r, open source, development",aman,,,,,
+heading,url,date,desc,cat,author,keyword,last_update,needs_fixing,published,externalURL,featured
+Srishti '23: Unwrapped,2020/whatsapp,15/12/2020,"Text Data of 20,000+ messages in the Srishti '23 Whatsapp group, visualized.","data, story",aman,"r, whatsapp",05/09/2021,FALSE,TRUE,google.com,FALSE
+A Critical News Consumer's Starter Manifesto,2020/manifesto,18/10/2020,"4.5 Lakh tweets by three major Indian news channels, analysed.","data, story","aman, malay","r, python,news,twitter",21/09/2021,TRUE,TRUE,google.com,FALSE
+This Studio Looks at Bellybuttons...,2021/abstracts,16/08/2021,Generating design school courses for anything with GPT-3,"humour, nlp, story",aman,"python, ai, nlp",16/08/2021,FALSE,TRUE,google.com,FALSE
+The People in the Food Apps,2021/food-apps,9/10/2021,Examining food delivery platforms & how much they can earn you,"data, story",aman,"r, research, modelling",9/10/2021,TRUE,TRUE,google.com,TRUE
+Desidata Package for R,2021/desidata,10/12/2021,Easily accessible datasets on India within RStudio,"data, r, open source, project, development",aman,"r, data, development",12/12/2021,FALSE,TRUE,google.com,FALSE
+"You're a Wizard, Harry",,,3000 Emails from Harry Potter Fans,"random, project",aman,,,,,,FALSE
+Lyrics by Michael Styles and Harry Scott,,24/05/2021,"Lyrical nonsense from the desk of Dwight, Michael and Harry","nlp, humour, project, development",aman,,,,,,TRUE
+Your Fate Depends on Which Newspaper You Read,,,,"nlp, data, humour, story",aman,,,,,,FALSE
+Srishti Archive,,19/12/2021,A permanent gallery of projects by students at Srishti,"design, development, project",aman,,,,,,TRUE
+The Yelli Pages,,,A student run newsletter for Srishti,"design, development, project",aman,,,,,,FALSE
+SongscrapR Package for R,,15/12/2020,Tidy lyric scraper for R,"data, project, r, open source, development",aman,,,,,,TRUE

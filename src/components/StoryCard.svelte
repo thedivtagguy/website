@@ -40,7 +40,7 @@
     <div class="flex flex-col items-start  md:flex-row">
         <div class="w-full">
                 <img
-                width="580"
+                width="640"
                 height="500"
                 src="/common/assets/thumbnails/32/{slug}.jpg"
                 alt="thumbnail for story"
@@ -50,9 +50,11 @@
                 sizes="(max-width: 320px) 640px, (max-width: 480px) 960px, 1280px"
               />
         </div>
-        <div class="flex flex-col items-start justify-start w-full h-full  md:mb-0 md:w-1/2">
+        <div class="flex flex-col items-start justify-start w-full h-full  pl-4 md:mb-0 md:w-1/2">
             <div class="flex flex-col items-start justify-start h-full space-y-3 transform   md:space-y-5">
-                
+              <div class="bg-slate-800">
+                <h3 class="font-sans font-semibold uppercase text-lg text-white px-2">Hot off the press</h3>
+            </div>
                 <h4 class="text-4xl font-sans font-bold leading-none lg:text-5xl xl:text-5xl">{heading}</h4>
                 <p class="pt-2 text-xl font-medium">{description}</p>
                 <button class="text-center font-bold uppercase bg-[{DEFAULT_COLOR.darker}] w-full py-4 rounded-none">Read Story</button>

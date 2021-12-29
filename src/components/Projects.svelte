@@ -30,11 +30,12 @@
   });
 </script>
 
-<section class=" border-b-[3px] pb-4 border-dashed border-slate-300">
+<section class="">
+  
     <StoryCard {...mostRecent} featured />
     <div class="flex flex-col lg:flex-row xl:flex-row md:flex-row gap-4">
       {#each refined as story}
-      <div>
+      <div class="py-4">
         <StoryCard {...story} />
       </div>
       {/each}

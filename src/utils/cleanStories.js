@@ -47,6 +47,7 @@ const parseStories = (story, key) => {
     output.published = d.published;
     output.category = strToArray(d.cat);
     output.thumbnail = makeSlug(d.url);
+    output.featured = d.featured;
     return output;
   });
 

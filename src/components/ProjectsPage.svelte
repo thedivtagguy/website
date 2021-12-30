@@ -3,7 +3,7 @@
   import parseStories from "$utils/cleanStories";
   import StoryCard from "./StoryCard.svelte";
   import Select from "svelte-select";
-  import Toc from 'svelte-toc'
+  import Toc from 'svelte-toc';
   import uniqueTags from "$utils/uniqueTags";
 import ButtonSet from "./helpers/ButtonSet.svelte";
 
@@ -58,18 +58,18 @@ import ButtonSet from "./helpers/ButtonSet.svelte";
         };
     });
 console.log(items)
+
+
 </script>
 
-
 <main>
-  <div class="relative w-1/2 h-1/2 ">
-    <aside >
-      <div>
-        <img src="/common/assets/resources/toc.png" alt="table of contents" width="180" height="200" />
-      </div>
-      <Toc id="table" headingSelector="main :where(h2)"
-      />
-    </aside>
+  <div id="toc">
+    <div class="relative w-1/2 h-1/2">
+      <aside>
+        <img src="/common/assets/resources/toc.png" alt="hand" width="180" class="hand" />
+        <Toc headingSelector="main :where(h2)" --toc-desktop-margin="1em 0 0 0;" />
+      </aside>
+    </div>
   </div>
   <section class="flex  pb-4 justify-between items-center mx-auto">
     <h1 class="text-6xl font-bold font-serif text-center py-4">Projects</h1>
@@ -77,7 +77,7 @@ console.log(items)
   </section>
  
   <h2 class="text-4xl font-bold font-serif text-left border-b-2 border-black pb-2 mb-2">Data Storytelling</h2>
-  <section class="grid grid-cols-3 gap-4 py-4">
+  <section id="data" class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3  gap-4 py-4">
 
     <!-- Projects where category includes data -->
     {#each refined as project}
@@ -89,7 +89,7 @@ console.log(items)
     {/each}
   </section>
   <h2 class="text-4xl font-bold font-serif text-left border-b-2 border-black pb-2 mb-2">Web Development</h2>
-  <section class="grid grid-cols-3 gap-4 py-4">
+  <section id="web" class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3  gap-4 py-4">
     <!-- Projects where category includes data -->
     {#each refined as project}
       {#if project.category.includes("website")}
@@ -100,7 +100,7 @@ console.log(items)
     {/each}
   </section>
   <h2 class="text-4xl font-bold font-serif text-left border-b-2 border-black pb-2 mb-2">R Programming</h2>
-  <section class="grid grid-cols-3 gap-4 py-4">
+  <section id="r" class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3  gap-4 py-4 mb-20">
     <!-- Projects where category includes data -->
     {#each refined as project}
       {#if project.category.includes("r")}
@@ -115,12 +115,13 @@ console.log(items)
 <style>
  aside {
     position: absolute;
-    left: -13rem;
-    top: 12rem;
+    left: -13.5rem;
+    top: 2rem;
     max-width: 200px;
   }
 
-  #table {
-    position: sticky;
+  #toc {
+    position: fixed;
   }
+
 </style>

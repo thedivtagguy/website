@@ -27,7 +27,6 @@
 	--default-darker: ${DEFAULT_COLOR["darker"]};
   `;
 
-  console.log(style);
 </script>
 
 <main class="py-2">

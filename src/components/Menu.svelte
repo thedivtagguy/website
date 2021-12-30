@@ -22,7 +22,7 @@
           class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start"
         >
           <div class="w-[50px]">
-            <a href="/" aria-label="The thedivtagguy">{@html wordmark}</a>
+            <a sveltekit:prefetch  href="/" aria-label="The thedivtagguy">{@html wordmark}</a>
           </div>
           <button
             class="text-black cursor-pointer text-xl leading-none  py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"

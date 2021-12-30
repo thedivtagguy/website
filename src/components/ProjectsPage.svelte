@@ -4,6 +4,7 @@
   import StoryCard from "./StoryCard.svelte";
   import Select from "svelte-select";
   import uniqueTags from "$utils/uniqueTags";
+import ButtonSet from "./helpers/ButtonSet.svelte";
 
   let stories = [];
   let refined = [];
@@ -32,7 +33,6 @@
     "path",
     "month",
     "date",
-    "featured"
   ];
 
   stories = parseStories(storiesData, keys);
@@ -60,28 +60,20 @@ console.log(items)
 </script>
 
 <main>
-  <section class="flex flex-col justify-items-center items-center mx-auto">
+  <section class="flex flex-col pb-4 justify-items-center items-center mx-auto">
     <h1 class="text-6xl font-bold font-serif text-center py-4">Projects</h1>
     <div>
-      <img src="/common/assets/resources/toc.png" alt="table of contents" width="300" />
+      <img src="/common/assets/resources/toc.png" alt="table of contents" width="300" height="200" />
     </div>
   </section>
-  <section class="flex flex-row justify-items-center items-center">
-    <div class=" flex-grow">
-      <form>
-        <label for="food">Category</label>
-        <Select id="food" class="w-full" {items} on:select={handleSelect} on:clear={handleClear} />
-      </form>
-
-      {#if favouriteFood}
-        <!-- Display only those refined stories where  category matches selection-->
-       {favouriteFood.value}
-      {/if}
-    </div>
+ 
+  <section class="grid grid-cols-3 gap-4">
+    {#each refined as project}
+      <div>
+        <StoryCard {...project} />
+      </div>
+    {/each}
   </section>
-  {#each refined as project}
-    <p>{project.heading}</p>
-  {/each}
 </main>
 
 <style>

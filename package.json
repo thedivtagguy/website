@@ -4,6 +4,7 @@
   "scripts": {
     "gdoc": "node tasks/fetch-google.cjs",
     "thumbnail-stories": "node tasks/thumbnail-stories.cjs",
+    "thumbnail-projects": "node tasks/thumbnail-projects.cjs",
     "thumbnail-resources": "node tasks/thumbnail-resources.cjs",
     "thumbnail-colour": "node tasks/thumbnail-colour.cjs",
     "dev:only": "svelte-kit dev",

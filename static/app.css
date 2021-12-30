@@ -398,11 +398,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
+.mx-1 {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
 .mb-10 {
   margin-bottom: 2.5rem;
 }
 .block {
   display: block;
+}
+.inline {
+  display: inline;
 }
 .flex {
   display: -webkit-box;
@@ -410,6 +417,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .table {
   display: table;
+}
+.grid {
+  display: grid;
 }
 .contents {
   display: contents;
@@ -460,6 +470,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .list-none {
   list-style-type: none;
+}
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 .flex-row {
   -webkit-box-orient: horizontal;
@@ -580,6 +593,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(30 41 59 / var(--tw-bg-opacity));
 }
+.bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+.bg-gray-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
 .bg-gradient-to-l {
   background-image: -webkit-gradient(linear, right top, left top, from(var(--tw-gradient-stops)));
   background-image: -o-linear-gradient(right, var(--tw-gradient-stops));
@@ -601,6 +622,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .p-2 {
   padding: 0.5rem;
+}
+.p-1 {
+  padding: 0.25rem;
 }
 .py-6 {
   padding-top: 1.5rem;
@@ -645,6 +669,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 .pb-4 {
   padding-bottom: 1rem;

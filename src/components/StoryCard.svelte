@@ -88,7 +88,11 @@
         />
         <h4 class="font-bold font-sans text-2xl">{heading}</h4>
         <p class="font-sans">{description}</p>
-        <h6 class="text-sm font-mono capitalize">{keyword}</h6>
+        <div>
+          {#each keyword as k}
+          <span class="text-sm p-1 mx-1 bg-gray-100 rounded-md font-mono  uppercase">{k}</span>
+          {/each}
+        </div>
       </div>
     </section>
   {/if}

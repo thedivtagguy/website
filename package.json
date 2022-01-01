@@ -2,7 +2,7 @@
   "name": "svelte-starter",
   "version": "3.0.0",
   "scripts": {
-    "gdoc": "node tasks/fetch-google.cjs",
+    "gdoc": "npm run docs && node tasks/fetch-google.cjs",
     "docs": "node tasks/collect-docs.cjs",
     "thumbnail-stories": "node tasks/thumbnail-stories.cjs",
     "thumbnail-projects": "node tasks/thumbnail-projects.cjs",
@@ -57,6 +57,7 @@
     "colorthief": "^2.3.2",
     "concurrently": "^6.3.0",
     "cross-env": "^7.0.3",
+    "dotenv": "^10.0.0",
     "googleapis": "^92.0.0",
     "make": "^0.8.1",
     "mkdirp": "^1.0.4",

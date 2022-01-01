@@ -4,6 +4,10 @@ const fs = require("fs");
 const archieml = require("archieml");
 const fetch = require("node-fetch");
 const docs = require(`${CWD}/google.config.cjs`);
+// Also get the Google Docs IDs from src/data/all-docs.js
+const allDocs = require(`${CWD}/src/data/posts/all-docs.cjs`);
+// Add allDocs to docs array
+docs.push(...allDocs);
 
 const fetchGoogle = async ({ id, gid }) => {
   console.log(`fetching...${id}`);

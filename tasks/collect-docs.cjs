@@ -6,12 +6,21 @@ const CWD = process.cwd();
 const fs = require("fs");
 const fetch = require("node-fetch");
 const getfilelist = require("google-drive-getfilelist");
+require('dotenv').config()
+// Get API key from /env
+const auth = process.env.key;
+// In src/data, create new directory called posts
+const posts = `${CWD}/src/data/posts`;
+// Create posts directory if it doesn't exist
+if (!fs.existsSync(posts)) {
+  fs.mkdirSync(posts);
+}
 
-const topFolderId = "xxx"; // Please set the top folder ID.
+const topFolderId = "1MOgN2bBcKhTuTPmjE3YGl6LMqNCf2OAx"; // Please set the top folder ID.
 getfilelist.GetFileList(
   {
-    auth: "3333",
-    fields: "files(id)",
+    auth: auth,
+    fields: "files(id), files(name)",
     id: topFolderId,
   },
   (err, res) => {
@@ -21,7 +30,19 @@ getfilelist.GetFileList(
     }
     const fileList = res.fileList.flatMap(({ files }) => files);
     console.log(fileList);
-    // Write the file list to a file to docs.json
-    fs.writeFileSync(`${CWD}/docs.json`, JSON.stringify(fileList));
+
+    const fileListString = fileList
+      .map(
+        (file) =>
+          `{
+    id: "${file.id}",
+    filepath: "src/data/posts/${file.name}.json"
+  }`
+      )
+      .join(",\n");
+    fs.writeFileSync(
+      `${CWD}/src/data/posts/all-docs.cjs`,
+      `module.exports = [\n${fileListString}\n];`
+    );
   }
 );

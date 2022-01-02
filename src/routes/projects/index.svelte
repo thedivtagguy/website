@@ -12,32 +12,32 @@
 
 	export async function load({ page }) {
 		try {
-			const Post = await import(`../../data/posts/${page.params.project}.json`);
-            console.log(Post);
+			const post = await import(`../../data/posts/${page.params.project}.json`);
+            console.log(post);
 			return {
 				// Data passed into svelte component
 				props: {
-					Post:Post.default,
+					post:post.default,
           single: false,
 				}
 			};
 		} catch (e) {
 			return {
         props: {
-					Post: false,
+					post: false,
 				}			};
 		}
 	}
 </script>
 
 <script>
-  export let Post;
+  export let post;
 </script>
 
 
 <Meta />
-{#if Post}
-<svelte:component this={Post}/>
+{#if post}
+<svelte:component this={post}/>
 {:else}
 <ProjectsPage />
 {/if}

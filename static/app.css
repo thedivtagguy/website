@@ -398,6 +398,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -407,12 +411,21 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mb-20 {
   margin-bottom: 5rem;
 }
+.mt-6 {
+  margin-top: 1.5rem;
+}
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
 .block {
   display: block;
 }
 .flex {
   display: -webkit-box;
   display: flex;
+}
+.table {
+  display: table;
 }
 .grid {
   display: grid;
@@ -432,6 +445,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-1\/2 {
   height: 50%;
 }
+.h-auto {
+  height: auto;
+}
 .w-full {
   width: 100%;
 }
@@ -449,6 +465,13 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .max-w-5xl {
   max-width: 64rem;
+}
+.max-w-4xl {
+  max-width: 56rem;
+}
+.grow {
+  -webkit-box-flex: 1;
+          flex-grow: 1;
 }
 .basis-1\/2 {
   flex-basis: 50%;
@@ -544,6 +567,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-b-2 {
   border-bottom-width: 2px;
 }
+.border-b {
+  border-bottom-width: 1px;
+}
 .border-solid {
   border-style: solid;
 }
@@ -564,6 +590,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-black {
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+.border-gray-100 {
+  --tw-border-opacity: 1;
+  border-color: rgb(243 244 246 / var(--tw-border-opacity));
 }
 .bg-divpurple {
   --tw-bg-opacity: 1;
@@ -605,6 +635,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .p-2 {
   padding: 0.5rem;
+}
+.p-3 {
+  padding: 0.75rem;
 }
 .py-6 {
   padding-top: 1.5rem;
@@ -662,6 +695,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .pt-2 {
   padding-top: 0.5rem;
 }
+.pb-5 {
+  padding-bottom: 1.25rem;
+}
 .text-left {
   text-align: left;
 }
@@ -707,6 +743,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .text-6xl {
   font-size: 3.75rem;
+  line-height: 1;
+}
+.text-5xl {
+  font-size: 3rem;
   line-height: 1;
 }
 .font-extrabold {
@@ -763,6 +803,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 .decoration-dashed {
   -webkit-text-decoration-style: dashed;
@@ -853,6 +897,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 @media (min-width: 640px) {
+  .sm\:w-1\/2 {
+    width: 50%;
+  }
   .sm\:text-5xl {
     font-size: 3rem;
     line-height: 1;
@@ -875,6 +922,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
   .md\:w-1\/2 {
     width: 50%;
+  }
+  .md\:w-1\/3 {
+    width: 33.333333%;
   }
   .md\:flex-row {
     -webkit-box-orient: horizontal;
@@ -932,6 +982,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   .lg\:w-auto {
     width: auto;
   }
+  .lg\:w-1\/4 {
+    width: 25%;
+  }
   .lg\:flex-grow {
     -webkit-box-flex: 1;
             flex-grow: 1;
@@ -958,6 +1011,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 @media (min-width: 1280px) {
+  .xl\:w-1\/5 {
+    width: 20%;
+  }
   .xl\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }

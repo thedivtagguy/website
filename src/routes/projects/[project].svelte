@@ -4,19 +4,19 @@
 
 	export async function load({ page }) {
 		try {
-			const Post = await import(`../../data/posts/${page.params.project}.json`);
-            console.log(Post);
+			const post = await import(`../../data/posts/${page.params.project}.json`);
+            console.log(post);
 			return {
 				// Data passed into svelte component
 				props: {
-					Post:Post.default
+					post:post.default
 				}
 			};
 		} catch (e) {
 			return {
 				props: {
-					Post: {
-						headling: "404",
+					post: {
+						title: "404",
 						content: "Page not found"
 					}
 				}
@@ -25,11 +25,26 @@
 	}
 </script>
 <script>
-    export let Post;
-    console.log(Post);
+    export let post;
+    console.log(post);
 </script>
 <main>
-    <div class="articleContainer">
-       {Post.headline}
-    </div>
+	<div class="container max-w-5xl mt-6 px-6">
+		<div class="pb-5 mb-5 border-b border-gray-100">
+			<h1 class="font-bold text-5xl">{post.title}</h1>
+			<h2>{post.summary}</h2>
+		</div>
+		<article class="prose lg:prose-xl my-4 mx-auto">
+		{#each post.text as text}
+			<p>{text.value}</p>
+		{/each}
+		</article>
+		<div class="flex flex-wrap">
+			{#each post.images as image}
+				<div class="w-full ">
+					<img src="{image.value.src}" alt="{image.value.alt}" class="w-full h-auto" />
+				</div>
+			{/each}
+		</div>
+	</div>
 </main>

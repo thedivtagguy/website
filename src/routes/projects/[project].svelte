@@ -14,8 +14,12 @@
 			};
 		} catch (e) {
 			return {
-				status: 401,
-				error: 'Post not found'
+				props: {
+					Post: {
+						headling: "404",
+						content: "Page not found"
+					}
+				}
 			};
 		}
 	}

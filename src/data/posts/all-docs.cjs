@@ -1,7 +1,7 @@
 module.exports = [
 {
     id: "1NcZr3AKotKJxJV5Re-Oa-ktQeMgNNJEegYfdCZp5vhk",
-    filepath: "src/data/posts/joker.json"
+    filepath: "src/data/posts/abstracts.json"
   },
 {
     id: "1eZtGTzvGNIWVx66HTwUb4Blth_XrKewmW9faTkOJQAU",

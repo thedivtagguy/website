@@ -1,11 +1,31 @@
-<script>
-import { getStores, navigating, page, session } from '$app/stores';
-console.log($page.params.project);
-</script>
+<script context="module">
+	export const router = false;
+    import "/src/styles/tailwind.css";
 
+	export async function load({ page }) {
+		try {
+			const Post = await import(`../../data/posts/${page.params.project}.json`);
+            console.log(Post);
+			return {
+				// Data passed into svelte component
+				props: {
+					Post:Post.default
+				}
+			};
+		} catch (e) {
+			return {
+				status: 404,
+				error: 'Post not found'
+			};
+		}
+	}
+</script>
+<script>
+    export let Post;
+    console.log(Post);
+</script>
 <main>
-    <section class="flex  pb-4 justify-between items-center mx-auto">
-        <h1 class="text-6xl font-bold font-serif text-center py-4">{$page.path}</h1>
-      </section>
-      <h2 class="text-4xl font-bold font-serif text-left border-b-2 border-black pb-2 mb-2">Data Storytelling</h2>
+    <div class="articleContainer">
+       {Post.headline}
+    </div>
 </main>

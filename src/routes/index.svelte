@@ -1,6 +1,7 @@
 <script context="module">
   import "../styles/tailwind.css";
   export const prerender = true;
+	export const router = true;
   import storiesData from "$data/stories.csv";
   import parseStories from "$utils/cleanStories";
   import Footer from "$components/Footer.svelte";
@@ -22,11 +23,12 @@
       "date"
     ];
 
-    const url = "api/stories";
-    const response = await fetch(url);
-    if (response.ok) {
-      const data = await response.json();
-    }
+    // const url = "api/stories.js";
+    // const response = await fetch(url);
+    // console.log(response);
+    // if (response.ok) {
+    //   const data = await response.json();
+    // }
 
     const stories = parseStories(storiesData, keys);
     return {

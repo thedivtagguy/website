@@ -1,5 +1,5 @@
 <script context="module">
-	export const router = false;
+	export const prerender = true;
   import "/src/styles/tailwind.css";
 
 	export async function load({ page }) {

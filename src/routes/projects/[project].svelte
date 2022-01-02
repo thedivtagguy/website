@@ -14,7 +14,7 @@
 			};
 		} catch (e) {
 			return {
-				status: 404,
+				status: 401,
 				error: 'Post not found'
 			};
 		}

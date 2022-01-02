@@ -3,26 +3,43 @@
   import "/src/styles/tailwind.css";
   import Footer from "$components/Footer.svelte";
 
+  import Meta from "$components/Meta.svelte";
+  import ProjectsPage from "$components/ProjectsPage.svelte";
+  // Check if we're on a project page
+
+  export const router = false;
+    import "/src/styles/tailwind.css";
+
+	export async function load({ page }) {
+		try {
+			const Post = await import(`../../data/posts/${page.params.project}.json`);
+            console.log(Post);
+			return {
+				// Data passed into svelte component
+				props: {
+					Post:Post.default,
+          single: false,
+				}
+			};
+		} catch (e) {
+			return {
+        props: {
+					Post: false,
+				}			};
+		}
+	}
 </script>
 
 <script>
-  import Meta from "$components/Meta.svelte";
-  import ProjectsPage from "$components/ProjectsPage.svelte";
-  import { page } from "$app/stores"
-  // State to check if page has a slug after 'projects'
-  let slug = $page.params;
-  // If page has a slug, remove 'projects' from the slug
-  console.log(slug)
+  export let Post;
 </script>
 
 
 <Meta />
+{#if Post}
+<svelte:component this={Post}/>
+{:else}
 <ProjectsPage />
+{/if}
 <Footer />
 
-<main>
-    <section class="flex  pb-4 justify-between items-center mx-auto">
-        <h1 class="text-6xl font-bold font-serif text-center py-4">{$page.path}</h1>
-      </section>
-      <h2 class="text-4xl font-bold font-serif text-left border-b-2 border-black pb-2 mb-2">Data Storytelling</h2>
-</main>

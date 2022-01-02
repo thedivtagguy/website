@@ -4,7 +4,7 @@
   export let heading;
   export let description;
   export let featured;
-  export let keyword;
+  export let link;
 
   // Choose first item from category
   const DEFAULT_COLOR = {
@@ -38,6 +38,7 @@
         </aside>
       </div>
       <div class="flex  flex-col items-start  md:flex-row">
+        
         <div class="w-full">
           <img
             width="640"
@@ -73,26 +74,23 @@
     </section>
   {:else}
     <section class="basis-1/2">
-      <div class="flex flex-col justify-items-start gap-2 items-start">
-        <img
-          width="600"
-          height="720"
-          src="/common/assets/thumbnails/32/{slug}.jpg"
-          alt="thumbnail for story"
-          srcset="/common/assets/thumbnails/1280/{slug}.jpg 1280w,
-                /common/assets/thumbnails/960/{slug}.jpg 960w,
-                /common/assets/thumbnails/640/{slug}.jpg 640w"
-          sizes="(max-width: 320px) 640px, (max-width: 480px) 960px, 1280px"
-          loading="lazy"
-        />
-        <h4 class="font-bold font-sans text-2xl">{heading}</h4>
-        <p class="font-sans">{description}</p>
-        <!-- <div>
-          {#each keyword as k}
-          <span class="text-sm p-1 mx-1 bg-gray-100 rounded-md font-mono  uppercase">{k}</span>
-          {/each}
-        </div> -->
-      </div>
+      <a href="/projects/{link}">
+        <div class="flex flex-col justify-items-start gap-2 items-start">
+          <img
+            width="600"
+            height="720"
+            src="/common/assets/thumbnails/32/{slug}.jpg"
+            alt="thumbnail for story"
+            srcset="/common/assets/thumbnails/1280/{slug}.jpg 1280w,
+                  /common/assets/thumbnails/960/{slug}.jpg 960w,
+                  /common/assets/thumbnails/640/{slug}.jpg 640w"
+            sizes="(max-width: 320px) 640px, (max-width: 480px) 960px, 1280px"
+            loading="lazy"
+          />
+          <h4 class="font-bold font-sans text-2xl">{heading}</h4>
+          <p class="font-sans">{description}</p>
+        </div>
+      </a>
     </section>
   {/if}
 </main>

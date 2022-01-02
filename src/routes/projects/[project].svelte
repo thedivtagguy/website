@@ -1,6 +1,6 @@
 <script context="module">
 	export const router = false;
-    import "/src/styles/tailwind.css";
+  import "/src/styles/tailwind.css";
 
 	export async function load({ page }) {
 		try {

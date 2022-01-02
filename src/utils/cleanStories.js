@@ -9,6 +9,14 @@ const makeArray = (str) => {
   return [];
 };
 
+const makeLink = (str) => {
+  if (str) {
+    // Keep string after the last slash
+    return str.split("/").pop();
+  }
+  return "";
+};
+
 const makeSlug = (str) => {
   return str.toLowerCase().replace(/[-,/]/g, "_");
 };
@@ -50,6 +58,7 @@ const parseStories = (story, key) => {
     output.category = makeArray(d.cat);
     output.thumbnail = makeSlug(d.url);
     output.featured = d.featured;
+    output.link = makeLink(d.url);
     return output;
   });
 

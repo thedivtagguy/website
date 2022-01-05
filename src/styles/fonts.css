@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "PF Goudy Initials Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("PF Goudy Initials Pro"), url("./fonts/pf-goudy-initials.ttf") format("truetype");
+}
+
 /* playfair-display-400normal - latin */
 @font-face {
   font-family: "Playfair Display";
@@ -11,6 +19,7 @@
       url("../../node_modules/typeface-playfair-display/files/playfair-display-latin-400.woff")
       format("woff"); /* Modern Browsers */
 }
+
 
 /* playfair-display-400italic - latin */
 @font-face {

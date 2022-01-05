@@ -2,8 +2,7 @@
   import storiesData from "$data/stories.csv";
   import parseStories from "$utils/cleanStories";
   import StoryCard from "./StoryCard.svelte";
-  import Select from "svelte-select";
-  import Toc from 'svelte-toc';
+
   import uniqueTags from "$utils/uniqueTags";
 import ButtonSet from "./helpers/ButtonSet.svelte";
 

@@ -34,7 +34,10 @@ const config = {
           $utils: path.resolve("./src/utils")
         }
       },
-      plugins: [dsv(), svg()]
+      plugins: [dsv(), svg()],
+      optimizeDeps: {
+        include: ['lodash.get', 'lodash.isequal', 'lodash.clonedeep']
+      }
     },
     paths: {
       base
@@ -43,3 +46,4 @@ const config = {
 };
 
 export default config;
+

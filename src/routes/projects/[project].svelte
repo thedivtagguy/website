@@ -2,17 +2,50 @@
 	export const prerender = true;
 	import "/src/styles/tailwind.css";
     import Menu from "$components/Menu.svelte";
+	import Meta from "$components/Meta.svelte";
+	import storiesData from "$data/stories.csv";
+
+   	import parseStories from "$utils/cleanStories"; 
+
+	   const keys = [
+      "url",
+      "date",
+      "heading",
+      "desc",
+      "cat",
+      "author",
+      "keyword",
+      "published",
+      "img",
+      "path",
+      "slug",
+      "month",
+      "date"
+    ];
+
+    // const url = "api/stories.js";
+    // const response = await fetch(url);
+    // console.log(response);
+    // if (response.ok) {
+    //   const data = await response.json();
+    // }
+
+    const stories = parseStories(storiesData, keys);
 
   const render = item => item || '';
 
 	export async function load({ page }) {
 		try {
 			const post = await import(`../../data/posts/${page.params.project}.json`);
-            console.log(post);
+			// Filter stories by slug
+			const story = stories.filter(story => story.link === page.params.project)[0];
+			// Combine data
+			const data = { ...post, ...story };
+
 			return {
 				// Data passed into svelte component
 				props: {
-					post:post.default
+					post: data
 				}
 			};
 		} catch (e) {
@@ -26,32 +59,63 @@
 			};
 		}
 	}
+
+
+
 </script>
 <script>
     export let post;
     console.log(post);
+	import { onMount } from 'svelte';
+  
+  let Carousel;
+  onMount(async () => {
+	const module = await import('svelte-carousel');
+	Carousel = module.default;
+  });
 </script>
+
+
+  
+
 {#if post.title != "404"}
-<main>
-	<div class="container max-w-5xl mt-6 px-6">
-		<div class="pb-5 mb-5 border-b border-gray-100">
-			<h1 class="font-bold text-5xl">{post.heading}</h1>
-			<h2>{post.summary}</h2>
+<main class="mx-auto">
+	<Meta />
+	<div class="max-w-5xl mx-auto mt-6 px-6">
+		<div class="flex justify-between items-start justify-self-start">
+			<div class="pb-5 flex flex-col justify-items-center items-start gap-4  mb-5 border-b border-gray-100">
+				<span class="font-bold font-sans uppercase">{post.category[0]} 🢒 {post.date}</span>
+				<h1 class="font-bold text-6xl font-serif">{post.heading}</h1>
+				<h2 class="font-semibold text-xl font-sans">{post.summary}</h2>
+			</div>
+			<div class="sm:flex lg:flex xl:flex  hidden flex-col justify-items-center items-start">
+				<h4 class="font-drops text-[9rem] uppercase leading-none">
+					<!-- First letter of the title -->
+					{post.heading[0]}
+				</h4>
+			</div>
 		</div>
 		<article class="prose lg:prose-xl my-4 mx-auto">
 		{#each post.text as text}
 			<p>{text.value}</p>
 		{/each}
 		</article>
-		<div class="flex flex-wrap">
-			{#each post.images as image}
-				<div class="w-full ">
-					<img src="{image.value.src}" alt="{image.value.alt}" class="w-full h-auto" />
-				</div>
-			{/each}
-		</div>
 	</div>
+	<div class="mx-auto">
+		<svelte:component this={Carousel}>
+				{#each post.images as image}
+				<div class="h-[400px] w-full">
+					<img src={image.value.src} alt={image.value.alt} class="object-cover mx-auto object-center" />
+				</div>
+				{/each}
+		</svelte:component>
+	</div>
+	
 </main>
+
+
+
+
 {:else}
 <main>
 	<div class="container max-w-5xl mt-6 px-6">

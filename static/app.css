@@ -369,6 +369,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 /* custom CSS goes here */
+article {
+  font-family: "Source Sans Pro", sans-serif;
+}
+h1 {
+  font-family: "Playfair Display", serif;
+}
 /* Injects Tailwind's utility classes & any utility classes registered by plugins. */
 .sr-only {
   position: absolute;
@@ -442,8 +448,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-1\/2 {
   height: 50%;
 }
-.h-auto {
-  height: auto;
+.h-\[400px\] {
+  height: 400px;
 }
 .w-full {
   width: 100%;
@@ -510,6 +516,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .justify-items-start {
   justify-items: start;
 }
+.justify-items-center {
+  justify-items: center;
+}
 .gap-4 {
   gap: 1rem;
 }
@@ -523,6 +532,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-space-y-reverse: 0;
   margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+}
+.justify-self-start {
+  justify-self: start;
 }
 .truncate {
   overflow: hidden;
@@ -623,6 +635,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   -webkit-background-clip: text;
           background-clip: text;
 }
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.object-center {
+  -o-object-position: center;
+     object-position: center;
+}
 .p-2 {
   padding: 0.5rem;
 }
@@ -700,6 +720,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .font-serif {
   font-family: "Playfair Display", serif;
 }
+.font-drops {
+  font-family: "PF Goudy Initials Pro", serif;
+}
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -731,6 +754,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-6xl {
   font-size: 3.75rem;
   line-height: 1;
+}
+.text-\[9rem\] {
+  font-size: 9rem;
 }
 .text-5xl {
   font-size: 3rem;
@@ -880,6 +906,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 @media (min-width: 640px) {
+  .sm\:flex {
+    display: -webkit-box;
+    display: flex;
+  }
   .sm\:text-5xl {
     font-size: 3rem;
     line-height: 1;
@@ -985,6 +1015,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 @media (min-width: 1280px) {
+  .xl\:flex {
+    display: -webkit-box;
+    display: flex;
+  }
   .xl\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }

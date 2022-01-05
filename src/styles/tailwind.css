@@ -12,14 +12,6 @@
   /* custom CSS goes here */
 }
 
-article {
-  @apply font-sans;
-}
-
-h1 {
-  @apply font-serif;
-}
-
 /* Injects Tailwind's utility classes & any utility classes registered by plugins. */
 @tailwind utilities;
 

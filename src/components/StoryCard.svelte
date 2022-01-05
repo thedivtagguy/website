@@ -64,10 +64,12 @@
               {heading}
             </h4>
             <p class="pt-2 text-xl font-medium">{description}</p>
-            <button
-              class="text-center font-bold uppercase bg-[{DEFAULT_COLOR.darker}] w-full py-4 rounded-none"
-              >Read Story</button
-            >
+            <a class="w-full" href="/projects/{link}">
+              <button
+                class="text-center font-bold uppercase bg-zinc-300 rounded-sm w-full py-4"
+                >Read Story</button
+              >
+            </a>
           </div>
         </div>
       </div>

@@ -70,25 +70,26 @@
         </div>
         <div class="w-full flex-col flex gap-4 lg:w-1/2">
           {#each refined as development}
-            <div
-              class="flex group items-center justify-between w-full col-span-1 p-2 bg-white hover:cursor-pointer hover:bg-divorange rounded-lg shadow"
-            >
-              <div class="px-4 py-1 flex flex-col">
-                <div class="relative ">
-                  <p
-                    class=" text-sm text-gray-600 group-hover:text-white font-sans uppercase font-bold sm:text-lg lg:text-lg xl:text-lg"
+            <a href="/projects/{development.link}">
+              <div
+                class="flex group items-center justify-between w-full col-span-1 p-2 bg-white hover:cursor-pointer hover:bg-divorange rounded-lg shadow"
+              >
+                <div class="px-4 py-1 flex flex-col">
+                  <div class="relative ">
+                    <p
+                      class=" text-sm text-gray-600 group-hover:text-white font-sans uppercase font-bold sm:text-lg lg:text-lg xl:text-lg"
+                    >
+                      {development.heading}
+                    </p>
+                  </div>
+                  <h3
+                    class="text-sm font-medium leading-5 group-hover:text-white text-gray-800 truncate"
                   >
-                    {development.heading}
-                  </p>
+                    {development.description}
+                  </h3>
                 </div>
-
-                <h3
-                  class="text-sm font-medium leading-5 group-hover:text-white text-gray-800 truncate"
-                >
-                  {development.description}
-                </h3>
               </div>
-            </div>
+            </a>
           {/each}
         </div>
       </div>

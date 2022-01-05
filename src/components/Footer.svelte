@@ -58,6 +58,7 @@ import Arrow from "svelte-carousel/src/components/Arrow/Arrow.svelte";
 
 <footer class="max-w-5xl py-12">
 {#if keywords}
+<img src="/common/assets/resources/footer.png" alt="footer image" class="mx-auto py-6" width="500"/>
 <section class="flex mx-auto font-sans font-bold gap-6 text-xs justify-center items-center ">
   {#each stories as story}
     <div>

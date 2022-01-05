@@ -109,8 +109,8 @@
 	<div class="mx-auto">
 		<svelte:component this={Carousel} let:showPrevPage
 		let:showNextPage>
-		<div slot="prev" on:click={showPrevPage} class="custom-arrow custom-arrow-prev">
-			<div class="text-6xl  border-black border-2 hover:bg-zinc-800 hover:text-white hover:cursor-pointer">
+		<div slot="prev" on:click={showPrevPage} class="custom-arrow flex justify-items-center items-center custom-arrow-prev">
+			<div class="text-xl sm:text-5xl lg:text-5xl mx-4  border-black border-2 hover:bg-zinc-800 hover:text-white hover:cursor-pointer">
 				<Icon name="chevron-left"/>
 			</div>
 		  </div>
@@ -119,8 +119,8 @@
 			  <img src={image.value.src} alt={image.value.alt} class="object-cover mx-auto object-center" />
 		  </div>
 		  {/each}
-		  <div slot="next" on:click={showNextPage} class="custom-arrow custom-arrow-next">
-			<div class="text-6xl  border-black border-2 hover:bg-zinc-800 hover:text-white hover:cursor-pointer">
+		  <div slot="next" on:click={showNextPage} class="custom-arrow flex justify-items-center items-center custom-arrow-next">
+			<div class="text-xl sm:text-5xl lg:text-5xl mx-4  border-black border-2 hover:bg-zinc-800 hover:text-white hover:cursor-pointer">
 				<Icon name="chevron-right"/>
 			</div>
 		  </div>
@@ -134,7 +134,7 @@
 
 {:else}
 <main>
-	<div class="container max-w-5xl mt-6 px-6">
+	<div class="container mx-auto max-w-5xl mt-6 px-6">
 		<div class="pb-5 mb-5 border-b border-gray-100">
 			<h1 class="font-bold text-5xl">404 Page Not Found</h1>
 			<h2>Kuch Nahi Hai Idhar</h2>

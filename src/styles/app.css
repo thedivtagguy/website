@@ -33,10 +33,3 @@
   --color-highlight: var(--color-yellow);
 }
 
-a {
-  @apply text-black font-sans;
-}
-
-a:hover {
-  @apply underline underline-offset-2  decoration-dashed text-purple-800;
-}

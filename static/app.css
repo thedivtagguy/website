@@ -559,9 +559,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .rounded {
   border-radius: 0.25rem;
 }
-.rounded-none {
-  border-radius: 0px;
-}
 .rounded-sm {
   border-radius: 0.125rem;
 }
@@ -607,14 +604,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-gray-100 {
   --tw-border-opacity: 1;
   border-color: rgb(243 244 246 / var(--tw-border-opacity));
-}
-.border-zinc-500 {
-  --tw-border-opacity: 1;
-  border-color: rgb(113 113 122 / var(--tw-border-opacity));
-}
-.border-zinc-800 {
-  --tw-border-opacity: 1;
-  border-color: rgb(39 39 42 / var(--tw-border-opacity));
 }
 .bg-divpurple {
   --tw-bg-opacity: 1;
@@ -716,10 +705,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-}
-.py-8 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
 }
 .pb-4 {
   padding-bottom: 1rem;
@@ -870,9 +855,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .outline-2 {
   outline-width: 2px;
-}
-.outline-zinc-800 {
-  outline-color: #27272a;
 }
 .filter {
   -webkit-filter: var(--tw-filter);

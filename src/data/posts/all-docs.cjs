@@ -1,7 +1,11 @@
 module.exports = [
 {
-    id: "1xDz0pAgzv0NuYR0BuYFQFOJU_TYG43iLEw6yOGQRnFI",
+    id: "1NcZr3AKotKJxJV5Re-Oa-ktQeMgNNJEegYfdCZp5vhk",
     filepath: "src/data/posts/abstracts.json"
+  },
+{
+    id: "1eZtGTzvGNIWVx66HTwUb4Blth_XrKewmW9faTkOJQAU",
+    filepath: "src/data/posts/lyrical-nonsense.json"
   },
 {
     id: "1j4G8hIduB5lHPZ9GMeRtV3au_fykZcCKU9W7RwUR9tY",

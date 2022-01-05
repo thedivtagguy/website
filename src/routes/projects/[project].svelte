@@ -1,6 +1,9 @@
 <script context="module">
 	export const prerender = true;
-  import "/src/styles/tailwind.css";
+	import "/src/styles/tailwind.css";
+    import Menu from "$components/Menu.svelte";
+
+  const render = item => item || '';
 
 	export async function load({ page }) {
 		try {
@@ -32,7 +35,7 @@
 <main>
 	<div class="container max-w-5xl mt-6 px-6">
 		<div class="pb-5 mb-5 border-b border-gray-100">
-			<h1 class="font-bold text-5xl">{post.title}</h1>
+			<h1 class="font-bold text-5xl">{post.heading}</h1>
 			<h2>{post.summary}</h2>
 		</div>
 		<article class="prose lg:prose-xl my-4 mx-auto">

@@ -2,7 +2,7 @@
   font-family: "PF Goudy Initials Pro";
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
+  font-display: block;
   src: local("PF Goudy Initials Pro"), url("./fonts/pf-goudy-initials.ttf") format("truetype");
 }
 

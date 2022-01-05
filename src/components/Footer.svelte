@@ -1,10 +1,11 @@
 <script>
   import { onMount } from "svelte";
   import wordmark from "$svg/wordmark.svg";
-
-  let localURL;
+  import StoryCard from "./StoryCard.svelte";
   let stories = [];
-
+  export let show;
+  export let keywords;
+  export let current;
   const v = Date.now();
   const url = `/data/stories.json`;
 
@@ -20,8 +21,8 @@
   export const prerender = true;
   import storiesData from "$data/stories.csv";
   import parseStories from "$utils/cleanStories";
-
-  onMount(async () => {
+import Arrow from "svelte-carousel/src/components/Arrow/Arrow.svelte";
+    if(keywords){
     const keys = [
       "url",
       "date",
@@ -39,28 +40,33 @@
     ];
 
     stories = parseStories(storiesData, keys);
+    // Keywords is an array of keywords
+    // Filter where stories where at least one of the keywords is in the array
+   // And heading is not the current story
+    stories = stories.filter(story => {
+      return story.keyword.some(keyword => keywords.includes(keyword)) && story.heading !== current;
+    });
 
-    // Find stories that are not the current page
-    const storiesToShow = stories.filter((story) => story.slug !== location.pathname.split("/")[2]);
-    // From the stories that are not the current page, find the one where the category matches 'data'
-    // Category is an array
-    const dataStories = storiesToShow.filter((story) => story.category.includes("data"));
-    // Choose two random stories from dataStories
-    stories = dataStories.sort(() => 0.5 - Math.random()).slice(0, 2);
-    stories = stories;
-  });
+    // Show two random stories
+    stories = stories.sort(() => 0.5 - Math.random());
+    stories = stories.slice(0, 2);
+
+    console.log(stories)
+
+    }
 </script>
 
-<footer class="max-w-5xl py-6">
-  <!-- <section class="stories">
-    {#each stories as { heading }}
-      <div class="story">
-        <a href="https://thedivtagguy.cool/{heading}">
-          <span>{heading}</span>
-        </a>
-      </div>
-    {/each}
-  </section> -->
+<footer class="max-w-5xl py-12">
+{#if keywords}
+<section class="flex mx-auto font-sans font-bold gap-6 text-xs justify-center items-center ">
+  {#each stories as story}
+    <div>
+      <StoryCard {...story}/>
+    </div>
+  {/each}
+</section>
+
+{/if}
 
   <section class="about py-6">
     <p class="text-center text-sm font-sans font-semibold italic text-gray-600 whitespace-pre-wrap">

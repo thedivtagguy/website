@@ -73,7 +73,7 @@
       </div>
     </section>
   {:else}
-    <section class="basis-1/2">
+    <section class="basis-1/2 max-w-[20rem]">
       <a href="/projects/{link}" sveltekit:prefetch>
         <div class="flex flex-col justify-items-start gap-2 items-start">
           <img

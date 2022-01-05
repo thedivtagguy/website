@@ -4,9 +4,10 @@
     import Menu from "$components/Menu.svelte";
 	import Meta from "$components/Meta.svelte";
 	import storiesData from "$data/stories.csv";
-
+	import Icon from "$components/helpers/Icon.svelte";
    	import parseStories from "$utils/cleanStories"; 
-
+	import ButtonSet from "$components/helpers/ButtonSet.svelte";
+	import Footer from "$components/Footer.svelte";
 	   const keys = [
       "url",
       "date",
@@ -83,7 +84,7 @@
 	<Meta />
 	<div class="max-w-5xl mx-auto mt-6 px-6">
 		<div class="flex justify-between items-start justify-self-start">
-			<div class="pb-5 flex flex-col justify-items-center items-start gap-4  mb-5 border-b border-gray-100">
+			<div class="pb-5 flex flex-col justify-items-center items-start gap-2 mb-5 border-b border-gray-100">
 				<span class="font-bold font-sans uppercase">{post.category[0]} 🢒 {post.date}</span>
 				<h1 class="font-bold text-6xl font-serif">{post.heading}</h1>
 				<h2 class="font-semibold text-xl font-sans">{post.summary}</h2>
@@ -93,6 +94,10 @@
 					<!-- First letter of the title -->
 					{post.heading[0]}
 				</h4>
+				<button type="button" class="py-2 px-4 flex justify-center items-center gap-2   hover:bg-zinc-800 hover:text-white focus:ring-zinc-500  text-black w-full text-center text-base font-semibold  focus:ring-2 focus:ring-offset-2 out outline-2  outline rounded-sm ">
+					<Icon name="globe"/> 
+					Upload
+				</button>
 			</div>
 		</div>
 		<article class="prose lg:prose-xl my-4 mx-auto">
@@ -102,12 +107,23 @@
 		</article>
 	</div>
 	<div class="mx-auto">
-		<svelte:component this={Carousel}>
-				{#each post.images as image}
-				<div class="h-[400px] w-full">
-					<img src={image.value.src} alt={image.value.alt} class="object-cover mx-auto object-center" />
-				</div>
-				{/each}
+		<svelte:component this={Carousel} let:showPrevPage
+		let:showNextPage>
+		<div slot="prev" on:click={showPrevPage} class="custom-arrow custom-arrow-prev">
+			<div class="text-6xl  border-black border-2 hover:bg-zinc-800 hover:text-white hover:cursor-pointer">
+				<Icon name="chevron-left"/>
+			</div>
+		  </div>
+		  {#each post.images as image}
+		  <div class="h-[400px] w-full">
+			  <img src={image.value.src} alt={image.value.alt} class="object-cover mx-auto object-center" />
+		  </div>
+		  {/each}
+		  <div slot="next" on:click={showNextPage} class="custom-arrow custom-arrow-next">
+			<div class="text-6xl  border-black border-2 hover:bg-zinc-800 hover:text-white hover:cursor-pointer">
+				<Icon name="chevron-right"/>
+			</div>
+		  </div>
 		</svelte:component>
 	</div>
 	
@@ -129,3 +145,7 @@
 	</div>
 </main>
 {/if}
+
+<footer class="max-w-5xl mx-auto mt-6 px-6">
+	<Footer keywords={post.keyword} current={post.heading} />
+</footer>	

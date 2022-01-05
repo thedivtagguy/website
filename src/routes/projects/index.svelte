@@ -36,10 +36,12 @@
 
 
 <Meta />
-{#if post}
-<svelte:component this={post}/>
-{:else}
-<ProjectsPage />
-{/if}
-<Footer />
+<main class="max-w-5xl mx-auto">
+	{#if post}
+	<svelte:component this={post}/>
+	{:else}
+	<ProjectsPage />
+	{/if}
+	<Footer />
+</main>
 

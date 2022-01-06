@@ -16,7 +16,7 @@ if (!fs.existsSync(posts)) {
   fs.mkdirSync(posts);
 }
 
-const topFolderId = "1MOgN2bBcKhTuTPmjE3YGl6LMqNCf2OAx"; // Please set the top folder ID.
+const topFolderId = "18PQUp9RmpLMocB92_Mus4dPFTnXkYM2P"; // Please set the top folder ID.
 getfilelist.GetFileList(
   {
     auth: auth,

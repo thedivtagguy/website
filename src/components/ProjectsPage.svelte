@@ -139,5 +139,7 @@ console.log(items)
     top: 0rem;
     max-width: 200px;
   }
-
+aside {
+  padding: 1.5rem;
+}
 </style>

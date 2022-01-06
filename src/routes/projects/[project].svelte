@@ -100,11 +100,17 @@
 				</button>
 			</div>
 		</div>
-		<article class="prose lg:prose-xl my-4 mx-auto">
-		{#each post.text as text}
-			<p>{text.value}</p>
-		{/each}
-		</article>
+
+		<section class="grid grid-cols-1 lg:grid-cols-5 sm:grid-cols-5 md:grid-cols-5">
+			<div class="col-span-3">
+				<article class="prose lg:prose-xl my-4 mx-auto">
+					{#each post.text as text}
+						<p class="mt-4">{@html text.value}</p>
+					{/each}
+					</article>
+			</div>
+		</section>
+	
 	</div>
 	<div class="mx-auto">
 		<svelte:component this={Carousel} let:showPrevPage

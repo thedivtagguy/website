@@ -33,8 +33,6 @@
 <script>
   export let post;
 </script>
-
-
 <Meta />
 <main class="max-w-5xl mx-auto">
 	{#if post}

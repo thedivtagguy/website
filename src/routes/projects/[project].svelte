@@ -8,6 +8,8 @@
    	import parseStories from "$utils/cleanStories"; 
 	import ButtonSet from "$components/helpers/ButtonSet.svelte";
 	import Footer from "$components/Footer.svelte";
+	import ProjectDetails from "$components/ProjectDetails.svelte";
+
 	   const keys = [
       "url",
       "date",
@@ -67,6 +69,7 @@
 <script>
     export let post;
     console.log(post);
+import Project from '$components/ProjectDetails.svelte';
 	import { onMount } from 'svelte';
   
   let Carousel;
@@ -94,20 +97,25 @@
 					<!-- First letter of the title -->
 					{post.heading[0]}
 				</h4>
-				<button type="button" class="py-2 px-4 flex justify-center items-center gap-2   hover:bg-zinc-800 hover:text-white focus:ring-zinc-500  text-black w-full text-center text-base font-semibold  focus:ring-2 focus:ring-offset-2 out outline-2  outline rounded-sm ">
+				<!-- <button type="button" class="py-2 px-4 flex justify-center items-center gap-2   hover:bg-zinc-800 hover:text-white focus:ring-zinc-500  text-black w-full text-center text-base font-semibold  focus:ring-2 focus:ring-offset-2 out outline-2  outline rounded-sm ">
 					<Icon name="globe"/> 
 					Upload
-				</button>
+				</button> -->
 			</div>
 		</div>
 
-		<section class="grid grid-cols-1 lg:grid-cols-5 sm:grid-cols-5 md:grid-cols-5">
+		<section class="grid grid-cols-1 py-6 gap-6 lg:grid-cols-5 sm:grid-cols-5 md:grid-cols-5">
 			<div class="col-span-3">
 				<article class="prose lg:prose-xl my-4 mx-auto">
 					{#each post.text as text}
 						<p class="mt-4">{@html text.value}</p>
 					{/each}
 					</article>
+			</div>
+			<div class="col-span-2 lg:min-h-[20rem]">
+				<aside class="sticky top-4">
+					<ProjectDetails {...post} />
+				</aside>
 			</div>
 		</section>
 	

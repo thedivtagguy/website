@@ -97,19 +97,21 @@ import Project from '$components/ProjectDetails.svelte';
 					<!-- First letter of the title -->
 					{post.heading[0]}
 				</h4>
-				<!-- <button type="button" class="py-2 px-4 flex justify-center items-center gap-2   hover:bg-zinc-800 hover:text-white focus:ring-zinc-500  text-black w-full text-center text-base font-semibold  focus:ring-2 focus:ring-offset-2 out outline-2  outline rounded-sm ">
-					<Icon name="globe"/> 
-					Upload
-				</button> -->
 			</div>
 		</div>
 
-		<section class="grid grid-cols-1 py-6 gap-6 lg:grid-cols-5 sm:grid-cols-5 md:grid-cols-5">
+		<section class="grid grid-cols-1 py-6 gap-8 lg:grid-cols-5 sm:grid-cols-5 md:grid-cols-5">
 			<div class="col-span-3">
-				<article class="prose lg:prose-xl my-4 mx-auto">
-					{#each post.text as text}
-						<p class="mt-4">{@html text.value}</p>
+				<article class="prose lg:prose-xl mx-auto">
+					{#each post.text as text, i }
+					<!-- If first text item, then add red text. Else add blue text -->
+					{#if i === 0}
+					<p class="text-md font-sans">{@html text.value}</p>
+					{:else}
+					<p class="text-md mt-4 font-sans">{@html text.value}</p>
+					{/if}
 					{/each}
+
 					</article>
 			</div>
 			<div class="col-span-2 lg:min-h-[20rem]">

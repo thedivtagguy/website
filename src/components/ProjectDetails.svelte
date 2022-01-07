@@ -10,7 +10,7 @@ import Icon from "./helpers/Icon.svelte";
     export let description;
 </script>
 
-<main class="flex flex-col gap-2 border-2 p-4 border-dashed border-zinc-300 justify-items-start items-start">
+<main class="flex flex-col gap-2  justify-items-start items-start">
     <div class="w-full">
         <img
         width="640"
@@ -23,16 +23,14 @@ import Icon from "./helpers/Icon.svelte";
         sizes="(max-width: 320px) 640px, (max-width: 480px) 960px, 1280px"
       />
     </div>
-    <h3 class="text-4xl font-bold text-left">{heading}</h3>
-    <p class="text-left">{description}</p>
-    
-        <div class="flex flex-wrap  gap-2">
+    <button type="button" class="py-2 my-2 px-4 flex justify-center items-center gap-2 font-mono font-extrabold bg-zinc-800 hover:shadow-2xl text-white focus:ring-zinc-500  w-full text-center text-base   focus:ring-2 focus:ring-offset-2 out outline-2  outline rounded-sm ">
+        <Icon name="link"/> 
+        CHECK IT OUT
+    </button>
+        <div class="flex flex-wrap my-2 gap-2">
             {#each keyword as keyword}
-            <p class="text-center border-zinc-200 text-sm font-mono px-2 rounded-sm border-2 capitalize">{keyword}</p>
+            <p class="text-center hover:bg-gray-100 cursor-pointer border-zinc-200 text-sm font-mono px-2 rounded-sm border-2 capitalize">{keyword}</p>
             {/each}
         </div>
-        <button type="button" class="py-2 my-4 px-4 flex justify-center items-center gap-2   hover:bg-zinc-800 hover:text-white focus:ring-zinc-500  text-black w-full text-center text-base font-semibold  focus:ring-2 focus:ring-offset-2 out outline-2  outline rounded-sm ">
-            <Icon name="link"/> 
-            Check it Out
-        </button>
+       
 </main>

@@ -1,11 +1,12 @@
 <script>
   import { onMount } from "svelte";
-  import wordmark from "$svg/wordmark.svg";
   import StoryCard from "./StoryCard.svelte";
   let stories = [];
   export let show;
   export let keywords;
   export let current;
+  import wordmark from "$svg/wordmark.svg";
+
   const v = Date.now();
   const url = `/data/stories.json`;
 
@@ -21,7 +22,6 @@
   export const prerender = true;
   import storiesData from "$data/stories.csv";
   import parseStories from "$utils/cleanStories";
-import Arrow from "svelte-carousel/src/components/Arrow/Arrow.svelte";
     if(keywords){
     const keys = [
       "url",
@@ -58,7 +58,13 @@ import Arrow from "svelte-carousel/src/components/Arrow/Arrow.svelte";
 
 <footer class="max-w-5xl py-12">
 {#if keywords}
-<img src="/common/assets/resources/footer.png" alt="footer image" class="mx-auto py-6" width="500"/>
+
+<div class="grid  max-w-md justify- justify-items-center items-center mx-auto grid-cols-5">
+  <div class="col-span-1"><div class="w-[70px]">
+    <a sveltekit:prefetch  href="/" aria-label="The thedivtagguy">{@html wordmark}</a>
+  </div></div>
+  <div class="col-span-4"><img src="/common/assets/resources/footer.png" alt="footer image" class="mx-auto py-6" width="500"/></div>
+</div>
 <section class="flex mx-auto font-sans font-bold gap-6 text-xs justify-center items-center ">
   {#each stories as story}
     <div>

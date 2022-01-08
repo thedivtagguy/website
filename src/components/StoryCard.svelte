@@ -28,7 +28,7 @@ import Button from "./helpers/Button.svelte";
 	--default-dark: ${DEFAULT_COLOR["dark"]};
 	--default-darker: ${DEFAULT_COLOR["darker"]};
   `;
-
+console.log
 </script>
 
 <main class="py-2">
@@ -53,12 +53,12 @@ import Button from "./helpers/Button.svelte";
             sizes="(max-width: 320px) 640px, (max-width: 480px) 960px, 1280px"
           />
         </div>
-        <div class="flex flex-col items-start justify-start w-full h-full pl-0 pt-4 lg:pl-4 xl:pl-4 md:pl-4  md:mb-0 md:w-1/2">
+        <div class="flex flex-col items-start justify-start w-full h-full pl-0 pt-4 lg:pt-0 md:pt-0 sm:pt-0  lg:pl-4 xl:pl-4 md:pl-4  md:mb-0 md:w-1/2">
           <div
             class="flex flex-col items-start justify-start h-full space-y-3 transform   md:space-y-5"
           >
-            <div class="bg-color-story" style= {style}>
-              <h3 class="font-sans font-semibold uppercase text-lg text-white px-2">
+            <div class="bg-color-story" >
+              <h3 class="font-sans font-semibold uppercase text-lg bg-zinc-800 text-white px-2">
                 Hot off the press
               </h3>
             </div>
@@ -69,15 +69,13 @@ import Button from "./helpers/Button.svelte";
             <div class="w-full">
               <Button text="Read Story" 
                       link="/projects/{link}"  
-                      --bg-color={lookupColor("darker")}
-
                       /></div>
           </div>
         </div>
       </div>
     </section>
   {:else}
-    <section class="basis-1/2 max-w-[20rem] group">
+    <section class="basis-1/2  group">
       <a href="/projects/{link}" sveltekit:prefetch>
         <div class="flex flex-col justify-items-start gap-2 items-start">
           <img

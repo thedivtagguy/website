@@ -7,7 +7,7 @@
     <button class="cta-pushable">
     <span class="cta-shadow"></span>
     <span class="cta-edge"></span>
-    <div class="cta-front w-full text flex justify-items-center justify-around mx-auto items-center gap-4">
+    <div class="cta-front w-full text flex justify-items-center py-4 justify-around mx-auto items-center gap-4">
         <div class="font-mono font-bold">{text}</div>
     </div>
     </button>
@@ -79,7 +79,7 @@
     @media (min-width: 768px) {
       .cta-front {
         font-size: 1.25rem;
-        padding: 10px 42px;
+        padding: 12px 42px;
       }
     }
     

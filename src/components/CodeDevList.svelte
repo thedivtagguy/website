@@ -50,17 +50,19 @@
           <p class="my-6 text-lg lg:w-2/3 text-white">
             Programming and development insanities that escaped the lab.
           </p>
-          <a href="/projects/#web" class="flex items-center justify-center px-8 py-2 text-base font-medium leading-6 text-white transition duration-150 ease-in-out bg-divorange border border-transparent rounded-md shadow hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 hover:text-white focus:shadow-outline-indigo  md:text-lg md:px-10" >
+          <a href="/projects/#web" class="flex items-center w-2/3 justify-center px-8 py-2 text-base font-medium leading-6 text-white transition duration-150 ease-in-out bg-divorange border border-transparent rounded-md shadow hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 hover:text-white focus:shadow-outline-indigo  md:text-lg md:px-10" >
               View All
           </a>
         </div>
         <!-- Second column -->
         <div class="flex flex-col justify-start items-start gap-4">
             {#each refined as story}
-            <div class="flex-col w-full flex justify-items-start group bg-white hover:cursor-pointer hover:bg-divorange rounded-lg shadow p-2 items-start">
-                <h3 class="text-sm text-gray-600 group-hover:text-white font-sans uppercase font-bold sm:text-lg lg:text-lg xl:text-lg">{story.heading}</h3>
-                <h4 class="text-sm font-medium leading-5 break-normal group-hover:text-white text-gray-800 ">{story.description}</h4>
-            </div>
+            <a sveltekit:prefetch class="w-full" href="/projects/{story.link}">
+                <div class="flex-col w-full flex justify-items-start group bg-white hover:cursor-pointer hover:bg-divorange rounded-lg shadow p-4 items-start">
+                    <h3 class="text-sm text-gray-600 group-hover:text-white break-normal font-sans uppercase font-bold sm:text-lg lg:text-lg xl:text-lg">{story.heading}</h3>
+                    <h4 class="text-sm font-medium leading-5 break-normal group-hover:text-white text-gray-800 ">{story.description}</h4>
+                </div>
+            </a>
             {/each}
         </div>
   </section>

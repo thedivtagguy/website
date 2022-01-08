@@ -70,7 +70,7 @@ console.log(items)
       </aside>
     </div>
   <section class="flex  pb-4 justify-between items-center mx-auto">
-    <h1 class="text-6xl font-bold font-serif text-center py-4">Projects</h1>
+    <h1 class="text-5xl lg:text-6xl font-bold font-serif text-center py-4">Projects</h1>
   </section>
   <h2 class="text-4xl font-bold font-serif text-left border-b-2 border-black pb-2 mb-2">Data Storytelling</h2>
   <section id="data" class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3  gap-4 py-4">

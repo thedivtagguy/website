@@ -9,9 +9,9 @@ import CodeDevList from "./CodeDevList.svelte";
   <Header />
 
   <div class="py-4">
-    <h2 class="font-sans text-lg">
+    <h2 class="font-sans lg:text-lg md:text-lg sm:text-lg">
       Visual designer, developer and data enthusiast who does all three things with the varying
-      levels of incompetence. <br /> Maybe you'll like some of it, idk.
+      levels of incompetence. <br class="hidden lg:block md:block sm:block" /> Maybe you'll like some of it, idk.
     </h2>
   </div>
 

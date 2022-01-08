@@ -1,7 +1,7 @@
 <script>
   import colors from "$data/thumbnail-colors.json";
 import Button from "./helpers/Button.svelte";
-console.log(colors);
+
   export let slug;
   export let heading;
   export let description;
@@ -66,7 +66,12 @@ console.log(colors);
               {heading}
             </h4>
             <p class="pt-2 text-xl font-medium">{description}</p>
-            <div class="w-full"><Button text="Read Story" link="/projects/{link}"  /></div>
+            <div class="w-full">
+              <Button text="Read Story" 
+                      link="/projects/{link}"  
+                      --bg-color={lookupColor("darker")}
+
+                      /></div>
           </div>
         </div>
       </div>

@@ -1,15 +1,10 @@
-<script context="module">
-import Icon from "./helpers/Icon.svelte";
-</script>
 <script>
 import Button from "./helpers/Button.svelte";
-
     export let keyword;
-    export let heading;
-    export let link;
-    export let category;
     export let slug;
-    export let description;
+    export let styles;
+    console.log(styles);
+
 </script>
 
 <main class="flex flex-col gap-2  justify-items-start items-start">
@@ -26,7 +21,8 @@ import Button from "./helpers/Button.svelte";
       />
     </div>
    
- <div class="w-full py-2"><Button text="CHECK IT OUT" link="/projects/{slug}"/></div>
+ <div class="w-full py-2"><Button text="CHECK IT OUT" link="/projects/{slug}"
+    /></div>
 
         <div class="flex flex-wrap my-2 gap-2">
             {#each keyword as keyword}

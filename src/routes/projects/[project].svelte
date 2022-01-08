@@ -8,6 +8,8 @@
 	import ProjectDetails from "$components/ProjectDetails.svelte";
 	import Error404 from '$components/Error404.svelte';
 
+
+
 	const keys = [
       "url",
       "date",
@@ -61,12 +63,35 @@
 		}
 	}
 
-
-
 </script>
 <script>
     export let post;
-    console.log(post);
+	import colors from "$data/thumbnail-colors.json";
+ // Choose first item from category
+ const DEFAULT_COLOR = {
+    light: "hsl(0, 0%, 80%)",
+    dark: "hsl(0, 0%, 44%)",
+    darker: "red"
+  };
+
+
+	const lookupColor = (version) => {
+    const match = colors.find((d) => d.slug === post.slug);
+    return match ? match[version] : DEFAULT_COLOR;
+  };
+	
+	const style = `
+  --name: ${post.slug}
+	--light: ${lookupColor("light", post)};
+	--dark: ${lookupColor("dark")};
+	--darker: ${lookupColor("darker")};
+	--default-light: ${DEFAULT_COLOR["light"]};
+	--default-dark: ${DEFAULT_COLOR["dark"]};
+	--default-darker: ${DEFAULT_COLOR["darker"]};
+  `;
+
+    console.log(post.slug);
+	console.log(style);
 </script>
 
 
@@ -106,7 +131,8 @@
 			</div>
 			<div class="col-span-2 lg:min-h-[20rem]">
 				<aside class="sticky top-8">
-					<ProjectDetails {...post} />
+					<ProjectDetails {...post} 
+					/>
 				</aside>
 			</div>
 		</section>

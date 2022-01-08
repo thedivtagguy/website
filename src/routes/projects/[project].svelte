@@ -1,16 +1,14 @@
 <script context="module">
 	export const prerender = true;
 	import "/src/styles/tailwind.css";
-    import Menu from "$components/Menu.svelte";
 	import Meta from "$components/Meta.svelte";
 	import storiesData from "$data/stories.csv";
-	import Icon from "$components/helpers/Icon.svelte";
    	import parseStories from "$utils/cleanStories"; 
-	import ButtonSet from "$components/helpers/ButtonSet.svelte";
 	import Footer from "$components/Footer.svelte";
 	import ProjectDetails from "$components/ProjectDetails.svelte";
+	import Error404 from '$components/Error404.svelte';
 
-	   const keys = [
+	const keys = [
       "url",
       "date",
       "heading",
@@ -69,14 +67,6 @@
 <script>
     export let post;
     console.log(post);
-import Project from '$components/ProjectDetails.svelte';
-	import { onMount } from 'svelte';
-  
-  let Carousel;
-  onMount(async () => {
-	const module = await import('svelte-carousel');
-	Carousel = module.default;
-  });
 </script>
 
 
@@ -106,16 +96,16 @@ import Project from '$components/ProjectDetails.svelte';
 					{#each post.text as text, i }
 					<!-- If first text item, then add red text. Else add blue text -->
 					{#if i === 0}
-					<p class="text-md font-sans">{@html text.value}</p>
+					<p class="font-sans">{@html text.value}</p>
 					{:else}
-					<p class="text-md mt-4 font-sans">{@html text.value}</p>
+					<p class="mt-4 font-sans">{@html text.value}</p>
 					{/if}
 					{/each}
 
 					</article>
 			</div>
 			<div class="col-span-2 lg:min-h-[20rem]">
-				<aside class="sticky top-4">
+				<aside class="sticky top-8">
 					<ProjectDetails {...post} />
 				</aside>
 			</div>
@@ -123,43 +113,12 @@ import Project from '$components/ProjectDetails.svelte';
 	
 	</div>
 	<div class="mx-auto">
-		<svelte:component this={Carousel} let:showPrevPage
-		let:showNextPage>
-		<div slot="prev" on:click={showPrevPage} class="custom-arrow flex justify-items-center items-center custom-arrow-prev">
-			<div class="text-xl sm:text-5xl lg:text-5xl mx-4  border-black border-2 hover:bg-zinc-800 hover:text-white hover:cursor-pointer">
-				<Icon name="chevron-left"/>
-			</div>
-		  </div>
-		  {#each post.images as image}
-		  <div class="h-[400px] w-full">
-			  <img src={image.value.src} alt={image.value.alt} class="object-cover mx-auto object-center" />
-		  </div>
-		  {/each}
-		  <div slot="next" on:click={showNextPage} class="custom-arrow flex justify-items-center items-center custom-arrow-next">
-			<div class="text-xl sm:text-5xl lg:text-5xl mx-4  border-black border-2 hover:bg-zinc-800 hover:text-white hover:cursor-pointer">
-				<Icon name="chevron-right"/>
-			</div>
-		  </div>
-		</svelte:component>
+	
 	</div>
 	
 </main>
-
-
-
-
 {:else}
-<main>
-	<div class="container mx-auto max-w-5xl mt-6 px-6">
-		<div class="pb-5 mb-5 border-b border-gray-100">
-			<h1 class="font-bold text-5xl">404 Page Not Found</h1>
-			<h2>Kuch Nahi Hai Idhar</h2>
-		</div>
-		<article class="prose lg:prose-xl my-4 mx-auto">
-			<p>Go back</p>
-		</article>
-	</div>
-</main>
+<Error404/>
 {/if}
 
 <footer class="max-w-5xl mx-auto mt-6 px-6">

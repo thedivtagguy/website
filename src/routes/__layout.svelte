@@ -6,7 +6,7 @@
 
 </script>
 
-<main class="max-w-5xl mx-auto px-6" id="content">
+<main class="max-w-5xl mx-auto " id="content">
   <Menu />
   <slot />
 </main>

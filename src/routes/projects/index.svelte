@@ -40,5 +40,6 @@
 	{:else}
 	<ProjectsPage />
 	{/if}
+	<Footer />
 </main>
-<Footer />
+

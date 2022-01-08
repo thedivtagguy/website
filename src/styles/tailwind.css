@@ -3,6 +3,10 @@
 
 @layer base {
   /* custom CSS goes here */
+  p {
+    font-size: 18px;
+    font-family: 'Source Sans Pro', 'sans-serif';
+  }
 }
 
 /* Injects Tailwind's component classes & any component classes registered by plugins. */

@@ -1,5 +1,7 @@
 <script>
   import colors from "$data/thumbnail-colors.json";
+import Button from "./helpers/Button.svelte";
+console.log(colors);
   export let slug;
   export let heading;
   export let description;
@@ -55,7 +57,7 @@
           <div
             class="flex flex-col items-start justify-start h-full space-y-3 transform   md:space-y-5"
           >
-            <div class="bg-slate-800">
+            <div class="bg-color-story" style= {style}>
               <h3 class="font-sans font-semibold uppercase text-lg text-white px-2">
                 Hot off the press
               </h3>
@@ -64,18 +66,13 @@
               {heading}
             </h4>
             <p class="pt-2 text-xl font-medium">{description}</p>
-            <a class="w-full" href="/projects/{link}">
-              <button
-                class="text-center font-bold uppercase bg-zinc-300 rounded-sm w-full py-4"
-                >Read Story</button
-              >
-            </a>
+            <div class="w-full"><Button text="Read Story" link="/projects/{link}"  /></div>
           </div>
         </div>
       </div>
     </section>
   {:else}
-    <section class="basis-1/2 max-w-[20rem]">
+    <section class="basis-1/2 max-w-[20rem] group">
       <a href="/projects/{link}" sveltekit:prefetch>
         <div class="flex flex-col justify-items-start gap-2 items-start">
           <img
@@ -89,8 +86,8 @@
             sizes="(max-width: 320px) 640px, (max-width: 480px) 960px, 1280px"
             loading="lazy"
           />
-          <h4 class="font-bold font-sans text-2xl">{heading}</h4>
-          <p class="font-sans">{description}</p>
+          <h4 class="font-bold font-sans text-2xl group-hover:text-divpurple">{heading}</h4>
+          <p class="font-sans group-hover:text-gray-700">{description}</p>
         </div>
       </a>
     </section>
@@ -109,5 +106,9 @@
     left: -6rem;
     top: 2rem;
     max-width: 200px;
+  }
+
+  .bg-color-story{
+    background-color: var(--darker);
   }
 </style>

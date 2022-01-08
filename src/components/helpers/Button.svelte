@@ -79,7 +79,7 @@
     @media (min-width: 768px) {
       .cta-front {
         font-size: 1.25rem;
-        padding: 8px 42px;
+        padding: 10px 42px;
       }
     }
     

@@ -1,7 +1,7 @@
 <script>
-  import Projects from "./Projects.svelte";
-  import CodingList from "./CodingList.svelte";
-  import Header from "./Header.svelte";
+import Projects from "./Projects.svelte";
+import Header from "./Header.svelte";
+import CodeDevList from "./CodeDevList.svelte";
 </script>
 
 <!-- Iterate and show all story headings -->
@@ -17,8 +17,9 @@
 
   <div class="flex flex-col justify-items-start items-start">
     <Projects />
-    <section class="py-4">
-      <CodingList />
+    <section class="py-4 w-full">
+      <!-- <CodingList /> -->
+      <CodeDevList />
     </section>
   </div>
 </main>

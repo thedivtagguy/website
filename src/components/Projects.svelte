@@ -42,9 +42,9 @@
 
 <section class="">
   <StoryCard {...mostRecent} featured />
-  <div class="flex flex-col lg:flex-row xl:flex-row md:flex-row gap-4">
+  <div class="flex flex-col lg:flex-row py-4 xl:flex-row md:flex-row gap-4">
     {#each refined as story}
-      <div class="py-4">
+      <div>
         <StoryCard {...story} />
       </div>
     {/each}

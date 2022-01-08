@@ -7,8 +7,8 @@
   
   </script>
   
-  <main class="mx-auto px-6" id="content">
-    <div class="max-w-5xl mx-auto"><Menu/></div>
+  <main class="px-6 max-w-5xl mx-auto" id="content">
+   <Menu/>
     <slot />
   </main>
   

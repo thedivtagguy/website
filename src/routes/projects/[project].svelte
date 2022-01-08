@@ -100,11 +100,11 @@
 {#if post.title != "404"}
 <main class="mx-auto">
 	<Meta />
-	<div class="max-w-5xl mx-auto mt-6 px-6">
+	<div class="max-w-5xl mx-auto mt-6 px-2">
 		<div class="flex justify-between items-start justify-self-start">
 			<div class="pb-5 flex flex-col justify-items-center items-start gap-2 mb-5 border-b border-gray-100">
 				<span class="font-bold font-sans uppercase">{post.category[0]} 🢒 {post.date}</span>
-				<h1 class="font-bold text-6xl font-serif">{post.heading}</h1>
+				<h1 class="font-bold text-5xl lg:text-6xl md:text-6xl xl:text-6xl sm:text-6xl font-serif">{post.heading}</h1>
 				<h2 class="font-semibold text-xl font-sans">{post.summary}</h2>
 			</div>
 			<div class="sm:flex lg:flex xl:flex  hidden flex-col justify-items-center items-start">
@@ -115,21 +115,27 @@
 			</div>
 		</div>
 
-		<section class="grid grid-cols-1 py-6 gap-8 lg:grid-cols-5 sm:grid-cols-5 md:grid-cols-5">
+		<section class="grid grid-cols-1  py-6 gap-8 lg:grid-cols-5 sm:grid-cols-5 md:grid-cols-5">
+			<div class="block lg:hidden md:hidden xl:hidden col-span-2 lg:min-h-[20rem]">
+				<aside class="sticky top-8">
+					<ProjectDetails {...post} 
+					/>
+				</aside>
+			</div>
 			<div class="col-span-3">
 				<article class="prose lg:prose-xl mx-auto">
 					{#each post.text as text, i }
 					<!-- If first text item, then add red text. Else add blue text -->
 					{#if i === 0}
-					<p class="font-sans">{@html text.value}</p>
+					<p class="font-sans text-md">{@html text.value}</p>
 					{:else}
-					<p class="mt-4 font-sans">{@html text.value}</p>
+					<p class="mt-4 font-sans text-md">{@html text.value}</p>
 					{/if}
 					{/each}
 
 					</article>
 			</div>
-			<div class="col-span-2 lg:min-h-[20rem]">
+			<div class="hidden lg:block md:block xl:block col-span-2 lg:min-h-[20rem]">
 				<aside class="sticky top-8">
 					<ProjectDetails {...post} 
 					/>

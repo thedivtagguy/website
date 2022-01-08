@@ -8,15 +8,13 @@
 
   const links = [
     { name: "Home", link: "/" },
-    { name: "Projects", link: "/projects" },
-    { name: "Arey O", link: "/" },
-    { name: "Amanaaan", link: "/" }
+    { name: "Projects", link: "/projects" }
   ];
 </script>
 
 <div class="flex flex-wrap py-2">
   <div class="w-full ">
-    <nav class="relative flex flex-wrap items-center justify-between px-2 py-3 ">
+    <nav class="relative flex flex-wrap items-center justify-between py-3 ">
       <div class="container mx-auto flex flex-wrap items-center justify-between">
         <div
           class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start"

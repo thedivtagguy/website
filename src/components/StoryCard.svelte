@@ -34,7 +34,7 @@ import Button from "./helpers/Button.svelte";
 <main class="py-2">
   {#if featured}
     <section>
-      <div class="relative w-1/2 h-1/2">
+      <div class="relative hidden lg:block xl:block w-1/2 h-1/2">
         <aside>
           <img src="/common/assets/resources/hand.png" alt="hand" width="120" class="hand" />
         </aside>
@@ -53,7 +53,7 @@ import Button from "./helpers/Button.svelte";
             sizes="(max-width: 320px) 640px, (max-width: 480px) 960px, 1280px"
           />
         </div>
-        <div class="flex flex-col items-start justify-start w-full h-full  pl-4 md:mb-0 md:w-1/2">
+        <div class="flex flex-col items-start justify-start w-full h-full pl-0 pt-4 lg:pl-4 xl:pl-4 md:pl-4  md:mb-0 md:w-1/2">
           <div
             class="flex flex-col items-start justify-start h-full space-y-3 transform   md:space-y-5"
           >

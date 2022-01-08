@@ -65,7 +65,7 @@
   </div></div>
   <div class="col-span-4"><img src="/common/assets/resources/footer.png" alt="footer image" class="mx-auto py-6" width="500"/></div>
 </div>
-<section class="flex mx-auto font-sans font-bold gap-6 text-xs justify-center items-center ">
+<section class="flex-col lg:flex-row sm:flex-row md:flex-row mx-auto flex font-sans font-bold gap-6 text-xs justify-center items-center ">
   {#each stories as story}
     <div>
       <StoryCard {...story}/>

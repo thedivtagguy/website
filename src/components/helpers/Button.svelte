@@ -67,7 +67,7 @@
       border-radius: 8px;
       font-size: 1.1rem;
       color: white;
-      background: var(--bg-color);
+      background: #393942;
       will-change: transform;
       transform: translateY(-4px);
       transition:

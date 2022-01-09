@@ -44,7 +44,7 @@
     // Filter where stories where at least one of the keywords is in the array
    // And heading is not the current story
     stories = stories.filter(story => {
-      return story.keyword.some(keyword => keywords.includes(keyword)) && story.heading !== current;
+      return story.keyword.some(keyword => keywords.includes(keyword));
     });
 
     // Show two random stories

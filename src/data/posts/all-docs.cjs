@@ -16,10 +16,6 @@ module.exports = [
     filepath: "src/data/posts/srishti-archive.json"
   },
 {
-    id: "1W7cxhQamgtKGL-mxFtVkT2um8r7JkZuu",
-    filepath: "src/data/posts/wizard.json"
-  },
-{
     id: "1r26cWrKq1ArSwj_38KM61D7DqCl0_x2Y",
     filepath: "src/data/posts/yelli-pages.json"
   }

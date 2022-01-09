@@ -58,8 +58,6 @@
 </script>
 <script>
     export let post;
-	export let images;
-	images = post.images;
 </script>
 {#if post.title != "404"}
 <main class="mx-auto">
@@ -105,11 +103,11 @@
 			</div>
 		</section>
 		<!-- Image Gallery -->
-		{#if images}
+		{#if post.images}
 		<section class="mx-auto">
 			<h4 class="text-left font-serif font-bold text-4xl border-b-2 py-2 border-gray-200 my-6">Snippets</h4>
 			
-				<Masonry items={images} let:item>
+				<Masonry items={post.images} let:item>
 					<img
 					  {item}
 					  width="600"

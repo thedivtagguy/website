@@ -106,9 +106,10 @@
 			</div>
 		</section>
 		<!-- Image Gallery -->
+		{#if images}
 		<section class="mx-auto">
 			<h4 class="text-left font-serif font-bold text-4xl border-b-2 py-2 border-gray-200 my-6">Snippets</h4>
-			{#if images}
+			
 				<Masonry items={images} let:item>
 					<img
 					  {item}
@@ -123,9 +124,9 @@
 					  loading="lazy"
 					/>
 				  </Masonry>
-			{/if}
+			
 		</section>
-	
+		{/if}
 	</div>
 </main>
 {:else}

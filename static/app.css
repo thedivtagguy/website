@@ -316,6 +316,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 p {
     font-size: 18px;
     font-family: 'Source Sans Pro', 'sans-serif';
+    line-height: 1.85rem;
   }
 .link {
   --tw-text-opacity: 1;

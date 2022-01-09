@@ -48,7 +48,7 @@
     {#each refined as story}
       <div class="w-full">
         <section class="basis-1/2  group">
-          <a href="/projects/{story.link}">
+          <a href="/projects/{story.link}" target="_blank">
             <div class="flex flex-col justify-items-start gap-2 items-start">
               <img
                 width="600"

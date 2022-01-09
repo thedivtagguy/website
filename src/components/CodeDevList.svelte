@@ -58,7 +58,7 @@
         <div class="flex flex-col justify-start items-start gap-4">
             {#each refined as story}
             <a sveltekit:prefetch class="w-full" href="/projects/{story.link}">
-                <div  class="flex-col w-full flex justify-items-start group listing hover:cursor-pointer hover:bg-divorange rounded-lg shadow p-4 items-start">
+                <div  class="flex-col w-full flex justify-items-start bg-white group listing hover:cursor-pointer hover:bg-divorange rounded-lg shadow p-4 items-start">
                     <h3 class="text-sm text-gray-600 group-hover:text-white break-normal font-sans uppercase font-bold sm:text-lg lg:text-lg xl:text-lg">{story.heading}</h3>
                     <h4 class="text-sm font-medium leading-5 break-normal group-hover:text-white text-gray-800 ">{story.description}</h4>
                 </div>

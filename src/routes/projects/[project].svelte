@@ -58,9 +58,8 @@
 </script>
 <script>
     export let post;
-	//Images are in post.images
-	const images = post.images;
-
+	export let images;
+	images = post.images;
 </script>
 {#if post.title != "404"}
 <main class="mx-auto">

@@ -69,6 +69,7 @@ console.log
             <div class="w-full">
               <Button text="Read Story" 
                       link="/projects/{link}"  
+                      target="_blank"
                       /></div>
           </div>
         </div>

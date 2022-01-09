@@ -1,9 +1,10 @@
 <script>
     export let text;
     export let link;
+    export let target;
 </script>
 
-<a href={link} >
+<a href={link} target={target}>
     <button class="cta-pushable">
     <span class="cta-shadow"></span>
     <span class="cta-edge"></span>

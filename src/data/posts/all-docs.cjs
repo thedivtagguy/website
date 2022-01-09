@@ -1,9 +1,5 @@
 module.exports = [
 {
-    id: "1cLIA5vHxykw8UUnLE9N9b-mFnYteOipm",
-    filepath: "src/data/posts/abstracts.json"
-  },
-{
     id: "1FM953PSvcdZ5ROYFjUQf9zowcC-WjfBl",
     filepath: "src/data/posts/desidata.json"
   },

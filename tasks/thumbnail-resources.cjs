@@ -3,13 +3,13 @@ const mkdirp = require("mkdirp");
 const resize = require("./resize-image.cjs");
 
 const CWD = process.cwd();
-const pathIn = `${CWD}/thumbnails/resources`;
+const pathIn = `${CWD}/images`;
 const pathOut = `${CWD}/static/common/assets/resources`;
-const sizes = [32, 480];
+const sizes = [32, 640, 960, 1280];
 
 function getNewImages() {
-  const filesIn = fs.readdirSync(pathIn).filter((d) => d.includes(".jpg"));
-  const filesOut = fs.readdirSync(`${pathOut}/${sizes[0]}`).filter((d) => d.includes(".jpg"));
+  const filesIn = fs.readdirSync(pathIn).filter((d) => d.includes(".jpg") || d.includes(".png"));
+  const filesOut = fs.readdirSync(`${pathOut}/${sizes[0]}`).filter((d) => d.includes(".jpg") || d.includes(".png"));
 
   return filesIn.filter((d) => !filesOut.includes(d));
 }

@@ -42,7 +42,7 @@
   });
 </script>
 <main>
-    <section id="code" class="flex py-4 px-4 lg:py-10 md:py-12 sm:py-10 flex-col lg:flex-row md:flex-row items-center justify-center  bg-divpurple border-4 border-indigo-900 border-dashed md:px-4 lg:px-4">
+    <section id="code"  class="flex py-4 px-4 lg:py-10 md:py-12 sm:py-10 flex-col lg:flex-row md:flex-row items-center justify-center  bg-divpurple border-4 border-indigo-900 border-dashed md:px-4 lg:px-4">
      <div class="flex flex-col items-start justify-center  mb-10 lg:mb-0 lg:w-1/2">
         <h2 id="head-text" class="text-5xl font-extrabold tracking-tight text-white font-mono  sm:text-5xl sm:leading-none md:text-6xl lg:text-5xl xl:text-6xl" >
             Code & Dev.
@@ -58,7 +58,7 @@
         <div class="flex flex-col justify-start items-start gap-4">
             {#each refined as story}
             <a sveltekit:prefetch class="w-full" href="/projects/{story.link}">
-                <div class="flex-col w-full flex justify-items-start group bg-white hover:cursor-pointer hover:bg-divorange rounded-lg shadow p-4 items-start">
+                <div  class="flex-col w-full flex justify-items-start group listing hover:cursor-pointer hover:bg-divorange rounded-lg shadow p-4 items-start">
                     <h3 class="text-sm text-gray-600 group-hover:text-white break-normal font-sans uppercase font-bold sm:text-lg lg:text-lg xl:text-lg">{story.heading}</h3>
                     <h4 class="text-sm font-medium leading-5 break-normal group-hover:text-white text-gray-800 ">{story.description}</h4>
                 </div>

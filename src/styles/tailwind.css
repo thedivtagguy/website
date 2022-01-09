@@ -7,6 +7,10 @@
     font-size: 18px;
     font-family: 'Source Sans Pro', 'sans-serif';
   }
+
+  .link {
+    @apply underline text-blue-800 hover:text-divpurple decoration-dashed;
+  }
 }
 
 /* Injects Tailwind's component classes & any component classes registered by plugins. */

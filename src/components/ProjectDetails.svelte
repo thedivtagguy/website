@@ -2,6 +2,7 @@
 import Button from "./helpers/Button.svelte";
     export let keyword;
     export let slug;
+    export let externalLink;
     export let styles;
     console.log(styles);
 
@@ -20,9 +21,11 @@ import Button from "./helpers/Button.svelte";
         sizes="(max-width: 320px) 640px, (max-width: 480px) 960px, 1280px"
       />
     </div>
-   
- <div class="w-full py-2"><Button text="CHECK IT OUT" link="/projects/{slug}"
-    /></div>
+ {#if externalLink}  
+ <div class="w-full py-2">
+     <Button text="CHECK IT OUT" link={externalLink}/>
+</div>
+{/if}
 
         <div class="flex flex-wrap my-2 gap-2">
             {#each keyword as keyword}

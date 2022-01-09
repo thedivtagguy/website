@@ -7,7 +7,6 @@
 	import Footer from "$components/Footer.svelte";
 	import ProjectDetails from "$components/ProjectDetails.svelte";
 	import Error404 from '$components/Error404.svelte';
-	import Prism from 'svelte-prism';
 
 	const keys = [
       "url",
@@ -116,21 +115,6 @@
 				</aside>
 			</div>
 		</section>
-
-		<Prism language="r">
-			{`
-				# Create a function to print squares of numbers in sequence.
-				new.function <- function(a) {
-				   for(i in 1:a) {
-					  b <- i^2
-					  print(b)
-				   }
-				}
-				
-				# Call the function new.function supplying 6 as an argument.
-				new.function(6)
-				`}
-		</Prism>
 
 		<section class="mx-auto">
 		<!-- Show images -->

@@ -54,14 +54,19 @@ const parseStories = (story, key) => {
     }
     output.description = d.desc;
     output.keyword = makeArray(d.keyword);
-    output.published = d.published;
     output.category = makeArray(d.cat);
+    output.published = d.published;
     output.thumbnail = makeSlug(d.url);
     output.featured = d.featured;
     output.link = makeLink(d.url);
     return output;
   });
-
+  // Only keep stories that are published
+  storiesData.forEach((d) => {
+    if (d.published === "TRUE") {
+      result.push(d);
+    }
+  });
   return storiesData;
 };
 

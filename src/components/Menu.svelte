@@ -8,7 +8,8 @@
 
   const links = [
     { name: "Home", link: "/" },
-    { name: "Projects", link: "/projects" }
+    { name: "Projects", link: "/projects" },
+    { name: "Resume", link: "https://drive.google.com/file/d/17aSMtGFeFdNyNYtpYY0L7XFO1_MFBqnL/view?usp=sharing", external: true}
   ];
 </script>
 
@@ -47,6 +48,7 @@
                   sveltekit:prefetch 
                   href={link.link}
                   class="px-3 py-2 font-sans flex items-center text-sm uppercase font-bold leading-snug text-black hover:opacity-75"
+                  target= {link.external ? '_blank' : '_self'}
                 >
                   {link.name}
                 </a>

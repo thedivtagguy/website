@@ -1,7 +1,7 @@
 heading,url,date,desc,cat,author,keyword,last_update,published,featured
 Srishti '23: Unwrapped,2020/whatsapp,15/12/2020,"Text Data of 20,000+ messages in the Srishti '23 Whatsapp group, visualized.","data, story",aman,"r, whatsapp",05/09/2021,TRUE,FALSE
 A Critical News Consumer's Starter Manifesto,2020/manifesto,18/10/2020,"4.5 Lakh tweets by three major Indian news channels, analysed.","data, story","aman, malay","r, python,news,twitter",21/09/2021,TRUE,FALSE
-This Studio Looks at Bellybuttons...,2021/abstracts,16/08/2021,Generating design school courses for anything with GPT-3,story,aman,"python, ai, nlp",16/08/2021,TRUE,FALSE
+This Studio Looks at Bellybuttons...,2021/bellybutton,16/08/2021,Generating design school courses for anything with GPT-3,story,aman,"python, ai, nlp",16/08/2021,TRUE,FALSE
 The People in the Food Apps,2021/food-apps,9/10/2021,Examining food delivery platforms & how much they can earn you,"data, story",aman,"r, research, modelling",9/10/2021,TRUE,TRUE
 Desidata Package for R,projects/desidata,10/12/2021,Easily accessible datasets on India within RStudio,"data, development, r",aman,"r, data, development",12/12/2021,TRUE,TRUE
 "You're a Wizard, Harry",projects/wizard,9/11/2020,3000 Emails from Harry Potter Fans,"random, project",aman,"website, writing",,FALSE,FALSE

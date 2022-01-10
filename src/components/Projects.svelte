@@ -6,7 +6,6 @@
   let stories = [];
   let refined = [];
   let mostRecent = [];
-
     const keys = [
       "url",
       "date",
@@ -43,7 +42,7 @@
 </script>
 
 <section class="">
-  <StoryCard {...mostRecent} featured />
+  <StoryCard {...mostRecent} featured {external} />
   <div class="flex flex-col lg:flex-row py-4 xl:flex-row w-full md:flex-row gap-4">
     {#each refined as story}
       <div class="w-full">

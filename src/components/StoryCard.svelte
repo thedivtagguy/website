@@ -68,8 +68,8 @@ console.log
             <p class="pt-2 text-xl font-medium">{description}</p>
             <div class="w-full">
               <Button text="Read Story" 
-                      link="/projects/{link}"  
-                      target="_blank"
+                      link="/projects/{link}" 
+                      rel={external ? "external" : ""} 
                       /></div>
           </div>
         </div>
@@ -77,8 +77,7 @@ console.log
     </section>
   {:else}
     <section class="basis-1/2  group">
-      <a href="/projects/{link}"  rel={external ? "external" : ''} 
-      >
+      <a href="/projects/{link}"  rel={external ? "external" : ''}>
         <div class="flex flex-col justify-items-start gap-2 items-start">
           <img
             width="600"

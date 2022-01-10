@@ -1,3 +1,7 @@
+<script context="module">
+      export const prerender = true;
+	export const router = true;
+</script>
 <script>
     import copy from "$data/contact.json"
 	import Meta from "$components/Meta.svelte";

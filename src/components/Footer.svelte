@@ -12,6 +12,7 @@
     },
     { name: "github", url: "https://github.com/thedivtagguy/" }
   ];
+  export const prerender = true;
   import storiesData from "$data/stories.csv";
   import parseStories from "$utils/cleanStories";
     if(keywords){

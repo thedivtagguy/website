@@ -3,11 +3,9 @@
   import parseStories from "$utils/cleanStories";
   import StoryCard from "./StoryCard.svelte";
 
-  import uniqueTags from "$utils/uniqueTags";
 
   let stories = [];
   let refined = [];
-  let items = [];
 
   const keys = [
     "url",
@@ -35,16 +33,6 @@
   refined = refined.sort((a, b) => {
     return new Date(b.date) - new Date(a.date);
   });
-  // Split categories into individual categories at comma
-
-  const categoryList = uniqueTags(refined, "category");
-    // Create a list of options for the select component    
-    items = categoryList.map(category => {
-        return {
-            value: category.toLowerCase(),
-            label: category
-        };
-    });
 
 
 

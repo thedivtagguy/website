@@ -67,9 +67,9 @@ console.log
             </h4>
             <p class="pt-2 text-xl font-medium">{description}</p>
             <div class="w-full">
-              <Button text="Read Story" 
+              <Button text="Read Essay" 
                       link="/projects/{link}" 
-                      rel={external ? "external" : ""} 
+                      target="_blank"
                       /></div>
           </div>
         </div>

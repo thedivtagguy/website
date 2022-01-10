@@ -61,7 +61,10 @@
 </script>
 {#if post.title != "404"}
 <main class="mx-auto">
-	<Meta />
+	<Meta title={post.heading}
+		  description={post.heading}
+		  url="https://thedivtagguy/projects/{post.link}" 
+		  slug="/common/assets/thumbnails/960/{post.slug}.jpg" />
 	<div class="max-w-5xl mx-auto mt-6 px-2">
 		<div class="flex justify-between items-start justify-self-start">
 			<div class="pb-5 flex flex-col justify-items-center items-start gap-2 mb-5 border-b border-gray-100">

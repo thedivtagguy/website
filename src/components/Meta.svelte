@@ -1,8 +1,9 @@
 <script>
   export let title = "Aman Bhargava";
   export let description =
-    "Aman Bhargava's platform for a regular mishmash of design and code gimmickry";
+    "Aman's platform for a regular mishmash of design and code gimmickry";
   export let url = "https://thedivtagguy.com";
+  export let slug;
 </script>
 
 <svelte:head>
@@ -21,7 +22,7 @@
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="en_US" />
 
-  <meta property="og:image" content="{url}/assets/social-facebook.jpg" />
+  <meta property="og:image" content={slug ? {slug} : "/common/assests/resources/favicon/social.jpg"} />
   <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="600" />
@@ -31,9 +32,13 @@
   <meta name="twitter:creator" content="@thedivtagguy" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
-  <meta name="twitter:image:src" content="{url}/assets/social-twitter.jpg" />
+  <meta name="twitter:image:src" content={slug ? {slug} : "/common/assests/resources/favicon/social.jpg"} />
 
   <meta name="robots" content="max-image-preview:large" />
 
   <link rel="canonical" href="{url}/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/common/assets/resources/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/common/assets/resources/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/common/assets/resources/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/common/assets/resources/favicon/site.webmanifest">
 </svelte:head>

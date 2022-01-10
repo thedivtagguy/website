@@ -398,6 +398,9 @@ p {
   white-space: nowrap;
   border-width: 0;
 }
+.absolute {
+  position: absolute;
+}
 .relative {
   position: relative;
 }
@@ -467,6 +470,10 @@ p {
   display: -webkit-box;
   display: flex;
 }
+.inline-flex {
+  display: -webkit-inline-box;
+  display: inline-flex;
+}
 .grid {
   display: grid;
 }
@@ -487,6 +494,9 @@ p {
 }
 .h-auto {
   height: auto;
+}
+.h-3 {
+  height: 0.75rem;
 }
 .w-2\/3 {
   width: 66.666667%;
@@ -521,6 +531,9 @@ p {
 .w-\[220px\] {
   width: 220px;
 }
+.w-3 {
+  width: 0.75rem;
+}
 .max-w-5xl {
   max-width: 64rem;
 }
@@ -533,6 +546,38 @@ p {
 .transform {
   -webkit-transform: var(--tw-transform);
           transform: var(--tw-transform);
+}
+@-webkit-keyframes ping {
+  75%, 100% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0;
+  }
+}
+@keyframes ping {
+  75%, 100% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0;
+  }
+}
+.animate-ping {
+  -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+          animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+@-webkit-keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+@keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+.animate-pulse {
+  -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 .cursor-pointer {
   cursor: pointer;
@@ -638,6 +683,9 @@ p {
 .rounded-sm {
   border-radius: 0.125rem;
 }
+.rounded-full {
+  border-radius: 9999px;
+}
 .border-4 {
   border-width: 4px;
 }
@@ -718,6 +766,14 @@ p {
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+.bg-sky-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(56 189 248 / var(--tw-bg-opacity));
+}
+.bg-sky-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(14 165 233 / var(--tw-bg-opacity));
 }
 .bg-gradient-to-l {
   background-image: -webkit-gradient(linear, right top, left top, from(var(--tw-gradient-stops)));
@@ -920,6 +976,9 @@ p {
 }
 .underline-offset-2 {
   text-underline-offset: 2px;
+}
+.opacity-75 {
+  opacity: 0.75;
 }
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);

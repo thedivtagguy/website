@@ -12,5 +12,9 @@ module.exports = [
   {
     id: "1j4G8hIduB5lHPZ9GMeRtV3au_fykZcCKU9W7RwUR9tY",
     filepath: "src/data/trial.json"
+  },
+  {
+    id: "17KrxvYu4eS4LkE5no8ZkFhLe2XnvOOxCsii2dOaD4o4",
+    filepath: "src/data/contact.json"
   }
 ];

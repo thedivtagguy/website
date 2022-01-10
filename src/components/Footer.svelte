@@ -4,7 +4,7 @@
   export let keywords;
   import wordmark from "$svg/wordmark.svg";
   const links = [
-    { name: "contact", url: "https://thedivtagguy.cool/contact" },
+    { name: "contact", url: "https://thedivtagguy.com/contact" },
     { name: "twitter", url: "https://twitter.com/thedivtagguy/" },
     {
       name: "instagram",

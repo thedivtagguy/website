@@ -457,6 +457,9 @@ p {
 .mt-4 {
   margin-top: 1rem;
 }
+.mt-2 {
+  margin-top: 0.5rem;
+}
 .block {
   display: block;
 }
@@ -482,6 +485,9 @@ p {
 .h-full {
   height: 100%;
 }
+.h-auto {
+  height: auto;
+}
 .w-2\/3 {
   width: 66.666667%;
 }
@@ -499,6 +505,21 @@ p {
 }
 .w-1\/2 {
   width: 50%;
+}
+.w-\[20\] {
+  width: 20;
+}
+.w-\[20px\] {
+  width: 20px;
+}
+.w-\[120px\] {
+  width: 120px;
+}
+.w-\[420px\] {
+  width: 420px;
+}
+.w-\[220px\] {
+  width: 220px;
 }
 .max-w-5xl {
   max-width: 64rem;
@@ -525,6 +546,11 @@ p {
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
+.flex-row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+}
 .flex-col {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -537,6 +563,10 @@ p {
   -webkit-box-align: start;
           align-items: flex-start;
 }
+.items-end {
+  -webkit-box-align: end;
+          align-items: flex-end;
+}
 .items-center {
   -webkit-box-align: center;
           align-items: center;
@@ -544,6 +574,10 @@ p {
 .justify-start {
   -webkit-box-pack: start;
           justify-content: flex-start;
+}
+.justify-end {
+  -webkit-box-pack: end;
+          justify-content: flex-end;
 }
 .justify-center {
   -webkit-box-pack: center;
@@ -558,6 +592,9 @@ p {
 }
 .justify-items-start {
   justify-items: start;
+}
+.justify-items-end {
+  justify-items: end;
 }
 .justify-items-center {
   justify-items: center;
@@ -673,6 +710,14 @@ p {
 .bg-zinc-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(39 39 42 / var(--tw-bg-opacity));
+}
+.bg-green-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 163 74 / var(--tw-bg-opacity));
+}
+.bg-gray-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 .bg-gradient-to-l {
   background-image: -webkit-gradient(linear, right top, left top, from(var(--tw-gradient-stops)));
@@ -980,6 +1025,9 @@ p {
     display: -webkit-box;
     display: flex;
   }
+  .sm\:hidden {
+    display: none;
+  }
   .sm\:w-2\/3 {
     width: 66.666667%;
   }
@@ -1027,6 +1075,10 @@ p {
   }
   .md\:block {
     display: block;
+  }
+  .md\:flex {
+    display: -webkit-box;
+    display: flex;
   }
   .md\:hidden {
     display: none;
@@ -1126,6 +1178,11 @@ p {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
             flex-direction: row;
+  }
+  .lg\:flex-col {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
   }
   .lg\:justify-start {
     -webkit-box-pack: start;

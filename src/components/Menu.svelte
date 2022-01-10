@@ -9,7 +9,8 @@
   const links = [
     { name: "Home", link: "/" },
     { name: "Projects", link: "/projects" },
-    { name: "Resume", link: "https://drive.google.com/file/d/17aSMtGFeFdNyNYtpYY0L7XFO1_MFBqnL/view?usp=sharing", external: true}
+    { name: "Contact", link: "/contact" },
+    { name: "Resume", link: "https://drive.google.com/file/d/17aSMtGFeFdNyNYtpYY0L7XFO1_MFBqnL/view?usp=sharing", external: true},
   ];
 </script>
 

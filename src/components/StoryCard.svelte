@@ -7,7 +7,7 @@ import Button from "./helpers/Button.svelte";
   export let description;
   export let featured;
   export let link;
-
+  export let external;
   // Choose first item from category
   const DEFAULT_COLOR = {
     light: "hsl(0, 0%, 80%)",
@@ -77,7 +77,8 @@ console.log
     </section>
   {:else}
     <section class="basis-1/2  group">
-      <a href="/projects/{link}" sveltekit:prefetch>
+      <a href="/projects/{link}"  rel={external ? "external" : ''} 
+      >
         <div class="flex flex-col justify-items-start gap-2 items-start">
           <img
             width="600"

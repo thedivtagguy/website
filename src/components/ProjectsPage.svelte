@@ -4,21 +4,10 @@
   import StoryCard from "./StoryCard.svelte";
 
   import uniqueTags from "$utils/uniqueTags";
-import ButtonSet from "./helpers/ButtonSet.svelte";
 
   let stories = [];
   let refined = [];
   let items = [];
-
-  let favouriteFood = undefined;
-
-  function handleSelect(event) {
-    favouriteFood = event.detail;
-  }
-
-  function handleClear() {
-    favouriteFood = undefined;
-  }
 
   const keys = [
     "url",
@@ -56,7 +45,6 @@ import ButtonSet from "./helpers/ButtonSet.svelte";
             label: category
         };
     });
-console.log(items)
 
 
 

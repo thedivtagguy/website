@@ -1,15 +1,8 @@
 <script>
-  import { onMount } from "svelte";
   import StoryCard from "./StoryCard.svelte";
   let stories = [];
-  export let show;
   export let keywords;
-  export let current;
   import wordmark from "$svg/wordmark.svg";
-
-  const v = Date.now();
-  const url = `/data/stories.json`;
-
   const links = [
     { name: "contact", url: "https://thedivtagguy.cool/contact" },
     { name: "twitter", url: "https://twitter.com/thedivtagguy/" },
@@ -19,7 +12,6 @@
     },
     { name: "github", url: "https://github.com/thedivtagguy/" }
   ];
-  export const prerender = true;
   import storiesData from "$data/stories.csv";
   import parseStories from "$utils/cleanStories";
     if(keywords){
@@ -40,9 +32,7 @@
     ];
 
     stories = parseStories(storiesData, keys);
-    // Keywords is an array of keywords
-    // Filter where stories where at least one of the keywords is in the array
-   // And heading is not the current story
+
     stories = stories.filter(story => {
       return story.keyword.some(keyword => keywords.includes(keyword));
     });
@@ -54,6 +44,8 @@
     console.log(stories)
 
     }
+
+    const external = true;
 </script>
 
 <footer class="max-w-5xl py-12">
@@ -68,7 +60,7 @@
 <section class="flex-col  lg:w-2/3 sm:w-2/3 xl:w-2/3 md:w-2/3 lg:flex-row sm:flex-row md:flex-row mx-auto flex font-sans font-bold  text-xs justify-start items-start ">
   {#each stories as story}
     <div class="p-2">
-      <StoryCard {...story}/>
+      <StoryCard {...story} {external} />
     </div>
   {/each}
 </section>

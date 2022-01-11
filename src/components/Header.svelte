@@ -17,7 +17,7 @@
           class="bg-clip-text text-transparent  bg-gradient-to-l from-purple-800 via-violet-900 to-purple-800"
           >code, data & art.</span
         >
-        <span class="hidden border-opacity-20 lg:inline xl:inline md:inline sm:inline text-[9px] py-1 font-sans font-semibold border-2 border-black px-2 right-0 bottom-0 absolute">
+        <span class="hidden lg:inline xl:inline md:inline sm:inline text-[9px] py-1 font-sans font-semibold px-2 right-0 bottom-0 absolute">
           A Scrapbook Journal of Programming & Artistic Gimmickry
         </span>
        

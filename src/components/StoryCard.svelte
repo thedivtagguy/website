@@ -48,29 +48,31 @@ console.log
             src="/common/assets/thumbnails/32/{slug}.jpg"
             alt="thumbnail for story"
             srcset="/common/assets/thumbnails/1280/{slug}.jpg 1280w,
-                      /common/assets/thumbnails/960/{slug}.jpg 960w,
-                      /common/assets/thumbnails/640/{slug}.jpg 640w"
+                    /common/assets/thumbnails/960/{slug}.jpg 960w,
+                    /common/assets/thumbnails/640/{slug}.jpg 640w"
             sizes="(max-width: 320px) 640px, (max-width: 480px) 960px, 1280px"
           />
         </div>
-        <div class="flex flex-col items-start justify-start w-full h-full pl-0 pt-4 lg:pt-0 md:pt-0 sm:pt-0  lg:pl-4 xl:pl-4 md:pl-4  md:mb-0 md:w-1/2">
+        <div class="flex flex-col items-start justify-between w-full h-full pl-0 pt-4 lg:pt-0 md:pt-0 sm:pt-0  lg:pl-4 xl:pl-4 md:pl-4  md:mb-0 md:w-1/2">
           <div
-            class="flex flex-col items-start justify-start h-full space-y-3 transform   md:space-y-5"
+            class="flex flex-col items-start justify-between h-full space-y-3 transform   md:space-y-5"
           >
             <div class="bg-color-story" >
               <h3 class="font-sans font-semibold uppercase text-lg bg-zinc-800 text-white px-2">
                 Hot off the press
               </h3>
             </div>
-            <h4 class="text-4xl font-sans font-bold leading-none lg:text-5xl xl:text-5xl">
-              {heading}
-            </h4>
+            <div>
+              <h4 class="text-4xl font-sans font-bold leading-none lg:text-5xl xl:text-5xl">
+                {heading}
+              </h4>
+            </div>
             <p class="pt-2 text-xl font-medium">{description}</p>
             <div class="w-full">
               <Button text="Read Essay" 
                       link="/projects/{link}" 
-                      target="_blank"
-                      /></div>
+                      target="_blank" />
+            </div>
           </div>
         </div>
       </div>

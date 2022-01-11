@@ -1013,6 +1013,9 @@ p {
   .sm\:col-span-3 {
     grid-column: span 3 / span 3;
   }
+  .sm\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
   .sm\:block {
     display: block;
   }
@@ -1067,6 +1070,9 @@ p {
 @media (min-width: 768px) {
   .md\:col-span-3 {
     grid-column: span 3 / span 3;
+  }
+  .md\:col-span-2 {
+    grid-column: span 2 / span 2;
   }
   .md\:mb-0 {
     margin-bottom: 0px;
@@ -1136,6 +1142,9 @@ p {
   }
   .lg\:col-span-3 {
     grid-column: span 3 / span 3;
+  }
+  .lg\:col-span-2 {
+    grid-column: span 2 / span 2;
   }
   .lg\:mb-0 {
     margin-bottom: 0px;
@@ -1222,6 +1231,9 @@ p {
 @media (min-width: 1280px) {
   .xl\:col-span-3 {
     grid-column: span 3 / span 3;
+  }
+  .xl\:col-span-2 {
+    grid-column: span 2 / span 2;
   }
   .xl\:block {
     display: block;

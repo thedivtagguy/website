@@ -9,7 +9,7 @@
 
 		<div class="flex justify-between items-start justify-self-start">
             
-			<div class="pb-5 hidden lg:flex md:flex xl:flex sm:flex flex-row justify-between w-full items-end gap-2 mb-5 border-b border-gray-100">
+			<div class="pb-5 flex lg:flex md:flex xl:flex sm:flex flex-row justify-between w-full items-end gap-2 mb-5 border-b border-gray-100">
               <div><img src="/common/assets/resources/you-talking-to-me-what.gif" alt="gif" class="w-full lg:w-4/5 md:w-4/5 sm:w-4/5 xl:w-4/5 h-auto"/></div>
                 <div class="hidden lg:block md:block xl:block sm:block"><img src="/common/assets/resources/write.png" alt="gif" class="w-[220px] h-auto"/></div>
 			</div>
@@ -30,7 +30,7 @@
 					{/each}
 				</article>
 			</div>
-			<div class="block lg:flex justify-items-end items-end lg:flex-col md:block xl:block mx-auto col-span-2 lg:min-h-[20rem]">
+			<div class="block lg:flex justify-items-end items-end lg:flex-col md:block xl:block mx-auto col-span-5 lg:col-span-2 xl:col-span-2 md:col-span-2 sm:col-span-2 lg:min-h-[20rem]">
                 <div class="block lg:hidden md:hidden xl:hidden sm:hidden"><img src="/common/assets/resources/write.png" alt="gif" class="w-[220px] h-auto"/></div>
                 <div class="my-4">
                     {#if copy.forHire === 'true'}

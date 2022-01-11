@@ -78,11 +78,16 @@
 </section>
 
 {/if}
-
-  <section class="about py-6">
+  <section class="about ">
+    <div class="w-[40px] mx-auto pb-4">
+      <a sveltekit:prefetch  href="/" aria-label="The thedivtagguy">{@html wordmark}</a>
+    </div>
     <p class="text-center text-sm font-sans font-semibold italic text-gray-600 whitespace-pre-wrap">
       Another Website Almost But Not Completely Different From Some Of The Other Websites Which
       Aren't Quite The Same As This One Is.
+    </p>
+    <p class="text-center mx-auto text-sm font-sans font-semibold py-4 text-divpurple whitespace-pre-wrap">
+      &lt;/&gt; with Svelte, Tailwind and &lt;3 in Bangalore, IN
     </p>
   </section>
 
@@ -91,8 +96,7 @@
       <div>
         <a
           href={link.url}
-          class="hover:underline underline-offset-2  decoration-dashed hover:text-purple-800"
-        >
+          class="hover:underline underline-offset-2  decoration-dashed hover:text-purple-800">
           <span>{link.name.toUpperCase()}</span>
         </a>
       </div>

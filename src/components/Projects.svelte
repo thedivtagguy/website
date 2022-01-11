@@ -41,8 +41,9 @@
     const external = true;
 </script>
 
-<section class="">
+<section class="relative">
   <StoryCard {...mostRecent} featured external />
+  <div class="mark"></div>
   <div class="flex flex-col lg:flex-row py-4 xl:flex-row w-full md:flex-row gap-4">
     {#each refined as story}
       <div class="w-full">
@@ -51,3 +52,36 @@
     {/each}
   </div>
 </section>
+
+<style>
+.mark {
+  /* Draw big blue circle */
+  background: #F85E00;
+  background-image: url("/common/assets/resources/light-wool.png");
+
+  width: 75%;
+  height: 100%;
+  border-radius: 50%;
+  z-index: -10;
+  opacity: 0.5;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Mobile Mark */
+@media (max-width: 768px) {
+  .mark {
+    width: 90%;
+    height: 20%;
+    border-radius: 50%;
+    z-index: -10;
+    opacity: 0.5;
+    position: absolute;
+    top: 270px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+</style>

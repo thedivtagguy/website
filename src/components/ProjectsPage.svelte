@@ -125,7 +125,8 @@ aside {
   /* Draw big blue circle */
   background: #623CEA;
   background-image: url("/common/assets/resources/light-wool.png");
-
+  max-width: 950px;
+  max-height: 800px;
   width: 60%;
   height: 100%;
   border-radius: 50%;

@@ -78,7 +78,18 @@
     <div class="w-[40px] mx-auto pb-4">
       <a sveltekit:prefetch  href="/" aria-label="The thedivtagguy">{@html wordmark}</a>
     </div>
-    <p class="text-center text-sm font-sans font-semibold italic text-gray-600 whitespace-pre-wrap">
+    <section class="flex mx-auto font-sans pb-4 font-bold gap-6 text-xs justify-center items-center ">
+      {#each links as link}
+        <div>
+          <a
+            href={link.url}
+            class="hover:underline underline-offset-2  decoration-dashed hover:text-purple-800">
+            <span>{link.name.toUpperCase()}</span>
+          </a>
+        </div>
+      {/each}
+    </section>
+    <p class="text-center text-xs font-sans font-semibold italic text-gray-600 whitespace-pre-wrap">
       Another Website Almost But Not Completely Different From Some Of The Other Websites Which
       Aren't Quite The Same As This One Is.
     </p>
@@ -87,22 +98,12 @@
     </p>
   </section>
 
-  <section class="flex mx-auto font-sans font-bold gap-6 text-xs justify-center items-center ">
-    {#each links as link}
-      <div>
-        <a
-          href={link.url}
-          class="hover:underline underline-offset-2  decoration-dashed hover:text-purple-800">
-          <span>{link.name.toUpperCase()}</span>
-        </a>
-      </div>
-    {/each}
-  </section>
+  
   <img
   src="/common/assets/resources/end.png"
   alt="dinosaurs are dying"
   width="120"
-  class="mx-auto pt-4"
+  class="mx-auto "
   loading="lazy"
   />
 </footer>

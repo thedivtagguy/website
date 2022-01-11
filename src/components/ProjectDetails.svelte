@@ -1,10 +1,12 @@
 <script>
 import Button from "./helpers/Button.svelte";
+import ToolList from "./ToolList.svelte";
     export let keyword;
     export let slug;
     export let externalLink;
     export let styles;
-    console.log(styles);
+    export let tools;
+    console.log(tools);
 
 </script>
 
@@ -32,5 +34,5 @@ import Button from "./helpers/Button.svelte";
             <p class="text-center hover:bg-gray-100 cursor-pointer border-zinc-200 text-sm font-mono px-2 rounded-sm border-2 capitalize">{keyword}</p>
             {/each}
         </div>
-       
+       <ToolList tools={tools}/>
 </main>

@@ -59,6 +59,7 @@ const parseStories = (story, key) => {
     output.thumbnail = makeSlug(d.url);
     output.featured = d.featured;
     output.link = makeLink(d.url);
+    output.tools = makeArray(d.tools);
     return output;
   });
   // Only keep stories that are published

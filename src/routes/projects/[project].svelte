@@ -20,6 +20,7 @@
       "published",
       "img",
       "path",
+	  "tools",
       "slug",
       "month",
       "date"
@@ -58,6 +59,7 @@
 </script>
 <script>
     export let post;
+	console.log(post);
 </script>
 {#if post.title != "404"}
 

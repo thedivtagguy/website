@@ -4,7 +4,7 @@
     "Aman's platform for a regular mishmash of design and code gimmickry";
   export let url = "https://thedivtagguy.com";
   export let slug = 
-    "/common/assets/resources/favicon/social.jpg"
+    "common/assets/resources/favicon/social.jpg"
 </script>
 
 <svelte:head>

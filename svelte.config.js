@@ -5,6 +5,8 @@ import svg from "vite-plugin-svgstring";
 import dsv from "@rollup/plugin-dsv";
 import sveltePreprocess from "svelte-preprocess";
 import autoprefixer from "autoprefixer";
+import { mdsvex } from "mdsvex";
+
 const { thedivtagguy } = JSON.parse(fs.readFileSync("package.json", "utf8"));
 const dev = process.env.NODE_ENV === "development";
 const dir = thedivtagguy ? thedivtagguy.subdirectory : "";

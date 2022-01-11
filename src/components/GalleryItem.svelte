@@ -9,20 +9,23 @@
 
 <div>
     {#if image.value.tag.includes('video')}
-    <VideoPlayer {poster} {source} />;
+    <VideoPlayer {poster} {source} width="1500"/>
 
     {:else}
-    <img
-    width="400"
-    height="720"
-    src="/common/assets/resources/gallery/32/{image.value.filename}"
-    alt={image.value.alt}
-    srcset="/common/assets/resources/gallery/1280/{image.value.filename} 1280w,
-              /common/assets/resources/gallery/960/{image.value.filename} 960w,
-              /common/assets/resources/gallery/640/{image.value.filename} 640w"
-    sizes="(max-width: 320px) 640px, (max-width: 480px) 960px, 1280px"
-    loading="lazy"
-  />
+    <div class="flex flex-col gap-2">
+        <img
+        width="400"
+        height="720"
+        src="/common/assets/resources/gallery/32/{image.value.filename}"
+        alt={image.value.alt}
+        srcset="/common/assets/resources/gallery/1280/{image.value.filename} 1280w,
+                  /common/assets/resources/gallery/960/{image.value.filename} 960w,
+                  /common/assets/resources/gallery/640/{image.value.filename} 640w"
+        sizes="(max-width: 320px) 640px, (max-width: 480px) 960px, 1280px"
+        loading="lazy"
+          />
+          <span class="text-sm text-center font-sans capitalize">{image.value.caption}</span>
+    </div>
     {/if}
 
 </div>

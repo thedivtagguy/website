@@ -7,22 +7,24 @@
 <script>
     import images from "$data/gallery.json";
     import GalleryItem from "./GalleryItem.svelte";
-    let [minColWidth, maxColWidth, gap] = [200, 1200, 4]
+    import Footer from "./Footer.svelte";
+    let [minColWidth, maxColWidth, gap] = [400, 1200, 10]
     let width, height
     console.log(images);
 </script>
   
 <main>
     <div id="circle"><div class="image"></div></div>
-    <section class="flex lg:h-[150px] sm:h-[150px] md:h-[150px] xl:h-[150px] pb-4 justify-between items-center mx-auto">
+    <section class="flex  lg:h-[150px] sm:h-[150px] md:h-[150px] xl:h-[150px] pb-4 justify-between items-center mx-auto">
       <h1 class="text-5xl lg:text-6xl mx-auto text-white font-bold font-serif text-center py-4">Gallery</h1>
     </section>
-    <section class="z-2 py-4 bg-white">
+    <section class="z-2 border-t-2 border-gray-300 py-4 bg-white">
         <Masonry items={images.images} let:item {minColWidth}
         {maxColWidth}
         {gap}>
             <GalleryItem image={item} />
         </Masonry>
+        <Footer />
     </section>
 </main>
   

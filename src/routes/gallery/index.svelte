@@ -1,5 +1,5 @@
 <script context="module">
-    import "../styles/tailwind.css";
+    import "/src/styles/tailwind.css";
 
     export const prerender = true;
   export const router = true;
@@ -14,4 +14,3 @@ import GalleryPage from "$components/GalleryPage.svelte";
 
 <Meta/>
 <GalleryPage copy={copy}/>
-<Footer/>

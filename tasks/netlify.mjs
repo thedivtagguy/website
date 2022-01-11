@@ -31,5 +31,5 @@ const json = JSON.stringify({
 // Write to file
 fs.writeFile(`${CWD}/src/data/last_update.json`, json, (err) => {
   if (err) throw err;
-  console.log("Updated fetched and written to file");
+  
 });

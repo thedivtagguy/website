@@ -25,7 +25,7 @@ function makeThumbnail(file) {
 }
 
 (async () => {
-  console.log("task: resizing thumbnails - stories");
+  
 
   sizes.forEach((size) => mkdirp.sync(`${pathOut}/${size}`));
 
@@ -39,6 +39,6 @@ function makeThumbnail(file) {
     console.error(err);
   }
 
-  console.log("DONE: resizing thumbnails - stories");
+  
   process.exit();
 })();

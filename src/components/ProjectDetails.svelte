@@ -6,7 +6,7 @@ import ToolList from "./ToolList.svelte";
     export let externalLink;
     export let styles;
     export let tools;
-    console.log(tools);
+    
 
 </script>
 

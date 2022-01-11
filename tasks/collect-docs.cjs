@@ -25,11 +25,11 @@ getfilelist.GetFileList(
   },
   (err, res) => {
     if (err) {
-      console.log(err);
+      
       return;
     }
     const fileList = res.fileList.flatMap(({ files }) => files);
-    console.log(fileList);
+    
 
     const fileListString = fileList
       .map(

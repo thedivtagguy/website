@@ -25,7 +25,7 @@
 
     // const url = "api/stories.js";
     // const response = await fetch(url);
-    // console.log(response);
+    // 
     // if (response.ok) {
     //   const data = await response.json();
     // }

@@ -31,7 +31,7 @@
     mostRecent = refined.sort((a, b) => {
       return new Date(b.date) - new Date(a.date);
     })[0];
-    console.log(mostRecent);
+    
     // Remove most recent story from refined array
     refined = refined.filter((story) => {
       return story.heading !== mostRecent.heading;

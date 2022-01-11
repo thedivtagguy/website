@@ -5,7 +5,7 @@ module.exports = resizeImage = ({ pathIn, pathOut, file, size, blur }) => {
     const src = `${pathIn}/${file}`;
     const dest = `${pathOut}/${size}/${file}`;
 
-    console.log(`- resizing ${file} -> ${size}`);
+    
 
     jimp
       .read(src)

@@ -38,7 +38,7 @@
     });
 
     refined = refined.slice(0, 3);
-    console.log(refined);
+    
   });
 </script>
 <main>

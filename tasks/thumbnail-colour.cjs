@@ -62,7 +62,7 @@ const getColor = (path) => {
   const output = [];
   try {
     for (let file of FILES) {
-      console.log(`- extracting ${file}`);
+      
       const path = `${PATH_IN}/${file}`;
       const { light, dark, darker } = await getColor(path);
       const slug = file.replace(".jpg", "");
@@ -74,6 +74,6 @@ const getColor = (path) => {
 
   const json = JSON.stringify(output);
   fs.writeFileSync(`${PATH_OUT}/thumbnail-colors.json`, json);
-  console.log("DONE: extract thumbnail color");
+  
   process.exit();
 })();

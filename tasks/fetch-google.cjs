@@ -10,7 +10,7 @@ const allDocs = require(`${CWD}/src/data/posts/all-docs.cjs`);
 docs.push(...allDocs);
 
 const fetchGoogle = async ({ id, gid }) => {
-  console.log(`fetching...${id}`);
+  
 
   const base = "https://docs.google.com";
   const post = gid
@@ -39,7 +39,7 @@ const fetchGoogle = async ({ id, gid }) => {
       const file = `${CWD}/${d.filepath}`;
       fs.writeFileSync(file, str);
     } catch (err) {
-      console.log(err);
+      
     }
   }
 })();

@@ -13,7 +13,7 @@
 	export async function load({ page }) {
 		try {
 			const post = await import(`../../data/posts/${page.params.project}.json`);
-            console.log(post);
+            
 			return {
 				// Data passed into svelte component
 				props: {

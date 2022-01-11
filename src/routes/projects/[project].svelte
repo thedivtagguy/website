@@ -59,7 +59,7 @@
 </script>
 <script>
     export let post;
-	console.log(post);
+	
 </script>
 {#if post.title != "404"}
 

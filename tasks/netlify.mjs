@@ -13,6 +13,7 @@ let updated;
 for (let site of sites) {
   if (site.id === "7196b267-ca43-42dc-8670-6dc53300f092") {
     updated = site.updated_at;
+    console.log('Featured site updated at: ', updated);
   }
 }
 

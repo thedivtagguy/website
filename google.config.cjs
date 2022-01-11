@@ -16,5 +16,9 @@ module.exports = [
   {
     id: "17KrxvYu4eS4LkE5no8ZkFhLe2XnvOOxCsii2dOaD4o4",
     filepath: "src/data/contact.json"
+  },
+  {
+    id: "1_j1m4NvpGOT3iQ35nBxK5lO8_69WEJydi3ISlsXNTis",
+    filepath: "src/data/gallery.json"
   }
 ];

@@ -67,6 +67,7 @@ const getColor = (path) => {
       const { light, dark, darker } = await getColor(path);
       const slug = file.replace(".jpg", "");
       output.push({ slug, light, dark, darker });
+      console.log("Finished processing", file);
     }
   } catch (err) {
     console.error(err);

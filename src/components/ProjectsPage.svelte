@@ -84,7 +84,7 @@
       </aside>
     </div>
     <h2 class="text-4xl font-bold font-serif text-left border-b-2 border-black pb-2 mb-2">R Programming</h2>
-    <section id="r" class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3  gap-4 py-4 mb-20">
+    <section id="r" class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3  gap-4 ">
       <!-- Projects where category includes data -->
       {#each refined as project}
         {#if project.category.includes("r")}

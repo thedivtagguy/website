@@ -11,13 +11,13 @@ import CodeDevList from "./CodeDevList.svelte";
   <div class="pb-2 border-b-2 mb-2 border-black">
     <h2 class="font-sans text-[15px]">
       Visual designer, developer and data enthusiast who does all three things with the varying
-      levels of incompetence. Maybe you'll like some of it, idk.
+      levels of incompetence. 
     </h2>
   </div>
 
   <div class="flex flex-col justify-items-start items-start">
     <Projects />
-    <section class="py-4 w-full">
+    <section class="w-full">
       <!-- <CodingList /> -->
       <CodeDevList />
     </section>

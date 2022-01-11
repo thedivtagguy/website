@@ -102,4 +102,11 @@
       </div>
     {/each}
   </section>
+  <img
+  src="/common/assets/resources/end.png"
+  alt="dinosaurs are dying"
+  width="160"
+  class="mx-auto pt-4"
+  loading="lazy"
+  />
 </footer>

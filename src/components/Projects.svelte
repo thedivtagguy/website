@@ -42,9 +42,11 @@
 </script>
 
 <section class="relative">
-  <StoryCard {...mostRecent} featured external />
+  <div class="py-2">
+    <StoryCard {...mostRecent} featured external />
+  </div>
   <div class="mark"></div>
-  <div class="flex flex-col lg:flex-row py-4 xl:flex-row w-full md:flex-row gap-4">
+  <div class="flex flex-col lg:flex-row  xl:flex-row w-full md:flex-row gap-4">
     {#each refined as story}
       <div class="w-full">
         <StoryCard {...story} {external}/>
@@ -63,7 +65,7 @@
   height: 100%;
   border-radius: 50%;
   z-index: -10;
-  opacity: 0.3;
+  opacity: 0.2;
   position: absolute;
   top: 50px;
   left: 50%;

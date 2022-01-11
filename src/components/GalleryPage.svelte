@@ -7,7 +7,7 @@
 <script>
     import images from "$data/gallery.json";
     import GalleryItem from "./GalleryItem.svelte";
-    let [minColWidth, maxColWidth, gap] = [200, 1000, 10]
+    let [minColWidth, maxColWidth, gap] = [200, 1200, 4]
     let width, height
     console.log(images);
 </script>

@@ -9,7 +9,7 @@
 
 <div>
     {#if image.value.tag.includes('video')}
-    <VideoPlayer {poster} {source} />
+    <VideoPlayer {poster} {source} />;
 
     {:else}
     <img

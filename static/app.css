@@ -624,6 +624,9 @@ p {
   margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
+.self-stretch {
+  align-self: stretch;
+}
 .justify-self-start {
   justify-self: start;
 }
@@ -667,6 +670,18 @@ p {
 .border-t-2 {
   border-top-width: 2px;
 }
+.border-r-2 {
+  border-right-width: 2px;
+}
+.border-l-2 {
+  border-left-width: 2px;
+}
+.border-r-\[1px\] {
+  border-right-width: 1px;
+}
+.border-l-\[1px\] {
+  border-left-width: 1px;
+}
 .border-solid {
   border-style: solid;
 }
@@ -675,6 +690,9 @@ p {
 }
 .border-double {
   border-style: double;
+}
+.border-none {
+  border-style: none;
 }
 .border-indigo-900 {
   --tw-border-opacity: 1;
@@ -707,8 +725,19 @@ p {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
 }
+.border-divpurple {
+  --tw-border-opacity: 1;
+  border-color: rgb(98 60 234 / var(--tw-border-opacity));
+}
+.border-divorange {
+  --tw-border-opacity: 1;
+  border-color: rgb(248 94 0 / var(--tw-border-opacity));
+}
 .border-opacity-20 {
   --tw-border-opacity: 0.2;
+}
+.border-opacity-40 {
+  --tw-border-opacity: 0.4;
 }
 .bg-divpurple {
   --tw-bg-opacity: 1;
@@ -1109,6 +1138,9 @@ p {
     -webkit-box-direction: normal;
             flex-direction: row;
   }
+  .sm\:border-l-2 {
+    border-left-width: 2px;
+  }
   .sm\:py-10 {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
@@ -1180,6 +1212,9 @@ p {
     --tw-space-y-reverse: 0;
     margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
+  }
+  .md\:border-l-2 {
+    border-left-width: 2px;
   }
   .md\:py-12 {
     padding-top: 3rem;
@@ -1275,6 +1310,15 @@ p {
   .lg\:justify-start {
     -webkit-box-pack: start;
             justify-content: flex-start;
+  }
+  .lg\:border-r-2 {
+    border-right-width: 2px;
+  }
+  .lg\:border-l-2 {
+    border-left-width: 2px;
+  }
+  .lg\:border-solid {
+    border-style: solid;
   }
   .lg\:py-10 {
     padding-top: 2.5rem;

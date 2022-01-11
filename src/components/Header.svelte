@@ -2,8 +2,8 @@
   import updated from "$data/last_update.json";
 </script>
 
-<header>
-  <div class="mx-auto pb-4  border-double border-gray-900">
+<header class="py-1">
+  <div class="mx-auto pb-2  border-double border-gray-900">
     <div class="z-20 mx-auto">
       <div class="lg:flex  sm:flex xl:flex md:flex hidden justify-between items-center">
         <p class="font-sans text-xs font-semibold">Issue Published 
@@ -18,7 +18,7 @@
           >code, data & art.</span
         >
         <span class="hidden border-opacity-20 lg:inline xl:inline md:inline sm:inline text-[9px] py-1 font-sans font-semibold border-2 border-black px-2 right-0 bottom-0 absolute">
-          A Scrapbook Journal of Programming Artistic Gimmickry
+          A Scrapbook Journal of Programming & Artistic Gimmickry
         </span>
        
 

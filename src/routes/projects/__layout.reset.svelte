@@ -7,7 +7,7 @@
   
   </script>
   
-  <main class="px-6 max-w-5xl mx-auto" id="content">
+  <main class="px-6  border-none  lg:border-solid border-r-[1px] border-l-[1px] border-black border-opacity-40 max-w-5xl mx-auto" id="content">
    <Menu/>
     <slot />
   </main>

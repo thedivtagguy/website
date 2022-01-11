@@ -63,7 +63,7 @@
   height: 100%;
   border-radius: 50%;
   z-index: -10;
-  opacity: 0.5;
+  opacity: 0.3;
   position: absolute;
   top: 50px;
   left: 50%;

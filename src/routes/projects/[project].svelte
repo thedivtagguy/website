@@ -137,6 +137,6 @@
 <Error404/>
 {/if}
 <!-- Footer -->
-<footer class="max-w-5xl border-t-2 border-gray-200 mt-4 mx-auto mt-6 px-6">
-	<Footer keywords={post.keyword} current={post.heading} />
+<footer class="max-w-5xl border-t-2 border-gray-200 mt-4 mx-auto  px-6">
+	<Footer keywords={post.category} current={post.link} />
 </footer>	

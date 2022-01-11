@@ -1,8 +1,16 @@
 <script>
   import StoryCard from "./StoryCard.svelte";
-  let stories = [];
-  export let keywords;
+  import storiesData from "$data/stories.csv";
+  import parseStories from "$utils/cleanStories";
   import wordmark from "$svg/wordmark.svg";
+
+
+  export let keywords;
+  export let current;
+  let stories = [];
+
+  export const prerender = true;
+
   const links = [
     { name: "contact", url: "https://thedivtagguy.com/contact" },
     { name: "twitter", url: "https://twitter.com/thedivtagguy/" },
@@ -12,9 +20,7 @@
     },
     { name: "github", url: "https://github.com/thedivtagguy/" }
   ];
-  export const prerender = true;
-  import storiesData from "$data/stories.csv";
-  import parseStories from "$utils/cleanStories";
+
     if(keywords){
     const keys = [
       "url",
@@ -36,6 +42,11 @@
 
     stories = stories.filter(story => {
       return story.keyword.some(keyword => keywords.includes(keyword));
+    });
+
+    // Remove stories.link where it is the same as current
+    stories = stories.filter(story => {
+      return story.link !== current && story.published !== "FALSE";
     });
 
     // Show two random stories

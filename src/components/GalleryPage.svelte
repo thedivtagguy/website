@@ -1,10 +1,14 @@
 <script context="module">
 	import Masonry from 'svelte-bricks';
+    import { onMount } from 'svelte';
+
 </script>
 
 <script>
     import images from "$data/gallery.json";
     import GalleryItem from "./GalleryItem.svelte";
+    let [minColWidth, maxColWidth, gap] = [200, 1000, 10]
+    let width, height
     console.log(images);
 </script>
   
@@ -14,7 +18,9 @@
       <h1 class="text-5xl lg:text-6xl mx-auto text-white font-bold font-serif text-center py-4">Gallery</h1>
     </section>
     <section class="z-2 py-4 bg-white">
-        <Masonry items={images.images} let:item>
+        <Masonry items={images.images} let:item {minColWidth}
+        {maxColWidth}
+        {gap}>
             <GalleryItem image={item} />
         </Masonry>
     </section>

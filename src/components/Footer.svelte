@@ -60,15 +60,11 @@
     const external = true;
 </script>
 
-<footer class="max-w-5xl py-12">
+<footer class="max-w-5xl py-4">
 {#if keywords}
 
-<div class="grid  max-w-md justify- justify-items-center items-center mx-auto grid-cols-5">
-  <div class="col-span-1"><div class="w-[70px]">
-    <a sveltekit:prefetch  href="/" aria-label="The thedivtagguy">{@html wordmark}</a>
-  </div></div>
-  <div class="col-span-4"><img src="/common/assets/resources/footer.png" alt="footer image" class="mx-auto py-6" width="500"/></div>
-</div>
+  
+  <img src="/common/assets/resources/footer.png" alt="footer image" class="mx-auto py-6" width="300"/>
 <section class="flex-col  lg:w-2/3 sm:w-2/3 xl:w-2/3 md:w-2/3 lg:flex-row sm:flex-row md:flex-row mx-auto flex font-sans font-bold  text-xs justify-start items-start ">
   {#each stories as story}
     <div class="p-2">
@@ -86,7 +82,7 @@
       Another Website Almost But Not Completely Different From Some Of The Other Websites Which
       Aren't Quite The Same As This One Is.
     </p>
-    <p class="text-center mx-auto text-sm font-sans font-semibold py-4 text-divpurple whitespace-pre-wrap">
+    <p class="text-center mx-auto text-xs font-mono font-semibold py-4 text-black  whitespace-pre-wrap">
       &lt;/&gt; with Svelte, Tailwind and &lt;3 in Bangalore, IN
     </p>
   </section>
@@ -105,7 +101,7 @@
   <img
   src="/common/assets/resources/end.png"
   alt="dinosaurs are dying"
-  width="160"
+  width="120"
   class="mx-auto pt-4"
   loading="lazy"
   />

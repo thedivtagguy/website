@@ -24,7 +24,7 @@
         sizes="(max-width: 320px) 640px, (max-width: 480px) 960px, 1280px"
         loading="lazy"
           />
-          <span class="text-sm text-center font-sans capitalize">{image.value.caption}</span>
+          <span class="text-sm text-center hover:text-gray-600 font-sans capitalize">{image.value.caption}</span>
     </div>
     {/if}
 

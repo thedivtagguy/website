@@ -1,14 +1,18 @@
 <script context="module">
 	import Masonry from 'svelte-bricks';
     import { onMount } from 'svelte';
+    import images from "$data/gallery.json";
 
 </script>
 
 <script>
-    import images from "$data/gallery.json";
-    import GalleryItem from "./GalleryItem.svelte";
-    import Footer from "./Footer.svelte";
-    let [minColWidth, maxColWidth, gap] = [400, 1200, 10]
+    let GalleryItem;
+
+onMount(async () => {
+  const module = await import('./GalleryItem.svelte');
+  GalleryItem = module.default;
+})
+    let [minColWidth, maxColWidth, gap] = [300, 1500, 10]
     let width, height
     console.log(images);
 </script>
@@ -22,9 +26,9 @@
         <Masonry items={images.images} let:item {minColWidth}
         {maxColWidth}
         {gap}>
-            <GalleryItem image={item} />
+            <svelte:component this={GalleryItem} image={item}/>
         </Masonry>
-        <Footer />
+
     </section>
 </main>
   

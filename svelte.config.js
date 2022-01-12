@@ -36,7 +36,10 @@ const config = {
           $utils: path.resolve("./src/utils")
         }
       },
-      plugins: [dsv(), svg()]
+      plugins: [dsv(), svg()],
+      optimizeDeps: {
+        exclude: ['@svelte-video-player']
+      }
     },
     paths: {
       base

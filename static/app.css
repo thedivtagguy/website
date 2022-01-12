@@ -417,8 +417,14 @@ p {
 .top-8 {
   top: 2rem;
 }
+.top-0 {
+  top: 0px;
+}
 .z-20 {
   z-index: 20;
+}
+.z-10 {
+  z-index: 10;
 }
 .col-span-5 {
   grid-column: span 5 / span 5;
@@ -428,6 +434,9 @@ p {
 }
 .col-span-3 {
   grid-column: span 3 / span 3;
+}
+.col-span-4 {
+  grid-column: span 4 / span 4;
 }
 .float-left {
   float: left;
@@ -515,6 +524,9 @@ p {
 .h-4 {
   height: 1rem;
 }
+.h-5 {
+  height: 1.25rem;
+}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -544,6 +556,9 @@ p {
 }
 .w-4 {
   width: 1rem;
+}
+.w-5 {
+  width: 1.25rem;
 }
 .max-w-5xl {
   max-width: 64rem;
@@ -588,6 +603,9 @@ p {
 }
 .grid-cols-5 {
   grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+.grid-cols-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 .flex-row {
   -webkit-box-orient: horizontal;
@@ -961,6 +979,9 @@ p {
 .text-\[0\.65rem\] {
   font-size: 0.65rem;
 }
+.text-\[17px\] {
+  font-size: 17px;
+}
 .font-extrabold {
   font-weight: 800;
 }
@@ -972,6 +993,9 @@ p {
 }
 .font-semibold {
   font-weight: 600;
+}
+.font-black {
+  font-weight: 900;
 }
 .uppercase {
   text-transform: uppercase;

@@ -35,22 +35,35 @@
     </section>
    
     <section class="z-2 min-h-screen border-t-2 border-gray-300 py-4 bg-white">
-      <section class="py-4 grid grid-cols-5 gap-4">
-        <div class="col-span-3">
-          <p>If you're using webpack with svelte-loader, make sure that you add "svelte" to resolve.mainFields in your webpack config. This ensures that webpack imports the uncompiled component (src/index.html) rather than the compiled version (index.mjs) — this is more efficient.
+      <section class="py-4 grid grid-cols-6 gap-4 sticky top-0 z-10 bg-white px-4">
+        <div class="col-span-2">
+          <p class="text-[17px] leading-tight">
+            Some selected visual and motion works. I am an infrared and monochrome photographer and I also meddle with Blender from time to time.
           </p>
         </div>
-          <div class="flex col-span-2 w-full flex-row justify-center">
+          <div class="flex col-span-4 w-full flex-row items-center justify-center">
               <div class="form-check w-full">
-                <input class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox"  value="monochrome" bind:checked={isChecked} bind:group={filterTerm} id="flexCheckDefault">
-                <label class="form-check-label inline-block text-gray-800" for="flexCheckDefault">
-                  Default checkbox
+                <input class="form-check-input appearance-none h-5 w-5 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox"  value="monochrome" bind:checked={isChecked} bind:group={filterTerm} id="flexCheckDefault">
+                <label class="form-check-label inline-block font-sans  uppercase font-bold  text-lg text-gray-800" for="flexCheckDefault">
+                  Monochrome
                 </label>
               </div>
               <div class="form-check w-full">
-                <input class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="" id="flexCheckChecked" checked>
-                <label class="form-check-label inline-block text-gray-800" for="flexCheckChecked">
-                  Checked checkbox
+                <input class="form-check-input appearance-none h-5 w-5 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox"  value="infrared" bind:checked={isChecked} bind:group={filterTerm} id="flexCheckDefault">
+                <label class="form-check-label inline-block font-sans  uppercase font-bold  text-lg text-gray-800" for="flexCheckDefault">
+                  Infrared
+                </label>
+              </div>
+              <div class="form-check w-full">
+                <input class="form-check-input appearance-none h-5 w-5 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox"  value="color" bind:checked={isChecked} bind:group={filterTerm} id="flexCheckDefault">
+                <label class="form-check-label inline-block font-sans  uppercase font-bold  text-lg text-gray-800" for="flexCheckDefault">
+                  Color
+                </label>
+              </div>
+              <div class="form-check w-full">
+                <input class="form-check-input appearance-none h-5 w-5 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox"  value="blender" bind:checked={isChecked} bind:group={filterTerm} id="flexCheckDefault">
+                <label class="form-check-label inline-block font-sans  uppercase font-bold  text-lg text-gray-800" for="flexCheckDefault">
+                  Blender
                 </label>
               </div>
           </div>

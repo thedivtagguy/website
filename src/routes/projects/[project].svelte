@@ -66,7 +66,7 @@
 <Meta 	title={post.heading}
 		description={post.description}
 		url="https://thedivtagguy/projects/{post.link}" 
-		slug="/common/assets/thumbnails/960/{post.slug}.jpg"
+		slug="common/assets/thumbnails/960/{post.slug}.jpg"
 />
 
 <main class="mx-auto">

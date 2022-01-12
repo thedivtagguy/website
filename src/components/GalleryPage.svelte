@@ -17,11 +17,13 @@
     let [minColWidth, maxColWidth, gap] = [300, 1500, 10]
 
     let imageList = images.images;
-
     let filterTerm = "";
 
     $: filteredImages = imageList.filter(image => image.value.tag.indexOf(filterTerm) !== -1);
-    
+    let isChecked = false;
+    if(isChecked == false){
+      filterTerm = "";
+    }
 
 </script>
   
@@ -33,8 +35,25 @@
     </section>
    
     <section class="z-2 min-h-screen border-t-2 border-gray-300 py-4 bg-white">
-      <section class="py-4">
-        <input class="outline px-2 outline-gray-200 h-12 bg-gray-100" bind:value={filterTerm} />
+      <section class="py-4 grid grid-cols-5 gap-4">
+        <div class="col-span-3">
+          <p>If you're using webpack with svelte-loader, make sure that you add "svelte" to resolve.mainFields in your webpack config. This ensures that webpack imports the uncompiled component (src/index.html) rather than the compiled version (index.mjs) — this is more efficient.
+          </p>
+        </div>
+          <div class="flex col-span-2 w-full flex-row justify-center">
+              <div class="form-check w-full">
+                <input class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox"  value="monochrome" bind:checked={isChecked} bind:group={filterTerm} id="flexCheckDefault">
+                <label class="form-check-label inline-block text-gray-800" for="flexCheckDefault">
+                  Default checkbox
+                </label>
+              </div>
+              <div class="form-check w-full">
+                <input class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="" id="flexCheckChecked" checked>
+                <label class="form-check-label inline-block text-gray-800" for="flexCheckChecked">
+                  Checked checkbox
+                </label>
+              </div>
+          </div>
       </section>
         <Masonry items={filteredImages} let:item {minColWidth}
         {maxColWidth}

@@ -9,6 +9,7 @@
   const links = [
     { name: "Home", link: "/" },
     { name: "Projects", link: "/projects" },
+    { name: "Gallery", link: "/gallery" },
     { name: "Contact", link: "/contact" },
   ];
 </script>

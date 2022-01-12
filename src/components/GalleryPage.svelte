@@ -17,12 +17,14 @@
     let [minColWidth, maxColWidth, gap] = [300, 1500, 10]
 
     let imageList = images.images;
-    let filterTerm = "";
+    let filterTerm = [];
 
     $: filteredImages = imageList.filter(image => image.value.tag.indexOf(filterTerm) !== -1);
+
+    
     let isChecked = false;
     if(isChecked == false){
-      filterTerm = "";
+      filterTerm = [];
     }
 
 </script>
@@ -43,26 +45,26 @@
         </div>
           <div class="flex col-span-4 w-full flex-row items-center justify-center">
               <div class="form-check w-full">
-                <input class="form-check-input appearance-none h-5 w-5 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox"  value="monochrome" bind:checked={isChecked} bind:group={filterTerm} id="flexCheckDefault">
-                <label class="form-check-label inline-block font-sans  uppercase font-bold  text-lg text-gray-800" for="flexCheckDefault">
+                <input class="form-check-input appearance-none h-5 w-5 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox"  value="monochrome" bind:checked={isChecked} bind:group={filterTerm} id="monochrome">
+                <label class="form-check-label inline-block font-sans  uppercase font-bold  text-lg text-gray-800" for="monochrome">
                   Monochrome
                 </label>
               </div>
               <div class="form-check w-full">
-                <input class="form-check-input appearance-none h-5 w-5 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox"  value="infrared" bind:checked={isChecked} bind:group={filterTerm} id="flexCheckDefault">
-                <label class="form-check-label inline-block font-sans  uppercase font-bold  text-lg text-gray-800" for="flexCheckDefault">
+                <input class="form-check-input appearance-none h-5 w-5 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox"  value="infrared" bind:checked={isChecked} bind:group={filterTerm} id="infrared">
+                <label class="form-check-label inline-block font-sans  uppercase font-bold  text-lg text-gray-800" for="infrared">
                   Infrared
                 </label>
               </div>
               <div class="form-check w-full">
-                <input class="form-check-input appearance-none h-5 w-5 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox"  value="color" bind:checked={isChecked} bind:group={filterTerm} id="flexCheckDefault">
-                <label class="form-check-label inline-block font-sans  uppercase font-bold  text-lg text-gray-800" for="flexCheckDefault">
+                <input class="form-check-input appearance-none h-5 w-5 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox"  value="color" bind:checked={isChecked} bind:group={filterTerm} id="color">
+                <label class="form-check-label inline-block font-sans  uppercase font-bold  text-lg text-gray-800" for="color">
                   Color
                 </label>
               </div>
               <div class="form-check w-full">
-                <input class="form-check-input appearance-none h-5 w-5 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox"  value="blender" bind:checked={isChecked} bind:group={filterTerm} id="flexCheckDefault">
-                <label class="form-check-label inline-block font-sans  uppercase font-bold  text-lg text-gray-800" for="flexCheckDefault">
+                <input class="form-check-input appearance-none h-5 w-5 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox"  value="blender" bind:checked={isChecked} bind:group={filterTerm} id="blender">
+                <label class="form-check-label inline-block font-sans  uppercase font-bold  text-lg text-gray-800" for="blender">
                   Blender
                 </label>
               </div>

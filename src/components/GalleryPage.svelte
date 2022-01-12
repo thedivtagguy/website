@@ -7,10 +7,13 @@
 
 <script>
     let GalleryItem;
+    let show = false;
+    import Skeleton from 'svelte-skeleton-loader';
 
 onMount(async () => {
   const module = await import('./GalleryItem.svelte');
   GalleryItem = module.default;
+  show = true;
 })
     let [minColWidth, maxColWidth, gap] = [300, 1500, 10]
     let width, height
@@ -22,11 +25,16 @@ onMount(async () => {
     <section class="flex  lg:h-[150px] sm:h-[150px] md:h-[150px] xl:h-[150px] pb-4 justify-between items-center mx-auto">
       <h1 class="text-5xl lg:text-6xl mx-auto text-white font-bold font-serif text-center py-4">Gallery</h1>
     </section>
-    <section class="z-2 border-t-2 border-gray-300 py-4 bg-white">
+    <section class="z-2 min-h-screen border-t-2 border-gray-300 py-4 bg-white">
+
         <Masonry items={images.images} let:item {minColWidth}
         {maxColWidth}
         {gap}>
+          {#if show}
             <svelte:component this={GalleryItem} image={item}/>
+          {:else}
+          <Skeleton {item} height={800} />
+          {/if}
         </Masonry>
 
     </section>

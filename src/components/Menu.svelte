@@ -13,7 +13,7 @@
   ];
 </script>
 
-<div class="flex flex-wrap py-2">
+<div class="flex bg-white sm:bg-transparent md:bg-transparent lg:bg-transparent xl:bg-transparent flex-wrap">
   <div class="w-full ">
     <nav class="relative flex flex-wrap items-center justify-between py-3 ">
       <div class="container mx-auto flex flex-wrap items-center justify-between">
@@ -40,8 +40,8 @@
           </button>
 
         </div>
-        <div class="lg:flex lg:flex-grow items-center {menuShow ? 'flex' : 'hidden'}">
-          <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
+        <div class="lg:flex w-full lg:w-2/3 lg:flex-grow  justify-around  items-center {menuShow ? 'flex' : 'hidden'}">
+          <ul class="flex flex-row  list-none lg:ml-auto">
             {#each links as link}
               <li>
                 <a 

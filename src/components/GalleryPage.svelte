@@ -1,39 +1,48 @@
 <script context="module">
-	import Masonry from 'svelte-bricks';
+  	import Masonry from 'svelte-bricks';
     import { onMount } from 'svelte';
     import images from "$data/gallery.json";
-
 </script>
 
 <script>
     let GalleryItem;
     let show = false;
-    import Skeleton from 'svelte-skeleton-loader';
 
-onMount(async () => {
-  const module = await import('./GalleryItem.svelte');
-  GalleryItem = module.default;
-  show = true;
-})
+    onMount(async () => {
+      const module = await import('./GalleryItem.svelte');
+      GalleryItem = module.default;
+      show = true;
+    })
+
     let [minColWidth, maxColWidth, gap] = [300, 1500, 10]
-    let width, height
-    console.log(images);
+
+    let imageList = images.images;
+
+    let filterTerm = "";
+
+    $: filteredImages = imageList.filter(image => image.value.tag.indexOf(filterTerm) !== -1);
+    
+
 </script>
   
 <main>
-    <div id="circle"><div class="image"></div></div>
+   
     <section class="flex  lg:h-[150px] sm:h-[150px] md:h-[150px] xl:h-[150px] pb-4 justify-between items-center mx-auto">
+      <div id="circle"><div class="image"></div></div>
       <h1 class="text-5xl lg:text-6xl mx-auto text-white font-bold font-serif text-center py-4">Gallery</h1>
     </section>
+   
     <section class="z-2 min-h-screen border-t-2 border-gray-300 py-4 bg-white">
-
-        <Masonry items={images.images} let:item {minColWidth}
+      <section class="py-4">
+        <input class="outline px-2 outline-gray-200 h-12 bg-gray-100" bind:value={filterTerm} />
+      </section>
+        <Masonry items={filteredImages} let:item {minColWidth}
         {maxColWidth}
         {gap}>
           {#if show}
             <svelte:component this={GalleryItem} image={item}/>
           {:else}
-          <Skeleton {item} height={800} />
+          <div class="h-[600px] bg-gray-200 border-2 rounded-md shadow-xl animate-pulse"></div>
           {/if}
         </Masonry>
 
@@ -60,10 +69,10 @@ onMount(async () => {
   }
   
   .image {
-    background-image: url("/common/assets/resources/projects.png");
-    background-size: 80%;
+    background-image: url("/common/assets/resources/camera.png");
+    background-size: 54%;
     background-repeat: no-repeat;
-    background-position: 75% 0px;
+    background-position: 70% 8px;
     width: 90%;
     height: 100%;
     mix-blend-mode: multiply;

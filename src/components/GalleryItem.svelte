@@ -4,13 +4,16 @@
 <script>
     export let image;
     export let source = '/common/assets/resources/gallery/videos/' + image.value.filename;
-    export let poster = 'https://wesbos.com/static/83ff22ad325f96d7f69f822a5385b55e/b46b0/syntax-logo.webp';
+    let poster;
+    if(image.value.poster){
+        poster = '/common/assets/resources/gallery/960/' + image.value.poster;
+    }
 </script>
 
 <div>
     {#if image.value.tag.includes('video')}
     <VideoPlayer {poster} {source} width="1500"/>
-
+    <p class="text-sm text-center hover:text-gray-600 font-sans capitalize">{image.value.caption}</p>
     {:else}
     <div class="flex flex-col gap-2">
         <img

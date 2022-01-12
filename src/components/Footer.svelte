@@ -69,7 +69,7 @@
 </section>
 
 {/if}
-<section class="about ">
+<section class="about py-4">
   <div class="w-[40px] mx-auto pb-4">
     <a sveltekit:prefetch  href="/" aria-label="The thedivtagguy">{@html wordmark}</a>
   </div>
@@ -84,12 +84,11 @@
       </div>
     {/each}
   </section>
-  <p class="text-center text-xs font-sans font-semibold italic text-gray-600 whitespace-pre-wrap">
-    Another Website Almost But Not Completely Different From Some Of The Other Websites Which
-    Aren't Quite The Same As This One Is.
-  </p>
-  <p class="text-center mx-auto text-xs font-mono font-semibold py-4 text-black  whitespace-pre-wrap">
+  <p class="text-center mx-auto text-xs font-mono font-semibold  text-black  whitespace-pre-wrap">
     &lt;/&gt; with Svelte, Tailwind and &lt;3 in Bangalore, IN
+  </p>
+  <p class="text-center text-[0.65rem] leading-snug font-sans font-semibold italic py-4 text-gray-600">
+    Another Website Almost But Not Completely Different From Some Of The Other Websites Which Aren't Quite The Same As This One Is.
   </p>
 </section>
 

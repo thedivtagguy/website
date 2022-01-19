@@ -85,7 +85,7 @@
     {/each}
   </section>
   <p class="text-center mx-auto text-xs font-mono font-semibold  text-black  whitespace-pre-wrap">
-    &lt;/&gt; with Svelte, Tailwind and &lt;3 in Bangalore, IN
+    &lt;/&gt; with Svelte, Tailwind, Google Docs & &lt;3 in Bangalore, IN
   </p>
   <p class="text-center text-[0.65rem] leading-snug font-sans font-semibold italic py-4 text-gray-600">
     Another Website Almost But Not Completely Different From Some Of The Other Websites Which Aren't Quite The Same As This One Is.

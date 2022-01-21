@@ -909,11 +909,11 @@ p {
 .font-sans {
   font-family: "Source Sans Pro", sans-serif;
 }
-.font-britania {
-  font-family: Evagrande, serif;
-}
 .font-drops {
   font-family: "PF Goudy Initials Pro", serif;
+}
+.font-serif {
+  font-family: Evagrande, serif;
 }
 .text-5xl {
   font-size: 3rem;

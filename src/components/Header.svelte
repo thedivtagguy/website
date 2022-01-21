@@ -12,7 +12,7 @@
           <time datetime={updated.last_update}>{updated.last_update}</time>
         </p>
       </div>
-      <h2 class="lg:text-5xl py-1 text-2xl relative  font-britania font-medium sm:text-4xl">
+      <h2 class="lg:text-5xl py-1 text-2xl relative  font-serif font-medium sm:text-4xl">
         Hi, I'm Aman. I create a general mishmash of <span
           class="bg-clip-text text-transparent  bg-gradient-to-l from-purple-800 via-violet-900 to-purple-800"
           >code, data & art.</span

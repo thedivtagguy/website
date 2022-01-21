@@ -6,7 +6,7 @@
 <main class="mx-auto">
 	<div class="max-w-5xl mx-auto  px-2">
     <section class="flex  pb-4 justify-between items-center mx-auto">
-      <h1 class="text-5xl lg:text-6xl mx-auto font-medium font-britania text-center py-4">You talkin to me?</h1>
+      <h1 class="text-5xl lg:text-6xl mx-auto font-medium font-serif text-center py-4">You talkin to me?</h1>
     </section>
 
 		<div class="flex justify-between items-start justify-self-start">

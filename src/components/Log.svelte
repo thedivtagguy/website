@@ -80,14 +80,14 @@ svg.append('text')
     .attr('y', 20)
     .attr('text-anchor', 'middle')
     // Add class for css styling
-    .attr('class', 'font-britania text-gray-700 text-lg')
+    .attr('class', 'font-serif text-gray-700 text-lg')
     .style('font-size', '20px')
     .style('color', '#333')
     .text('Weekly log');
 
 // Select Y axis text
 svg.selectAll('.tick text')
-    .attr('class', 'font-britania text-gray-700 lg:text-sm text-[8px]');
+    .attr('class', 'font-serif text-gray-700 lg:text-sm text-[8px]');
 });
 
 

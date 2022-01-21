@@ -4,10 +4,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        serif: ['"Playfair Display"', "serif"],
+        serif: ['Evagrande', "serif"],
         sans: ['"Source Sans Pro"', "sans-serif"],
         'drops': ['"PF Goudy Initials Pro"', 'serif'],
-        'britania': ['Evagrande', 'serif'],
       },
       colors: {
         divpurple: "#623cea",

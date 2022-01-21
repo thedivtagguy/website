@@ -74,7 +74,7 @@
 		<div class="flex justify-between items-start justify-self-start">
 			<div class="pb-2 flex flex-col justify-items-center items-start gap-2">
 				<span class="font-bold font-sans uppercase">{post.category[0]} | {post.date}</span>
-				<h1 class="font-medium text-5xl lg:text-6xl md:text-6xl xl:text-6xl sm:text-6xl font-britania">{post.heading}</h1>
+				<h1 class="font-medium text-5xl lg:text-6xl md:text-6xl xl:text-6xl sm:text-6xl font-serif">{post.heading}</h1>
 				<h2 class="font-semibold text-xl font-sans">{post.summary}</h2>
 			</div>
 			<div class="sm:flex lg:flex xl:flex  hidden flex-col justify-items-center items-start">
@@ -116,7 +116,7 @@
 		<!-- Image Gallery -->
 		{#if post.images}
 		<section class="mx-auto">
-			<h4 class="text-left font-normal font-britania text-4xl border-b py-2 border-gray-600 my-6">Snippets</h4>
+			<h4 class="text-left font-normal font-serif text-4xl border-b py-2 border-gray-600 my-6">Snippets</h4>
 			
 				<Masonry items={post.images} let:item>
 					<img

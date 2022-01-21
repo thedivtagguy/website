@@ -6,7 +6,8 @@ module.exports = {
       fontFamily: {
         serif: ['"Playfair Display"', "serif"],
         sans: ['"Source Sans Pro"', "sans-serif"],
-        'drops': ['"PF Goudy Initials Pro"', 'serif']
+        'drops': ['"PF Goudy Initials Pro"', 'serif'],
+        'britania': ['Evagrande', 'serif'],
       },
       colors: {
         divpurple: "#623cea",

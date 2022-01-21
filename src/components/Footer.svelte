@@ -60,7 +60,7 @@
 <footer class="max-w-5xl bg-white py-4">
 {#if keywords}
 <img src="/common/assets/resources/footer.png" alt="footer" class="mx-auto py-6" width="300"/>
-<section class="flex-col  lg:w-2/3 sm:w-2/3 xl:w-2/3 md:w-2/3 lg:flex-row sm:flex-row md:flex-row mx-auto flex font-sans font-bold  text-xs justify-start items-start ">
+<section class="flex-col  lg:w-2/3 sm:w-2/3 xl:w-2/3 md:w-2/3 lg:flex-row sm:flex-row md:flex-row mx-auto flex font-sans   text-xs justify-start items-start ">
   {#each stories as story}
     <div class="p-2">
       <StoryCard {...story} {external} />

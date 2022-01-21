@@ -72,9 +72,9 @@
 <main class="mx-auto">
 	<div class="max-w-5xl mx-auto mt-6 px-2">
 		<div class="flex justify-between items-start justify-self-start">
-			<div class="pb-5 flex flex-col justify-items-center items-start gap-2 mb-5 border-b border-gray-100">
+			<div class="pb-2 flex flex-col justify-items-center items-start gap-2">
 				<span class="font-bold font-sans uppercase">{post.category[0]} | {post.date}</span>
-				<h1 class="font-bold text-5xl lg:text-6xl md:text-6xl xl:text-6xl sm:text-6xl font-serif">{post.heading}</h1>
+				<h1 class="font-medium text-5xl lg:text-6xl md:text-6xl xl:text-6xl sm:text-6xl font-britania">{post.heading}</h1>
 				<h2 class="font-semibold text-xl font-sans">{post.summary}</h2>
 			</div>
 			<div class="sm:flex lg:flex xl:flex  hidden flex-col justify-items-center items-start">
@@ -83,9 +83,12 @@
 					{post.heading[0]}
 				</h4>
 			</div>
+			
 		</div>
+		
+		<div class=" border-b w-full border-gray-600 my-4"></div>
 
-		<section class="grid grid-cols-1  py-6 gap-8 lg:grid-cols-5 sm:grid-cols-5 md:grid-cols-5">
+		<section class="grid grid-cols-1   gap-8 lg:grid-cols-5 sm:grid-cols-5 md:grid-cols-5">
 			<div class="block lg:hidden md:hidden xl:hidden col-span-5 lg:min-h-[20rem]">
 				<aside class="sticky top-8">
 					<!-- Sidebar -->
@@ -113,7 +116,7 @@
 		<!-- Image Gallery -->
 		{#if post.images}
 		<section class="mx-auto">
-			<h4 class="text-left font-serif font-bold text-4xl border-b-2 py-2 border-gray-200 my-6">Snippets</h4>
+			<h4 class="text-left font-normal font-britania text-4xl border-b py-2 border-gray-600 my-6">Snippets</h4>
 			
 				<Masonry items={post.images} let:item>
 					<img
@@ -139,6 +142,6 @@
 <Error404/>
 {/if}
 <!-- Footer -->
-<footer class="max-w-5xl border-t-2 border-gray-200 mt-4 mx-auto  px-6">
+<footer class="max-w-5xl border-t border-gray-600 mt-4 mx-auto  px-6">
 	<Footer keywords={post.category} current={post.link} />
 </footer>	

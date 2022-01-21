@@ -6,6 +6,14 @@
   src: local("PF Goudy Initials Pro"), url("./fonts/pf-goudy-initials.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Evagrande";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: local("Evagrande"), url("./fonts/Evagrande-1GeKM.otf") format("openType");
+}
+
 /* playfair-display-400normal - latin */
 @font-face {
   font-family: "Playfair Display";

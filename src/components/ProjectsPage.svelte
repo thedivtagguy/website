@@ -47,10 +47,10 @@
     </div>
     <div id="circle"><div class="image"></div></div>
   <section class="flex lg:h-[150px] sm:h-[150px] md:h-[150px] xl:h-[150px] pb-4 justify-between items-center mx-auto">
-    <h1 class="text-5xl lg:text-6xl mx-auto text-white font-bold font-serif text-center py-4">Projects</h1>
+    <h1 class="text-5xl lg:text-6xl mx-auto text-white font-medium font-britania text-center py-4">Projects</h1>
   </section>
   <section class="z-2 py-4 bg-white">
-    <h2 class="text-4xl font-bold font-serif text-left border-b-2 border-black pb-2 mb-2">Data Storytelling</h2>
+    <h2 class="text-4xl font-medium font-britania text-left border-b-2 border-black pb-2 mb-2">Data Storytelling</h2>
     <section id="data" class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3  gap-4 py-4">
       <!-- Projects where category includes data -->
       {#each refined as project}
@@ -67,7 +67,7 @@
         <!-- <Toc headingSelector="main :where(h2)" --toc-desktop-margin="1em 0 0 0;" title='' getHeadingIds = null/> -->
       </aside>
     </div>
-    <h2 class="text-4xl font-bold font-serif text-left border-b-2 border-black pb-2 mb-2">Web Development</h2>
+    <h2 class="text-4xl font-medium font-britania text-left border-b-2 border-black pb-2 mb-2">Web Development</h2>
     <section id="web" class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3  gap-4 py-4">
       <!-- Projects where category includes data -->
       {#each refined as project}
@@ -83,7 +83,7 @@
         <img src="/common/assets/resources/science.png" alt="hand" width="180" class="hand" />
       </aside>
     </div>
-    <h2 class="text-4xl font-bold font-serif text-left border-b-2 border-black pb-2 mb-2">R Programming</h2>
+    <h2 class="text-4xl font-medium font-britania text-left border-b-2 border-black pb-2 mb-2">R Programming</h2>
     <section id="r" class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3  gap-4 ">
       <!-- Projects where category includes data -->
       {#each refined as project}

@@ -55,7 +55,7 @@ console.log
         </div>
         <div class="flex flex-col items-start justify-between w-full h-full pl-0 pt-4 lg:pt-0 md:pt-0 sm:pt-0  lg:pl-4 xl:pl-4 md:pl-4  md:mb-0 md:w-1/2">
           <div
-            class="flex flex-col items-start justify-between h-full space-y-3 transform   md:space-y-5"
+            class="flex flex-col items-start justify-between  space-y-3 flex-grow  md:space-y-5"
           >
             <div class="bg-color-story" >
               <h3 class="font-sans font-semibold uppercase text-lg bg-zinc-800 text-white px-2">

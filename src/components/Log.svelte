@@ -48,7 +48,8 @@ onMount(() => {
 
 let chart = d3timelines.timelines().stack().tickFormat( {
     format: d3.timeFormat("%b %d"),
-    tickInterval: 4
+    // Show only 5 ticks
+    tickInterval: 5
     }
     ).margin({
     top: 20,
@@ -64,6 +65,9 @@ const svg = d3.select('#timeline')
     .datum(projects)
     .call(chart);
 
+// Show only 5 ticks on the x axis
+
+
     // Shift ticks down 
 svg.selectAll('.tick text')
     .attr('transform', 'translate(0, 10)');
@@ -72,18 +76,18 @@ svg.selectAll('.tick text')
 svg.append('text')
     .attr('x', 
    // Left align
-    chart.margin().left - 20    )
+    chart.margin().left - 80    )
     .attr('y', 20)
     .attr('text-anchor', 'middle')
     // Add class for css styling
-    .attr('class', 'font-serif text-gray-700 font-bold text-lg')
+    .attr('class', 'font-britania text-gray-700 text-lg')
     .style('font-size', '20px')
     .style('color', '#333')
-    .text('What am I working on?');
+    .text('Weekly log');
 
-svg.selectAll('.timeline-label text')
-    .attr('class', 'font-serif text-gray-700 font-bold text-lg');
-
+// Select Y axis text
+svg.selectAll('.tick text')
+    .attr('class', 'font-britania text-gray-700 lg:text-sm text-[8px]');
 });
 
 
@@ -102,6 +106,6 @@ svg.selectAll('.timeline-label text')
 }
 </style>
 
-<main class="py-8 w-full">
+<main class="py-8 w-full h-40">
     <div id="timeline" class="w-full overflow-auto"></div>   
 </main>

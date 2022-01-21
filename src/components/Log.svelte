@@ -44,7 +44,6 @@ timelines.forEach((project, i) => {
 projects.splice(3)
 console.log(projects);
 
-// On mount, create the timeline
 onMount(() => {
 
 let chart = d3timelines.timelines().stack().tickFormat( {

@@ -2,6 +2,8 @@
 import Projects from "./Projects.svelte";
 import Header from "./Header.svelte";
 import CodeDevList from "./CodeDevList.svelte";
+import Log from "./Log.svelte";
+import timelines from "$data/logs/timeline.json";
 </script>
 
 <!-- Iterate and show all story headings -->
@@ -17,9 +19,11 @@ import CodeDevList from "./CodeDevList.svelte";
 
   <div class="flex flex-col justify-items-start items-start">
     <Projects />
+
     <section class="w-full">
       <!-- <CodingList /> -->
       <CodeDevList />
+      <Log {timelines} />
     </section>
   </div>
 </main>

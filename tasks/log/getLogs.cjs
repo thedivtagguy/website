@@ -3,7 +3,6 @@
 const fetch = require('node-fetch');
 const fs = require('fs');
 const keys = [
-    "id",
     "state",
     "milestone",
     "comments_url",
@@ -13,7 +12,6 @@ const keys = [
     "body",
     "title",
     "number",
-    "html_url",
 ];
 
 const commentKeys = [
@@ -48,23 +46,28 @@ fetch(gitHubURL)
                 .then(res => res.json())
                 .then(json => {
                     // Get the keys defined in commentKeys
+                    let allComments = [];
                     for (let j = 0; j < json.length; j++) {
                         let comment = {};
                         for (let k = 0; k < commentKeys.length; k++) {
-                            comment[commentKeys[k]] = json[j][commentKeys[k]];
-                           
+                            comment[commentKeys[k]] = json[j][commentKeys[k]];                           
                         }
-                        console.log(comment);
-                        // Create a new key in the issueDetails array
-                        issueDetails[i][`comment-${j}`] = comment;
-
+                      console.log(comment);
+                        allComments.push(comment);
+                    // Push the comments to the issueDetails array
+                    issueDetails[i].comments = allComments;
+                    
                     }
                 }).then(() => {
                     // save the issueDetails array to a file
                     fs.writeFileSync('./src/data/logs/timeline.json', JSON.stringify(issueDetails));
                 });
+                
         }
+        console.log("Updated logs at",  new Date(Date.now()).toLocaleString());
+
     })
+    
     .catch(err => {
         console.log(err);
     });

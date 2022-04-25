@@ -44,9 +44,9 @@
   });
 </script>
 <section class="relative py-8">
-    <h2 class="text-5xl -mt-4 text-black font-serif stroke-black ">Resources</h2>
+    <h2 class="text-4xl -mt-4 text-black font-serif stroke-black ">Resources</h2>
     <div id="small-bar" class="mb-2"></div>
-    <p class="font-sans mb-2 text-[15px] w-[100ch] leading-normal">
+    <p class="font-sans mb-2 text-[15px] max-w-[100ch] leading-normal">
         I am conducting mentoring sessions at Srishti Institute of Art, Design and Technology on web development for students. All the resource material I create is available here.
       </p>
     <div class="flex flex-col lg:flex-row  xl:flex-row w-full md:flex-row gap-4">

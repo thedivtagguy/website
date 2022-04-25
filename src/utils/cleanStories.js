@@ -59,6 +59,8 @@ const parseStories = (story, key) => {
     output.thumbnail = makeSlug(d.url);
     output.featured = d.featured;
     output.link = makeLink(d.url);
+    output.fullLink = d.url;
+    output.isExternal = d.isExternal;
     output.tools = makeArray(d.tools);
     return output;
   });

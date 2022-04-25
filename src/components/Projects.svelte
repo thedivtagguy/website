@@ -15,6 +15,7 @@
       "author",
       "keyword",
       "published",
+      "isExternal",
       "img",
       "path",
       "month",

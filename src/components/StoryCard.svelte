@@ -7,7 +7,9 @@ import Button from "./helpers/Button.svelte";
   export let description;
   export let featured;
   export let link;
+  export let fullLink;
   export let external;
+  export let isExternal;
   // Choose first item from category
   const DEFAULT_COLOR = {
     light: "hsl(0, 0%, 80%)",
@@ -28,7 +30,17 @@ import Button from "./helpers/Button.svelte";
 	--default-dark: ${DEFAULT_COLOR["dark"]};
 	--default-darker: ${DEFAULT_COLOR["darker"]};
   `;
-console.log
+console.log(fullLink);
+
+export let url;
+
+if(isExternal === "TRUE") {
+  url = fullLink;
+
+}
+else{
+  url = `/projects/${link}`;
+}
 </script>
 
 <main class="py-2">
@@ -79,7 +91,7 @@ console.log
     </section>
   {:else}
     <section class="basis-1/2  group">
-      <a href="/projects/{link}"  rel={external ? "external" : ''}>
+      <a href="{url}"  rel={external ? "external" : ''}>
         <div class="flex flex-col justify-items-start gap-2 items-start">
           <img
             width="600"
@@ -93,7 +105,7 @@ console.log
             loading="lazy"
           />
           <h4 class="font-bold font-sans text-2xl group-hover:text-divpurple">{heading}</h4>
-          <p class="font-sans group-hover:text-gray-700">{description}</p>
+          <p class="font-sans max-w-lg group-hover:text-gray-700">{description}</p>
         </div>
       </a>
     </section>

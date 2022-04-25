@@ -6,6 +6,7 @@
     "docs": "node tasks/collect-docs.cjs",
     "thumbnail-stories": "node tasks/thumbnail-stories.cjs",
     "thumbnail-projects": "node tasks/thumbnail-projects.cjs",
+    "thumbnail-other": "node tasks/thumbnail-other.cjs",
     "thumbnail-resources": "node tasks/thumbnail-resources.cjs",
     "thumbnail-colour": "node tasks/thumbnail-colour.cjs",
     "dev:only": "svelte-kit dev",

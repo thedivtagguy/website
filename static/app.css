@@ -560,6 +560,18 @@ p {
 .max-w-7xl {
   max-width: 80rem;
 }
+.max-w-xl {
+  max-width: 36rem;
+}
+.max-w-\[10px\] {
+  max-width: 10px;
+}
+.max-w-md {
+  max-width: 28rem;
+}
+.max-w-lg {
+  max-width: 32rem;
+}
 .flex-grow {
   -webkit-box-flex: 1;
           flex-grow: 1;
@@ -909,11 +921,11 @@ p {
 .font-sans {
   font-family: "Source Sans Pro", sans-serif;
 }
-.font-drops {
-  font-family: "PF Goudy Initials Pro", serif;
-}
 .font-serif {
   font-family: Evagrande, serif;
+}
+.font-drops {
+  font-family: "PF Goudy Initials Pro", serif;
 }
 .text-5xl {
   font-size: 3rem;

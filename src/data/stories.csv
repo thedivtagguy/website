@@ -1,11 +1,12 @@
-heading,url,date,desc,cat,author,keyword,last_update,published,featured,tools
-Srishti '23: Unwrapped,2020/whatsapp,15/12/2020,"Text Data of 20,000+ messages in the Srishti '23 Whatsapp group, visualized.","data, story",aman,"r, whatsapp",05/09/2021,TRUE,FALSE,
-A Critical News Consumer's Starter Manifesto,2020/manifesto,18/10/2020,"4.5 Lakh tweets by three major Indian news channels, analysed.","data, story","aman, malay","r, python,news,twitter",21/09/2021,TRUE,FALSE,
-This Studio Looks at Bellybuttons...,2021/bellybutton,16/08/2021,Generating design school courses for anything with GPT-3,story,aman,"python, ai, nlp",16/08/2021,TRUE,FALSE,
-The People in the Food Apps,2021/food-apps,9/10/2021,Examining food delivery platforms & how much they can earn you,"data, story",aman,"r, research, modelling",9/10/2021,TRUE,TRUE,
-Desidata Package for R,projects/desidata,10/12/2021,Easily accessible datasets on India within RStudio,"data, development, r",aman,"r, data, development",12/12/2021,TRUE,TRUE,"r, python, git, github"
-"You're a Wizard, Harry",projects/wizard,9/11/2020,3000 Emails from Harry Potter Fans,"random, project",aman,"website, writing",,FALSE,FALSE,"hugo, markdown"
-Lyrics by Michael Styles and Harry Scott,projects/lyrical-nonsense,24/05/2021,"Lyrical nonsense from the desk of Dwight, Michael and Harry","project, random, development, coding, website",aman,"lyric, music, writing",,TRUE,TRUE,"python, tailwind, css, html, r, javascript"
-Srishti Archive,projects/srishti-archive,19/12/2021,A permanent gallery of projects by students at Srishti,"project, development, website",aman,"srishti, development, react, archive",,TRUE,TRUE,"react, gatsby, contentful, tailwind"
-The Yelli Pages,projects/yelli-pages,06/08/2020,A student run newsletter for Srishti,"project, development, website",aman,"website, writing, design, srishti, newsletter",,TRUE,FALSE,"wordpress, photoshop, html, css, javascript"
-SongscrapR Package for R,projects/songscrapr,15/12/2020,Tidy lyric scraper for R,"data, development, project, r",aman,"r, development, data",,TRUE,TRUE,r
+heading,url,date,desc,cat,author,keyword,last_update,published,featured,tools,isExternal
+Srishti '23: Unwrapped,2020/whatsapp,15/12/2020,"Text Data of 20,000+ messages in the Srishti '23 Whatsapp group, visualized.","data, story",aman,"r, whatsapp",05/09/2021,TRUE,FALSE,,FALSE
+A Critical News Consumer's Starter Manifesto,2020/manifesto,18/10/2020,"4.5 Lakh tweets by three major Indian news channels, analysed.","data, story","aman, malay","r, python,news,twitter",21/09/2021,TRUE,FALSE,,FALSE
+This Studio Looks at Bellybuttons...,2021/bellybutton,16/08/2021,Generating design school courses for anything with GPT-3,story,aman,"python, ai, nlp",16/08/2021,TRUE,FALSE,,FALSE
+The People in the Food Apps,2021/food-apps,9/10/2021,Examining food delivery platforms & how much they can earn you,"data, story",aman,"r, research, modelling",9/10/2021,TRUE,TRUE,,FALSE
+Desidata Package for R,projects/desidata,10/12/2021,Easily accessible datasets on India within RStudio,"data, development, r",aman,"r, data, development",12/12/2021,TRUE,TRUE,"r, python, git, github",FALSE
+"You're a Wizard, Harry",projects/wizard,9/11/2020,3000 Emails from Harry Potter Fans,"random, project",aman,"website, writing",,FALSE,FALSE,"hugo, markdown",FALSE
+Lyrics by Michael Styles and Harry Scott,projects/lyrical-nonsense,24/05/2021,"Lyrical nonsense from the desk of Dwight, Michael and Harry","project, random, development, coding, website",aman,"lyric, music, writing",,TRUE,TRUE,"python, tailwind, css, html, r, javascript",FALSE
+Srishti Archive,projects/srishti-archive,19/12/2021,A permanent gallery of projects by students at Srishti,"project, development, website",aman,"srishti, development, react, archive",,TRUE,TRUE,"react, gatsby, contentful, tailwind",FALSE
+The Yelli Pages,projects/yelli-pages,06/08/2020,A student run newsletter for Srishti,"project, development, website",aman,"website, writing, design, srishti, newsletter",,TRUE,FALSE,"wordpress, photoshop, html, css, javascript",FALSE
+SongscrapR Package for R,projects/songscrapr,15/12/2020,Tidy lyric scraper for R,"data, development, project, r",aman,"r, development, data",,TRUE,TRUE,r,FALSE
+HTML > Git > Netlify,web-dev/1,23/04/2022,A crash course on getting your basic HTML page up on Netlify and learning git-based deployment,teaching,aman,"web dev, resource",24/04/2022,TRUE,,,TRUE

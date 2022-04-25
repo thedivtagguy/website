@@ -4,7 +4,6 @@ import ToolList from "./ToolList.svelte";
     export let keyword;
     export let slug;
     export let externalLink;
-    export let styles;
     export let tools;
     
 

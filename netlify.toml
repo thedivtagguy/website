@@ -22,10 +22,17 @@
   status = 200
   force = true
 
+# Resources
 
 [[redirects]]
   from = "/web-dev/1"
   to = "https://mellifluous-crumble-4fde67.netlify.app/"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/web-dev/2"
+  to = "https://webdev-session2.netlify.app/"
   status = 200
   force = true
   

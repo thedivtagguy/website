@@ -10,3 +10,4 @@ Srishti Archive,projects/srishti-archive,19/12/2021,A permanent gallery of proje
 The Yelli Pages,projects/yelli-pages,06/08/2020,A student run newsletter for Srishti,"project, development, website",aman,"website, writing, design, srishti, newsletter",,TRUE,FALSE,"wordpress, photoshop, html, css, javascript",FALSE
 SongscrapR Package for R,projects/songscrapr,15/12/2020,Tidy lyric scraper for R,"data, development, project, r",aman,"r, development, data",,TRUE,TRUE,r,FALSE
 HTML > Git > Netlify,web-dev/1,23/04/2022,A crash course on getting your basic HTML page up on Netlify and learning git-based deployment,teaching,aman,"web dev, resource",24/04/2022,TRUE,,,TRUE
+CSS > Flexbox > Branching,web-dev/2,01/05/2022,"More CSS, learning flexbox and branching with Git",teaching,aman,"web dev, resource",01/05/2022,TRUE,,,TRUE

@@ -5,6 +5,7 @@ import CodeDevList from "./CodeDevList.svelte";
 import Log from "./Log.svelte";
 import timelines from "$data/logs/timeline.json";
 import Resources from "./Resources.svelte";
+import Publications from "./Publications.svelte";
 </script>
 
 <!-- Iterate and show all story headings -->
@@ -24,7 +25,9 @@ import Resources from "./Resources.svelte";
     <section class="w-full">
       <!-- <CodingList /> -->
       <CodeDevList />
+      <Publications />
       <Resources />
+     
     </section>
   </div>
 </main>

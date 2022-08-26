@@ -71,9 +71,9 @@
 
 <main class="mx-auto">
 	<div class="max-w-5xl mx-auto mt-6 px-2">
-		<div class="flex justify-between items-start justify-self-start">
-			<div class="pb-2 flex flex-col justify-items-center items-start gap-2">
-				<span class="font-bold font-sans uppercase">{post.category[0]} | {post.date}</span>
+		<div class="flex justify-between items-start ">
+			<div class="py-2 flex flex-col justify-items-center items-start gap-2">
+				<p class="font-bold mb-6 font-sans uppercase">{post.category[0]} | {post.date}</p>
 				<h1 class="font-medium text-5xl lg:text-6xl md:text-6xl xl:text-6xl sm:text-6xl font-serif">{post.heading}</h1>
 				<h2 class="font-semibold text-xl font-sans">{post.summary}</h2>
 			</div>

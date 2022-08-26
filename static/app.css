@@ -441,6 +441,9 @@ p {
 .float-left {
   float: left;
 }
+.m-6 {
+  margin: 1.5rem;
+}
 .my-6 {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
@@ -486,6 +489,12 @@ p {
 }
 .-mt-4 {
   margin-top: -1rem;
+}
+.mb-8 {
+  margin-bottom: 2rem;
+}
+.mb-6 {
+  margin-bottom: 1.5rem;
 }
 .block {
   display: block;
@@ -887,6 +896,10 @@ p {
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
+}
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 .pb-4 {
   padding-bottom: 1rem;

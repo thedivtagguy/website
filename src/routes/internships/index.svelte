@@ -11,7 +11,12 @@
   import { Tweet } from 'svelte-twitter-widgets';
 </script>
 
-<Meta/>
+<Meta
+ title = {"So, internships, huh?"}
+ description = {"FAQs about portfolios and internships I wish I had."}
+ slug = {"/common/assets/resources/internship/sharecard.jpg"}
+ url = {"https://thedivtagguy.com/internships"}
+/>
 
 
 

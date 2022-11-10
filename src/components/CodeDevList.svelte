@@ -43,7 +43,7 @@
 </script>
 <main>
     <section id="code"  class="flex py-4 px-4 lg:py-10 md:py-12 sm:py-10 flex-col lg:flex-row md:flex-row items-center justify-center  bg-divpurple border-4 border-indigo-900 border-dashed md:px-4 lg:px-4">
-     <div class="flex flex-col items-start justify-center  mb-10 lg:mb-0 lg:w-1/2">
+     <div class="flex flex-col items-start justify-center  mb-10 lg:w-1/2">
         <h2 id="head-text" class="text-5xl font-extrabold tracking-tight text-white font-mono  sm:text-5xl sm:leading-none md:text-6xl lg:text-5xl xl:text-6xl" >
             Code & Dev.
         </h2>

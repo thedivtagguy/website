@@ -10,6 +10,7 @@ import Button from "./helpers/Button.svelte";
   export let fullLink;
   export let external;
   export let isExternal;
+  export let image;
   // Choose first item from category
   const DEFAULT_COLOR = {
     light: "hsl(0, 0%, 80%)",
@@ -54,6 +55,10 @@ else{
       <div class="flex  flex-col items-start  md:flex-row">
         
         <div class="w-full">
+
+<!-- If image field has a link, use that link for source. Otherwise if it is blank, use slug -->
+
+          {#if !image}
           <img
             width="640"
             height="500"
@@ -64,6 +69,14 @@ else{
                     /common/assets/thumbnails/640/{slug}.jpg 640w"
             sizes="(max-width: 320px) 640px, (max-width: 480px) 960px, 1280px"
           />
+          {:else}
+          <img
+            width="640"
+            height="500"
+            src="{image}"
+            alt="thumbnail for story"
+          />
+          {/if}
         </div>
         <div class="flex flex-col items-start justify-between w-full h-full pl-0 pt-4 lg:pt-0 md:pt-0 sm:pt-0  lg:pl-4 xl:pl-4 md:pl-4  md:mb-0 md:w-1/2">
           <div
@@ -93,6 +106,8 @@ else{
     <section class="basis-1/2  group">
       <a href="{url}"  rel={external ? "external" : ''}>
         <div class="flex flex-col justify-items-start gap-2 items-start">
+         
+         {#if !image}
           <img
             width="600"
             height="720"
@@ -104,6 +119,15 @@ else{
             sizes="(max-width: 320px) 640px, (max-width: 480px) 960px, 1280px"
             loading="lazy"
           />
+          {:else}
+          <img
+            width="600"
+            height="720"
+            src="{image}"
+            alt="thumbnail for story"
+            loading="lazy"
+          />
+          {/if}
           <h4 class="font-bold font-sans text-2xl group-hover:text-divpurple">{heading}</h4>
           <p class="font-sans max-w-lg group-hover:text-gray-700">{description}</p>
         </div>

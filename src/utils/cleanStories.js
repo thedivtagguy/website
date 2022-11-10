@@ -52,7 +52,7 @@ const parseStories = (story, key) => {
     if (output.date === "01 January 1970") {
       output.date = null;
     }
-    output.description = d.desc;
+    output.description = d.desc || d.description;
     output.keyword = makeArray(d.keyword);
     output.category = makeArray(d.cat);
     output.published = d.published;
@@ -62,6 +62,7 @@ const parseStories = (story, key) => {
     output.fullLink = d.url;
     output.isExternal = d.isExternal;
     output.tools = makeArray(d.tools);
+    output.image = d.image;
     return output;
   });
   // Only keep stories that are published

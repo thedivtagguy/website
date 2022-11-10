@@ -20,5 +20,9 @@ module.exports = [
   {
     id: "1_j1m4NvpGOT3iQ35nBxK5lO8_69WEJydi3ISlsXNTis",
     filepath: "src/data/gallery.json"
+  },
+  {
+    id: "1h4QrR_QQ0TEODsnyv1ZNqGkGNzcyDyPd-yTqCnngTQQ",
+    filepath: "src/data/internships.json"
   }
 ];

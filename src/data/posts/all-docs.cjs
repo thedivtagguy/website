@@ -18,5 +18,9 @@ module.exports = [
 {
     id: "1r26cWrKq1ArSwj_38KM61D7DqCl0_x2Y",
     filepath: "src/data/posts/yelli-pages.json"
+  },
+{
+    id: "1rO54MTWi2IVO3GFxt-jTfZ1IOLLegIpg5WgYQSInOjA",
+    filepath: "src/data/posts/Dance of Dependence.json"
   }
 ];

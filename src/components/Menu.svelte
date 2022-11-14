@@ -8,9 +8,11 @@
 
   const links = [
     { name: "Home", link: "/" },
+    // { name: "Blog", link: "/blog" },
     { name: "Projects", link: "/projects" },
     { name: "Gallery", link: "/gallery" },
     { name: "Contact", link: "/contact" },
+
   ];
 </script>
 

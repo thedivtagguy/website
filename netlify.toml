@@ -35,6 +35,14 @@
   to = "https://webdev-session2.netlify.app/"
   status = 200
   force = true
+
+
+[[redirects]]
+  from = "/dance-of-dependence"
+  to = "https://danceofdependence.netlify.app/"
+  status = 200
+  force = true
+  
   
 [[headers]]
   # Define which paths this specific [[headers]] block will cover.

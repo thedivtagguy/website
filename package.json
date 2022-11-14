@@ -7,6 +7,7 @@
     "thumbnail-stories": "node tasks/thumbnail-stories.cjs",
     "thumbnail-projects": "node tasks/thumbnail-projects.cjs",
     "thumbnail-other": "node tasks/thumbnail-other.cjs",
+    "thumbnail": "npm run thumbnail-stories && npm run thumbnail-projects && npm run thumbnail-other && node tasks/thumbnail-blogposts.cjs",
     "thumbnail-resources": "node tasks/thumbnail-resources.cjs",
     "thumbnail-colour": "node tasks/thumbnail-colour.cjs",
     "dev:only": "svelte-kit dev",

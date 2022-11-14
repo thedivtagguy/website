@@ -11,6 +11,7 @@ import Button from "./helpers/Button.svelte";
   export let external;
   export let isExternal;
   export let image;
+  export let category;
   // Choose first item from category
   const DEFAULT_COLOR = {
     light: "hsl(0, 0%, 80%)",
@@ -39,9 +40,14 @@ if(isExternal === "TRUE") {
   url = fullLink;
 
 }
-else{
-  url = `/projects/${link}`;
+else if (category === "blogpost")
+{
+  url = "/blog/" + link;
 }
+else {
+  url = "/projects/" + link;
+}
+
 </script>
 
 <main class="py-2">

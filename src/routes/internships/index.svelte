@@ -8,7 +8,6 @@
   import Meta from "$components/Meta.svelte";
   import Footer from "$components/Footer.svelte";
   import copy from "$data/internships.json";
-  import { Tweet } from 'svelte-twitter-widgets';
 </script>
 
 <Meta

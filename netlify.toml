@@ -38,7 +38,7 @@
 
 
 [[redirects]]
-  from = "/dance-of-dependence"
+  from = "/projects/dance-of-dependence"
   to = "https://danceofdependence.netlify.app/"
   status = 200
   force = true

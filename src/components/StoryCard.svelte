@@ -1,7 +1,7 @@
 <script>
   import colors from "$data/thumbnail-colors.json";
 import Button from "./helpers/Button.svelte";
-
+import imageURL from "$utils/imageURL.js";
   export let slug;
   export let heading;
   export let description;
@@ -23,6 +23,7 @@ import Button from "./helpers/Button.svelte";
     const match = colors.find((d) => d.slug === slug);
     return match ? match[version] : DEFAULT_COLOR;
   };
+
   const style = `
   --name: ${slug}
 	--light: ${lookupColor("light")};
@@ -32,15 +33,14 @@ import Button from "./helpers/Button.svelte";
 	--default-dark: ${DEFAULT_COLOR["dark"]};
 	--default-darker: ${DEFAULT_COLOR["darker"]};
   `;
-console.log(fullLink);
 
 export let url;
-
-if(isExternal === "TRUE") {
-  url = fullLink;
+const startsWithHTTP = (string) => string.startsWith("http");
+if(isExternal && isExternal != "FALSE" && isExternal != "false" && startsWithHTTP(isExternal)) {
+  url = isExternal;
 
 }
-else if (category === "blogpost")
+else if (category == "blog")
 {
   url = "/blog/" + link;
 }
@@ -48,6 +48,12 @@ else {
   url = "/projects/" + link;
 }
 
+// Check if image field is empty or a link
+// If a link, use that link for source
+// Otherwise if it is not a link and not empty, assign that value to the slug variable and make image false
+
+
+console.log(image);
 </script>
 
 <main class="py-2">
@@ -100,7 +106,7 @@ else {
             </div>
             <p class="pt-2 text-xl font-medium">{description}</p>
             <div class="w-full">
-              <Button text="Read Essay" 
+              <Button text="Read More" 
                       link="/projects/{link}" 
                       target="_blank" />
             </div>

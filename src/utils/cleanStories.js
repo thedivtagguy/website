@@ -1,10 +1,10 @@
 import { timeParse, timeFormat } from "d3";
-import filterStoryProps from "./filterStoryProps";
+import monthShortName from "./monthShort";
 
 const makeArray = (str) => {
   if (str) {
-    // Split and trim 
-    return str.split(",").map((d) => d.trim()); 
+    // Split and trim
+    return str.split(",").map((d) => d.trim());
   }
   return [];
 };
@@ -18,10 +18,6 @@ const makeLink = (str) => {
 };
 
 const makeSlug = (str) => {
-  return str.toLowerCase().replace(/[-,/]/g, "_");
-};
-
-const imgName = (str) => {
   return str.toLowerCase().replace(/[-,/]/g, "_");
 };
 
@@ -42,9 +38,12 @@ const parseStories = (story, key) => {
     output.slug = makeSlug(d.url);
     output.author = makeArray(d.author);
     // Clean date
-    output.date = timeParse("%d/%m/%Y")(d.date);
+    output.date = timeParse("%m/%d/%Y")(d.date);
     // Convert date to d, month and year
     output.month = timeFormat("%B")(output.date);
+    output.day = timeFormat("%d")(output.date);
+    output.monthNo = timeFormat("%m")(output.date);
+    output.monthShort = monthShortName(output.monthNo);
     output.year = timeFormat("%Y")(output.date);
     output.date = timeFormat("%d %B %Y")(output.date);
 

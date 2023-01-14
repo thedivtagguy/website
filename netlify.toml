@@ -22,6 +22,12 @@
   status = 200
   force = true
 
+  [[redirects]]
+  from = "/projects/dance-of-dependence"
+  to = "https://danceofdependence.netlify.app"
+  status = 200
+  force = true
+
 # Resources
 
 [[redirects]]

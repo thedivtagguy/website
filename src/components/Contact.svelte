@@ -1,5 +1,52 @@
 <script>
     export let copy;
+    import storiesData from "$data/stories.csv";
+  import parseStories from "$utils/cleanStories";
+
+
+  let stories = [];
+  let refined = [];
+
+  const keys = [
+    "url",
+    "date",
+    "heading",
+    "desc",
+    "cat",
+    "author",
+    "keyword",
+    "published",
+    "img",
+    "path",
+    "month",
+    "date",
+  ];
+
+  stories = parseStories(storiesData, keys);
+  
+    stories.forEach(story => {
+        refined.push(story);
+        }
+    );
+
+  // Sort by date
+  refined = refined.sort((a, b) => {
+    return new Date(b.date) - new Date(a.date);
+  });
+
+  let selectedCategory = "all";
+
+  let categories = [
+    "All",
+    "Data Story",
+    "Web Development",
+    "Web Design",
+    "Tool Development",
+    "Graphic Design",
+    "Photography",
+    "3D Art"
+  ]
+
 </script>
 
 
@@ -37,6 +84,8 @@
                 <div class="my-4">
                     {#if copy.forHire === 'true'}
                         <span class="px-2 py-1 bg-green-600 text-white  rounded-sm my-2 font-bold text-sm">Available for work</span>
+                    {:else}
+                        <span class="px-2 py-1 bg-red-600 text-white  rounded-sm my-2 font-bold text-sm">Not available for work</span>
                      {/if}
                 </div>
                 <a href={copy.resume}><button class="button-31" role="button">View Resume</button></a>
@@ -57,6 +106,28 @@
 			</div>
 		</section>
 		
+    <!-- Allow users to sort through categories and display a refined list of projects -->
+    <!-- <section class="py-12">
+      <h3 class="text-3xl font-bold mb-4 ">How can I help you?</h3>
+      <p class="mb-4 w-3/5">I'd like to make it easier for you to decide if I can help you with something. Select a category below to see a list of projects I've worked on.
+      </p>
+      <select class="w-full mb-4" v-model="selectedCategory">
+        {#each categories as post}
+          <option value="{post}">{post}</option>
+        {/each}
+      </select>
+      
+      {#each refined as listing}
+        <div class="mb-4">
+          <h4 class="text-xl font-bold">{listing.heading}</h4>
+          <p>{listing.description}</p>
+        </div>
+      {/each}
+    </section>
+     -->
+
+
+
 	</div>
 </main>
 

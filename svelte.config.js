@@ -38,7 +38,7 @@ const config = {
       },
       plugins: [dsv(), svg()],
       optimizeDeps: {
-        exclude: ['@svelte-video-player']
+        exclude: ["@svelte-video-player", "svelte-fuzzy"]
       }
     },
     paths: {
@@ -48,4 +48,3 @@ const config = {
 };
 
 export default config;
-

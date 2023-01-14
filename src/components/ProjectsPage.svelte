@@ -67,7 +67,7 @@
         <!-- <Toc headingSelector="main :where(h2)" --toc-desktop-margin="1em 0 0 0;" title='' getHeadingIds = null/> -->
       </aside>
     </div>
-    <h2 class="text-4xl font-medium font-serif text-left border-b-2 border-black pb-2 mb-2">Web Development</h2>
+    <h2 class="text-4xl font-medium font-serif text-left border-b-2 border-black pb-2 mb-2">Websites</h2>
     <section id="web" class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3  gap-4 py-4">
       <!-- Projects where category includes data -->
       {#each refined as project}

@@ -5,11 +5,8 @@
 <header class="py-1">
   <div class="mx-auto pb-2  border-double border-gray-900">
     <div class="z-20 mx-auto">
-      <div class="lg:flex py-4 mb-2 sm:flex xl:flex md:flex hidden justify-between items-center">
-        <p class="font-sans text-xs font-semibold">Issue Published 
-
-          <!-- Format as date  -->
-          <time datetime={updated.last_update}>{updated.last_update}</time>
+      <div class="lg:flex py-2 sm:flex xl:flex md:flex hidden justify-between items-center">
+        <p class="font-sans text-xs font-semibold">Issue published on <time datetime={updated.last_update}>{updated.last_update}</time>
         </p>
       </div>
       <h2 class="lg:text-5xl py-1 text-2xl relative  font-serif font-medium sm:text-4xl">

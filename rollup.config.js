@@ -11,11 +11,13 @@ preprocess: sveltePreprocess({
 });
 
 export default {
+  extensions: [".svelte", ".svx", ".md"],
+  preprocess: mdsvex({ extensions: [".svx", ".md"] }),
   plugins: [
     svelte({
-			// tell svelte to handle mdsvex files
-			extensions: [".svelte", ".svx"],
-			preprocess: mdsvex()
-		})
+      // tell svelte to handle mdsvex files
+      extensions: [".svelte", ".svx"],
+      preprocess: mdsvex()
+    })
   ]
 };

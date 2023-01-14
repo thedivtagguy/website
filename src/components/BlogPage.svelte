@@ -2,7 +2,10 @@
   import storiesData from "$data/stories.csv";
   import parseStories from "$utils/cleanStories";
   import BlogListing from "./BlogListing.svelte";
-  import StoryCard from "./StoryCard.svelte";
+  // import Fuzzy from "svelte-fuzzy";
+
+  let query = "";
+
 
   let stories = [];
   let refined = [];
@@ -24,6 +27,15 @@
 
   stories = parseStories(storiesData, keys);
 
+  let options = {
+    keys: ["heading", "desc", "author", "keyword"],
+    threshold: 0.3,
+    limit: 10,
+    sort: true
+  };
+
+
+
   stories.forEach((story) => {
     refined.push(story);
   });
@@ -32,44 +44,6 @@
   refined = refined.sort((a, b) => {
     return new Date(b.date) - new Date(a.date);
   });
-
-  // // Organize by year
-  // // LIke this:
-  // // [
-  // //   {
-  //   2022: [
-  //     {
-  //       title: "title",
-  //       date: "date",
-  //       desc: "desc",
-  //       category: "category",
-  //     },
-  //     {
-  //       title: "title",
-  //       date: "date",
-  //       desc: "desc",
-  //       category: "category",
-  //     },
-  //   ],
-  // //   },
-  // //   {
-  //   2021: [
-  //     {
-  //       title: "title",
-  //       date: "date",
-  //       desc: "desc",
-  //       category: "category",
-  //     },
-  //     {
-  //       title: "title",
-  //       date: "date",
-  //       desc: "desc",
-  //       category: "category",
-  //     },
-  //   ],
-  // ]
-
-  // Organize by year
 
   let posts = [];
   // Year is in year key
@@ -91,6 +65,8 @@
       });
     }
   });
+
+  let formatted = [];
 </script>
 
 <main>
@@ -102,6 +78,7 @@
       Blog
     </h1>
   </section>
+
   <section class="z-2 py-4 bg-white min-h-[90vh]">
       <section class="flex-row   justify-center items-center">
       {#each posts as year}

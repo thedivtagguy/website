@@ -38,7 +38,7 @@ const parseStories = (story, key) => {
     output.slug = makeSlug(d.url);
     output.author = makeArray(d.author);
     // Clean date
-    output.date = timeParse("%m/%d/%Y")(d.date);
+    output.date = timeParse("%d/%m/%Y")(d.date);
     // Convert date to d, month and year
     output.month = timeFormat("%B")(output.date);
     output.day = timeFormat("%d")(output.date);

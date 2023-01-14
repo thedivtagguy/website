@@ -8,8 +8,8 @@
 
   const links = [
     { name: "Home", link: "/" },
-    { name: "Blog", link: "/blog" },
     { name: "Projects", link: "/projects" },
+    { name: "Blog", link: "/blog" },
     { name: "Gallery", link: "/gallery" },
     { name: "Contact", link: "/contact" },
 

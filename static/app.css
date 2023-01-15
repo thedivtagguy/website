@@ -1301,6 +1301,11 @@ p {
 .outline {
   outline-style: solid;
 }
+.grayscale {
+  --tw-grayscale: grayscale(100%);
+  -webkit-filter: var(--tw-filter);
+          filter: var(--tw-filter);
+}
 .filter {
   -webkit-filter: var(--tw-filter);
           filter: var(--tw-filter);
@@ -1318,6 +1323,17 @@ p {
        -o-transition-duration: 150ms;
           transition-duration: 150ms;
 }
+.transition-all {
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+       -o-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-duration: 150ms;
+       -o-transition-duration: 150ms;
+          transition-duration: 150ms;
+}
 .duration-150 {
   -webkit-transition-duration: 150ms;
        -o-transition-duration: 150ms;
@@ -1327,6 +1343,11 @@ p {
   -webkit-transition-duration: 200ms;
        -o-transition-duration: 200ms;
           transition-duration: 200ms;
+}
+.duration-500 {
+  -webkit-transition-duration: 500ms;
+       -o-transition-duration: 500ms;
+          transition-duration: 500ms;
 }
 .ease-in-out {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1411,6 +1432,11 @@ p {
 .group:hover .group-hover\:underline {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
+}
+.group:hover .group-hover\:grayscale-0 {
+  --tw-grayscale: grayscale(0);
+  -webkit-filter: var(--tw-filter);
+          filter: var(--tw-filter);
 }
 @media (min-width: 640px) {
   .sm\:sticky {

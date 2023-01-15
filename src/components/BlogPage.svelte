@@ -84,7 +84,7 @@
 
   <section class="heading-text w-2/3 mx-auto pb-8">
         <h2 class="leading-tight anfscd text-white font-medium font-serif text-center ">
-          And now for somethings completely different
+          And now for some things completely different
         </h2>
   </section>
 

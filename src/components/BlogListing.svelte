@@ -38,7 +38,7 @@
       --default-dark: ${DEFAULT_COLOR["dark"]};
       --default-darker: ${DEFAULT_COLOR["darker"]};
     `;
-  console.log(fullLink);
+  console.log(isExternal);
 
   export let url;
 
@@ -52,13 +52,13 @@
 </script>
 
 <!-- Display blogpost info -->
-<a href={url}  rel={external ? "external" : ''}>
+<a href={url}  rel={isExternal ? "" : 'external'}>
   <!-- If i is even, add border. If odd, no border -->
   <div
     class="w-full my-4 pb-8 group border-t-2 group border-black hover:cursor-pointer gap-4 flex flex-row justify-between items-center"
   >
     {#if !image}
-      <img
+      <img class="thumbnail grayscale group-hover:grayscale-0 transition-all duration-900 ease-in-out"
         width="240"
         height="300"
         src="/common/assets/thumbnails/32/{slug}.jpg"
@@ -101,3 +101,11 @@
     </p>
   </div>
 </a>
+
+<style>
+
+  .thumbnail {
+    /* Right border */
+    border-right: 2px solid #000;
+  }
+</style>

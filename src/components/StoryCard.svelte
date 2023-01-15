@@ -48,12 +48,7 @@ else {
   url = "/projects/" + link;
 }
 
-// Check if image field is empty or a link
-// If a link, use that link for source
-// Otherwise if it is not a link and not empty, assign that value to the slug variable and make image false
 
-
-console.log(image);
 </script>
 
 <main class="py-2">

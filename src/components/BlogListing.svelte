@@ -57,7 +57,7 @@
 
 <!-- Display blogpost info -->
 <a href="{url}">
-    <div class="w-full hover:cursor-pointer  py-8 flex flex-row justify-between items-center">
+    <div class="w-full hover:cursor-pointer hover:bg-divpurple px-6 hover:text-white hover:border-4 border-black  py-8 flex flex-row justify-between items-center">
           <div class="flex gap-2 flex-col w-full">
             <h2 class="text-4xl w-full  font-bold text-left">
               {heading}

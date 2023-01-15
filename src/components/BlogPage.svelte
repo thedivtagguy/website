@@ -72,14 +72,26 @@
 <main>
   <div id="circle"><div class="image" /></div>
   <section
-    class="flex lg:h-[150px] sm:h-[150px] md:h-[150px] xl:h-[150px] pb-4 justify-between items-center mx-auto"
+    class="flex justify-between h-[150px] items-center mx-auto"
   >
-    <h1 class="text-5xl lg:text-6xl mx-auto text-white font-medium font-serif text-center py-4">
-      Blog
-    </h1>
+    <div class="text-5xl lg:text-6xl relative mx-auto text-white font-medium font-serif text-center py-4">
+      <img id="photo" class="strike" src="/common/assets/resources/strike.png" alt="Strikethrough" />
+      <h1 class="heading">Blog</h1>
+    </div>
   </section>
 
+<!-- Wavy text that says 'And now for something completely different' -->
+
+  <section class="heading-text w-2/3 mx-auto pb-8">
+        <h2 class="leading-tight anfscd text-white font-medium font-serif text-center ">
+          And now for somethings completely different
+        </h2>
+  </section>
+
+
+
   <section class="z-2 py-4 bg-white min-h-[90vh]">
+  
       <section class="flex-row   justify-center items-center">
       {#each posts as year}
         <h2 class="text-4xl font-medium font-serif text-left border-b-2 border-black pb-2 mb-2">
@@ -94,29 +106,7 @@
 </main>
 
 <style>
-  #photo {
-    position: absolute;
-    left: -13.5rem;
-    top: 9rem;
-    max-width: 200px;
-  }
-
-  #science {
-    position: absolute;
-    left: -13.5rem;
-    max-width: 200px;
-  }
-
-  #www {
-    position: absolute;
-    left: -13.5rem;
-    top: 0rem;
-    max-width: 200px;
-  }
-  aside {
-    padding: 1.5rem;
-  }
-
+ 
   #circle {
     /* Draw big blue circle */
     background: #904e55;
@@ -156,4 +146,68 @@
       background-position: 10px 0px;
     }
   }
+
+  /* Overlay strike.png on the heading class */
+
+  /* Add strike.png using pseudo selector */
+
+  #photo {
+    position: absolute;
+    top: 2rem;
+    right: -40%;
+    background-image: url("/common/assets/resources/strike.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 200px;
+   min-height: 10px;
+  }
+
+
+
+  .heading {
+    position: relative;
+    z-index: 1;
+  }
+ .anfscd  {
+  font-size: 30pt;
+  color: #fff;
+  /* letter-spacing: 10px; */
+  text-transform: uppercase;
+  transform: rotate(-8deg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow:   0px 6px 0 #212121,  
+                 0px 6px 0 #212121,
+                 0px  2px 0 #212121,
+                 0px  2px 0 #212121,
+                6px  0px 0 #212121,  
+                 2px  0px 0 #212121,
+                6px  0px 0 #212121,
+                 2px  0px 0 #212121,
+                6px 6px 0 #212121,  
+                 2px 6px 0 #212121,
+                6px  2px 0 #212121,
+                 2px  2px 0 #212121,
+                6px  4px 0 #212121,
+                 0px  4px 0 #212121,
+                 2px  4px 0 #212121,
+                 0 19px 1px rgba(0,0,0,.1),
+                 0 0 2px rgba(0,0,0,.1),
+                 0 2px 3px rgba(0,0,0,.3),
+                 0 12px 2px rgba(0,0,0,.2),
+                 0 18px 18px rgba(0,0,0,.25),
+                 0 24px 24px rgba(0,0,0,.2),
+                 0 36px 36px rgba(0,0,0,.15);
+}
+
+
+/* Mobile version */
+
+@media screen and (max-width: 600px) {
+ .anfscd {
+    font-size: 15pt;
+    transform: rotate(-8deg);
+ }
+}
 </style>

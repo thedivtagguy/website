@@ -93,12 +93,12 @@
   <section class="z-2 py-4 bg-white min-h-[90vh]">
   
       <section class="flex-row   justify-center items-center">
-      {#each posts as year}
-        <h2 class="text-4xl font-medium font-serif text-left border-b-2 border-black pb-2 mb-2">
+      {#each posts as year }
+        <h2 class="text-6xl font-medium font-serif text-center opacity-30 ">
           {year.year}
         </h2>
-        {#each year.posts as post}
-          <BlogListing {...post} />
+        {#each year.posts as post, i}
+          <BlogListing {...post} {i}/>
         {/each}
       {/each}
     </section>
@@ -109,7 +109,7 @@
  
   #circle {
     /* Draw big blue circle */
-    background: #904e55;
+    background: #CF5C36;
     background-image: url("/common/assets/resources/light-wool.png");
     max-width: 950px;
     max-height: 800px;

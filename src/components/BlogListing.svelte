@@ -10,8 +10,10 @@
     export let fullLink;
     export let external;
     export let isExternal;
+    export let i;
     export let image;
     export let date;
+    export let keyword;
     export let day;
     export let month;
     export let monthShort;
@@ -49,7 +51,7 @@
     url = "/blog/" + link;
   }
   else {
-    url = "/projects/" + link;
+    url =  fullLink;
   }
   
   </script>
@@ -57,17 +59,48 @@
 
 <!-- Display blogpost info -->
 <a href="{url}">
-    <div class="w-full hover:cursor-pointer hover:bg-divpurple px-6 hover:text-white hover:border-4 border-black  py-8 flex flex-row justify-between items-center">
+  <!-- If i is even, add border. If odd, no border -->
+    <div class="w-full my-4 pb-8 group border-t-2 group border-black hover:cursor-pointer gap-4 flex flex-row justify-between items-center">
+      
+      {#if !image}
+      <img
+        width="240"
+        height="300"
+        src="/common/assets/thumbnails/32/{slug}.jpg"
+        alt="thumbnail for story"
+        srcset="/common/assets/thumbnails/1280/{slug}.jpg 1280w,
+                /common/assets/thumbnails/960/{slug}.jpg 960w,
+                /common/assets/thumbnails/640/{slug}.jpg 640w"
+        sizes="(max-width: 320px) 640px, (max-width: 480px) 960px, 1280px"
+      />
+      {:else}
+      <img
+        width="640"
+        height="500"
+        src="{image}"
+        alt="thumbnail for story"
+      />
+      {/if}
           <div class="flex gap-2 flex-col w-full">
-            <h2 class="text-4xl w-full  font-bold text-left">
+            <h2 class="text-4xl w-full group-hover:underline decoration-wavy  flex-grow font-bold text-left">
               {heading}
             </h2>
-            <p class="text-left w-full font-mono text-sm">
+
+            <p class="text-left truncate text-ellipsis text- max-w-[400px] font-mono text-sm">
               {description}
             </p>
           </div>
-          <p class="w-full font-bold font-serif text-right text-5xl p-0 opacity-20">
+          <!-- Display tags -->
+          <div class="flex min-w-[70px] flex-col gap-2">
+            {#each keyword as tag, i}
+            {#if i < 2}
+              <p class="text-sm capitalize text-center font-semibold text-white rounded-sm border-[3px] border-black bg-gray-700">{tag}</p>
+            {/if}
+            {/each}
+          </div>
+          <p class="font-bold mx-auto self-center rotate-90 font-serif text-center text-2xl  min-w-[100px] max-w-[150px] border-b-2 border- border-black">
             {day} / {monthShort}
          </p>
+
     </div>
 </a>

@@ -6,12 +6,14 @@
     import Meta from "$components/Meta.svelte";
     import styles from "$styles/blog.css"
     export const router = false;
-      import "/src/styles/tailwind.css";
-
+    import "/src/styles/tailwind.css";
+    import wrapLastWord from "$utils/wrapLastWord";
 
 
 
 // Get the matching post
+
+
 
 export async function load ({ page }) {
     try {
@@ -20,7 +22,7 @@ export async function load ({ page }) {
             props: {
                 post: Post.default,
                 metadata: Post.metadata
-            }
+                        }
         };
     } catch (error) {
         console.log(error);
@@ -35,19 +37,48 @@ export async function load ({ page }) {
   <script>
     export let post;
     export let metadata;
+
  
     // Show page params
 
+    let heading = metadata.title;
+    // Wrap last word in heading in span
+    heading = wrapLastWord(heading);
+
+
+
 </script>
   <Meta />
-  <main class="max-w-5xl mx-auto markdown-body">
-    <h1 class="text-4xl font-bold">{metadata.title}</h1>
-    <p class="text-gray-500">{metadata.date}</p>
-    <p class="text-gray-500">{metadata.description}</p>
+  <main class="max-w-5xl mx-auto">
+    <section class="meta">
+        <hr />
+        <p class="date">
+          <!-- Print date as 15 Oct, 2020 -->
+            {new Date(metadata.date).toLocaleDateString("en-US", {
+                day: "numeric",
+                month: "short",
+                year: "numeric"
+            })}
+        </p>
+        <h1 class="heading">{@html heading}</h1>
+        <p class="description">{metadata.description}</p>
+    <!-- Tags -->
+    <div class="tags flex flex-row gap-4 mx-auto justify-center items-center">
+        {#each metadata.tags as tag, i}
+            <p class="tags">{tag}</p> {metadata.tags.length - 1 === i ? '': '|'}
+       
+        {/each}
+    </div>
+        <hr />
+    </section>
 
     
-        <svelte:component this={post} />
+        <section class="text">
+            <svelte:component this={post} />
+        </section>
 
   </main>
 
   <Footer />
+
+  

@@ -63,6 +63,7 @@
     "subdirectory": ""
   },
   "dependencies": {
+    "@untemps/svelte-readotron": "^1.5.2",
     "color": "^4.1.0",
     "colorthief": "^2.3.2",
     "concurrently": "^6.3.0",
@@ -74,10 +75,12 @@
     "node-vibrant": "^3.2.1-alpha.1",
     "postcss-cli": "^9.0.1",
     "postcss-nesting": "^8.0.1",
+    "reading-time": "^1.5.0",
     "rehype-autolink-headings": "^6.1.1",
     "rehype-slug": "^5.1.0",
     "remark-abbr": "^1.4.1",
     "remark-github": "^11.2.4",
+    "typeface-playfair-display-sc": "^1.1.13",
     "typeface-source-sans-pro": "^1.1.13"
   }
 }

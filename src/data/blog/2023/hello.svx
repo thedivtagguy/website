@@ -1,25 +1,53 @@
 ---
-title: 'A second blog post'
+title: 'A second blog post like a longer one like this one'
 description: "The first blog post wasn't enough; I had to come back and write more about Svelte and SvelteKit."
 author: 'Mehdi Vasigh'
 date: '2021-05-03'
 published: true
+tags:
+  - svelte
+  - sveltekit
+  - javascript
 ---
 
-```js
-import { onMount } from 'svelte';
+
+
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sodales nisi. Donec at libero lacinia turpis tincidunt scelerisque vitae vel lorem. Nullam semper libero mauris, sit amet ornare turpis luctus id. Suspendisse scelerisque dapibus enim non pharetra. Cras finibus mauris a elit eleifend aliquet. Praesent pretium a eros ut cursus. Morbi tempus porta massa, non semper ex cursus sit amet. Integer at tincidunt massa. Integer ornare porttitor laoreet. Morbi aliquet lorem in orci fringilla viverra. Ut accumsan condimentum porttitor. Aliquam erat volutpat. Duis eu commodo ipsum, maximus posuere diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed pellentesque elementum quam. Duis convallis lectus dui, id consectetur eros vehicula sit amet.
+  
+2nd paragraph. *Italic*, **bold**, and `monospace`. Itemized lists
+look like:
+
+  * this one
+  * that one
+  * the other one
+
+Note that --- not considering the asterisk --- the actual text
+content starts at 4-columns in.
+
+> Block quotes are
+> written like so.
+>
+> They can span multiple paragraphs,
+> if you like.
+
+Use 3 dashes for an em-dash. Use 2 dashes for ranges (ex., "it's all
+in chapters 12--14"). Three dots ... will be converted to an ellipsis.
+Unicode is supported. ☺
+
+
+An h2 header
+------------
+
+Here's a numbered list:
+
+ 1. first item
+ 2. second item
+ 3. third item
+
+Note again how the actual text starts at 4 columns in (4 characters
+from the left side). Here's a code sample:
+
+```python
+    # Let me re-iterate ...
+    for i in 1 .. 10 { do-something(i) }
 ```
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pellentesque orci nec facilisis iaculis. Sed accumsan placerat dolor. Donec sollicitudin nisi sit amet sodales molestie. Maecenas sit amet dolor nulla. Fusce sed elit et erat consequat dignissim. Nunc eu erat felis. Mauris pretium, arcu eu dapibus tempor, mauris eros tempor tortor, eu tincidunt erat libero sit amet mi. Phasellus eu libero mollis, finibus lacus eget, sollicitudin nulla.
-
-Here's a random Svelte component thrown into my MDsveX markdown:
-
-
-# Heading
-
-In lectus erat, maximus sed pulvinar eu, elementum vehicula mi. Maecenas nec dui urna. Nunc at magna purus. Cras facilisis, purus in dignissim egestas, ante ligula malesuada leo, quis malesuada dolor tortor vitae mauris. Morbi auctor mauris nibh, ut sodales tortor volutpat in. Donec aliquet ex eget ullamcorper semper. Proin vel libero at nulla gravida blandit. Maecenas odio massa, pretium blandit lectus ac, vehicula ultrices justo. Suspendisse libero dolor, tristique quis laoreet vel, placerat vel nisl. Nunc et venenatis nunc, vitae fringilla risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus consectetur pellentesque ipsum, in hendrerit lectus ultricies quis. Morbi ultrices, elit nec lacinia vulputate, dolor nibh commodo justo, quis dictum nisi nulla vel mi.
-
-# Heading
-
-Nullam nisl risus, pellentesque at enim id, molestie tristique purus. Aliquam ultricies, sem eu rutrum posuere, augue libero commodo nisi, et aliquam massa mi vitae nunc. In sodales, lorem vitae pellentesque lacinia, est velit condimentum orci, in vestibulum lorem est eget nisi. Quisque varius eget risus mattis rutrum. Sed tellus nisl, egestas a ligula et, finibus sollicitudin mauris. Ut sit amet scelerisque purus, luctus auctor leo. Nullam enim velit, tincidunt sed venenatis non, fringilla ut lacus. Morbi diam nulla, luctus non orci at, maximus rhoncus est.
-
-Ut quis leo rhoncus, aliquet sapien at, venenatis lectus. Nunc mattis vestibulum sapien. Donec quis vestibulum ex. Vivamus condimentum dui gravida pulvinar feugiat. Duis posuere, lacus eu cursus gravida, magna ex lobortis sapien, non finibus orci justo at orci. Nulla sit amet ligula a lorem aliquam consequat. Sed vehicula lacus nec ipsum efficitur, vel volutpat sem blandit. Curabitur nunc nunc, commodo sed ultrices id, dignissim ac orci. Nunc semper lectus et orci faucibus, et suscipit nisl consequat. Phasellus malesuada nisl a risus ultricies, vitae pretium libero vulputate. Nullam at neque ut enim mattis dapibus porttitor vitae dui. Cras erat libero, porta a eros ac, tempus consectetur est.

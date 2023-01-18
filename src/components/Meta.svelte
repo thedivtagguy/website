@@ -5,6 +5,60 @@
   export let url = "https://thedivtagguy.com";
   export let slug = 
     "common/assets/thumbnails/960/social.jpg"
+
+    
+  const orgLdJson = {
+    "@context": "http://schema.org",
+    "@type": "CreativeWork",
+    "@id": "https://www.thedivtagguy.com",
+    name: "Aman Bhargava",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://thedivtagguy.com/common/assets/resources/favicon/apple-touch-icon.png",
+      width: "200",
+      height: "200",
+    },
+    url: "https://www.thedivtagguy.com/",
+  };
+  const articleLdJson = {
+    "@context": "http://schema.org",
+    "@type": "CreativeWork",
+    headline: seoTitle,
+    url: canonicalUrl,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": canonicalUrl,
+    },
+    thumbnailUrl: slug,
+    image: [
+      {
+        "@context": "http://schema.org",
+        "@type": "ImageObject",
+        url: slug,
+      },
+    ],
+    publisher: { "@id": "https://www.thedivtagguy.com" },
+    copyrightHolder: { "@id": "https://www.thedivtagguy.com" },
+    sourceOrganization: { "@id": "https://www.thedivtagguy.com" },
+    copyrightYear: new Date().getFullYear(),
+    dateCreated: publishTime,
+    datePublished: publishTime,
+    dateModified: updateTime,
+    author: authors.map(({ name, url }) => ({
+      "@type": "Person",
+      name,
+      url,
+    })),
+    articleSection: "Projects",
+    isAccessibleForFree: true,
+    creator: ["Aman Bhargava"],
+    keywords: [
+      "Aman Bhargava",
+      "thedivtagguy",
+      "data visualization",
+      "Interactives",
+    ],
+  };
 </script>
 
 <svelte:head>

@@ -16,7 +16,7 @@
   ];
 </script>
 
-<div class="flex bg-white sm:bg-transparent md:bg-transparent lg:bg-transparent xl:bg-transparent flex-wrap">
+<div class="flex menu bg-white sm:bg-transparent md:bg-transparent lg:bg-transparent xl:bg-transparent flex-wrap">
   <div class="w-full ">
     <nav class="relative flex flex-wrap items-center justify-between py-3 ">
       <div class="container mx-auto flex flex-wrap items-center justify-between">

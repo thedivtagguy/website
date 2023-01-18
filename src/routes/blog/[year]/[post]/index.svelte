@@ -50,18 +50,20 @@ export async function load ({ page }) {
 </script>
   <Meta />
   <main class="max-w-5xl mx-auto">
+    <div class="mx-auto flex justify-center"><a href="/blog" class="flex underlineTransition flex-row justify-center items-center  gap-2 hover:underline">← Blog</a></div>
     <section class="meta">
         <hr />
-        <p class="date">
-          <!-- Print date as 15 Oct, 2020 -->
-            {new Date(metadata.date).toLocaleDateString("en-US", {
-                day: "numeric",
-                month: "short",
-                year: "numeric"
-            })}
-        </p>
+       
         <h1 class="heading">{@html heading}</h1>
         <p class="description">{metadata.description}</p>
+        <p class="date">
+            <!-- Print date as 15 Oct, 2020 -->
+              {new Date(metadata.date).toLocaleDateString("en-US", {
+                  day: "numeric",
+                  month: "short",
+                  year: "numeric"
+              })}
+          </p>
     <!-- Tags -->
     <div class="tags flex flex-row gap-4 mx-auto justify-center items-center">
         {#each metadata.tags as tag, i}

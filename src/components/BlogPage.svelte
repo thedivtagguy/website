@@ -48,8 +48,10 @@
   let posts = [];
   // Year is in year key
   refined.forEach((post) => {
-    // Keep only blog posts
-    if (!post.category.includes("blog")) return;
+   // Keep only blog posts where the category contains "post" or "blog"
+    if (!post.category.includes("post") && !post.category.includes("blog")) {
+      return;
+    }
     // Get year from date
     const year = post.year;
     // Check if year exists in posts

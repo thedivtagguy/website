@@ -1,6 +1,5 @@
 import sveltePreprocess from "svelte-preprocess";
 import svelte from "rollup-plugin-svelte";
-import { mdsvex } from "mdsvex";
 const production = !process.env.ROLLUP_WATCH;
 
 preprocess: sveltePreprocess({
@@ -11,13 +10,16 @@ preprocess: sveltePreprocess({
 });
 
 export default {
-  extensions: [".svelte", ".svx", ".md"],
-  preprocess: mdsvex({ extensions: [".svx", ".md"] }),
   plugins: [
     svelte({
       // tell svelte to handle mdsvex files
-      extensions: [".svelte", ".svx"],
-      preprocess: mdsvex()
+      extensions: [".svelte"],
+      preprocess: sveltePreprocess({
+        sourceMap: !production,
+        postcss: {
+          plugins: [require("tailwindcss"), require("autoprefixer")]
+        }
+      })
     })
   ]
 };

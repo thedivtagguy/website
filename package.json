@@ -36,7 +36,7 @@
     "google-drive-getfilelist": "^1.0.5",
     "jimp": "^0.16.1",
     "lodash.debounce": "4.0.8",
-    "mdsvex": "^0.9.8",
+    "mdsvex": "^0.10.6",
     "netlify": "^10.1.1",
     "node-fetch": "^2.6.7",
     "postcss": "^8.4.5",
@@ -74,6 +74,10 @@
     "node-vibrant": "^3.2.1-alpha.1",
     "postcss-cli": "^9.0.1",
     "postcss-nesting": "^8.0.1",
+    "rehype-autolink-headings": "^6.1.1",
+    "rehype-slug": "^5.1.0",
+    "remark-abbr": "^1.4.1",
+    "remark-github": "^11.2.4",
     "typeface-source-sans-pro": "^1.1.13"
   }
 }

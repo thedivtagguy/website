@@ -6,21 +6,23 @@ import dsv from "@rollup/plugin-dsv";
 import sveltePreprocess from "svelte-preprocess";
 import autoprefixer from "autoprefixer";
 import { mdsvex } from "mdsvex";
-
+import mdsvexConfig from "./mdsvex.config.js";
 const { thedivtagguy } = JSON.parse(fs.readFileSync("package.json", "utf8"));
 const dev = process.env.NODE_ENV === "development";
 const dir = thedivtagguy ? thedivtagguy.subdirectory : "";
 const prefix = dir.startsWith("/") ? "" : "/";
 const base = dev || !dir ? "" : `${prefix}${dir}`;
 
-const preprocess = sveltePreprocess({
-  postcss: {
-    plugins: [autoprefixer]
-  }
-});
-
 const config = {
-  preprocess,
+  extensions: [".svelte", ...mdsvexConfig.extensions],
+  preprocess: [
+    mdsvex(mdsvexConfig),
+    sveltePreprocess({
+      postcss: {
+        plugins: [autoprefixer]
+      }
+    })
+  ],
   kit: {
     adapter: adapterStatic(),
     target: "#svelte",

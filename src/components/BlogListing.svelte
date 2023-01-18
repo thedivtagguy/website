@@ -5,17 +5,13 @@
   export let slug;
   export let heading;
   export let description;
-  export let featured;
   export let link;
   export let fullLink;
-  export let external;
   export let isExternal;
-  export let i;
   export let image;
-  export let date;
   export let keyword;
   export let day;
-  export let month;
+  export let year;
   export let monthShort;
   export let category;
   // Choose first item from category
@@ -38,7 +34,6 @@
       --default-dark: ${DEFAULT_COLOR["dark"]};
       --default-darker: ${DEFAULT_COLOR["darker"]};
     `;
-  console.log(isExternal);
 
   export let url;
 
@@ -48,6 +43,11 @@
     url = "/blog/" + link;
   } else {
     url = fullLink;
+  }
+
+  // Add year after blog/
+  if (category.includes("post")) {
+    url = "/blog/" + year + "/" + link;
   }
 </script>
 

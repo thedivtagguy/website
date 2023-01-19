@@ -48,7 +48,7 @@
             {#each links as link}
               <li>
                 <a 
-                  sveltekit:prefetch 
+                data-sveltekit-preload-data="hover"
                   href={link.link}
                   class="px-3 py-2 font-sans flex items-center text-sm uppercase font-bold leading-snug text-black hover:opacity-75"
                   target= {link.external ? '_blank' : '_self'}

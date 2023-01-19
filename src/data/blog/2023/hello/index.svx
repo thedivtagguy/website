@@ -47,7 +47,24 @@ Here's a numbered list:
 Note again how the actual text starts at 4 columns in (4 characters
 from the left side). Here's a code sample:
 
-```python
-    # Let me re-iterate ...
-    for i in 1 .. 10 { do-something(i) }
+```js
+function wrapLastWord(str) {
+  var words = str.split(" ");
+  var totalWords = words.length;
+  var wrapPoint = Math.round(totalWords * 0.7);
+  return (
+    words.slice(0, wrapPoint).join(" ") + " <span>" + 
+    words.slice(wrapPoint).join(" ") + "</span>"
+  );
+}
+
+export default wrapLastWord;
+
 ```
+
+<script>
+	let count = 0;
+</script>
+
+<input type=number bind:value={count}>
+<button on:click="{() => count += 1}">count</button>

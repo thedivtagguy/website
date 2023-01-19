@@ -75,6 +75,7 @@
       <h2
         class="text-4xl w-full group-hover:underline decoration-wavy  flex-grow font-bold text-left"
       >
+        
         {heading}
       </h2>
 

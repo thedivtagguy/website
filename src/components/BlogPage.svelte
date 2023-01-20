@@ -1,8 +1,8 @@
-<script context = "module">
+<!-- <script context = "module">
   export const router = false;
   export const prerender = true;
 
-</script>
+</script> -->
 <script>
   import storiesData from "$data/stories.csv";
   import parseStories from "$utils/cleanStories";

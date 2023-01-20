@@ -4,10 +4,6 @@
     import Menu from "$components/Menu.svelte";
     import "/src/styles/tailwind.css";
     import Footer from "$components/Footer.svelte";
-    export const router = true;
-
-
-
   </script>
   
     <!-- Aside content outside the borders -->

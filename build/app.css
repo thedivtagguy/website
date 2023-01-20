@@ -536,6 +536,9 @@ p {
 .h-full {
   height: 100%;
 }
+.min-h-\[120px\] {
+  min-height: 120px;
+}
 .min-h-\[90vh\] {
   min-height: 90vh;
 }
@@ -575,9 +578,6 @@ p {
 .w-4\/5 {
   width: 80%;
 }
-.min-w-\[70px\] {
-  min-width: 70px;
-}
 .min-w-\[100px\] {
   min-width: 100px;
 }
@@ -605,11 +605,6 @@ p {
 }
 .basis-1\/2 {
   flex-basis: 50%;
-}
-.rotate-90 {
-  --tw-rotate: 90deg;
-  -webkit-transform: var(--tw-transform);
-          transform: var(--tw-transform);
 }
 .transform {
   -webkit-transform: var(--tw-transform);
@@ -709,6 +704,9 @@ p {
   margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
+.self-start {
+  align-self: flex-start;
+}
 .self-center {
   align-self: center;
 }
@@ -762,11 +760,11 @@ p {
 .border-t-2 {
   border-top-width: 2px;
 }
-.border-b-2 {
-  border-bottom-width: 2px;
-}
 .border-b {
   border-bottom-width: 1px;
+}
+.border-b-2 {
+  border-bottom-width: 2px;
 }
 .border-r-\[1px\] {
   border-right-width: 1px;
@@ -903,13 +901,13 @@ p {
 .p-2 {
   padding: 0.5rem;
 }
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .px-8 {
   padding-left: 2rem;
@@ -1001,10 +999,6 @@ p {
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
@@ -1038,6 +1032,10 @@ p {
 }
 .text-\[15px\] {
   font-size: 15px;
+}
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 .text-\[9px\] {
   font-size: 9px;
@@ -1393,6 +1391,9 @@ p {
   .md\:h-\[150px\] {
     height: 150px;
   }
+  .md\:w-\[240px\] {
+    width: 240px;
+  }
   .md\:w-4\/5 {
     width: 80%;
   }
@@ -1401,6 +1402,14 @@ p {
   }
   .md\:w-1\/2 {
     width: 50%;
+  }
+  .md\:min-w-\[70px\] {
+    min-width: 70px;
+  }
+  .md\:rotate-90 {
+    --tw-rotate: 90deg;
+    -webkit-transform: var(--tw-transform);
+            transform: var(--tw-transform);
   }
   .md\:grid-cols-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -1416,10 +1425,21 @@ p {
     -webkit-box-direction: normal;
             flex-direction: row;
   }
+  .md\:flex-col {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+  }
   .md\:space-y-5 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
     margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
+  }
+  .md\:self-auto {
+    align-self: auto;
+  }
+  .md\:border-b-2 {
+    border-bottom-width: 2px;
   }
   .md\:bg-transparent {
     background-color: transparent;
@@ -1441,6 +1461,10 @@ p {
   }
   .md\:pl-4 {
     padding-left: 1rem;
+  }
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
   .md\:text-6xl {
     font-size: 3.75rem;

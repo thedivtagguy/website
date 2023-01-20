@@ -6,8 +6,7 @@
     import "/src/styles/tailwind.css";
     import wrapLastWord from "$utils/wrapLastWord";
 
-    export const router = false;
-
+export const prerender = 'auto';
 
 // Get the matching post
 export async function load({ page }) {

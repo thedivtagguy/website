@@ -1,8 +1,9 @@
-<!-- <script context = "module">
-  export const router = false;
+<script context = "module">
   export const prerender = true;
+  import styles from '$styles/tailwind.css'
 
-</script> -->
+
+</script>
 <script>
   import storiesData from "$data/stories.csv";
   import parseStories from "$utils/cleanStories";
@@ -75,10 +76,10 @@
   <section
     class="flex justify-between h-[150px] items-center mx-auto"
   >
-    <div class="text-5xl lg:text-6xl relative mx-auto text-white font-medium font-serif text-center py-4">
-      <img id="photo" class="strike" src="/common/assets/resources/strike.png" alt="Strikethrough" />
-      <h1 class="heading">Blog</h1>
-    </div>
+  <div class="text-5xl lg:text-6xl  text-white font-medium font-serif relative mx-auto py-4">
+    <div id="strike" />
+    <h1 class="heading  ">Blog</h1>
+  </div>
   </section>
 
 <!-- Wavy text that says 'And now for something completely different' -->
@@ -87,6 +88,7 @@
         <h2 class="leading-tight anfscd text-white font-medium font-serif text-center ">
           And now for some things completely different
         </h2>
+        
   </section>
 
 
@@ -107,6 +109,17 @@
 </main>
 
 <style>
+
+  .heading {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 600;
+    font-family: "Playfair Display", serif;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
  
   #circle {
     /* Draw big blue circle */
@@ -149,26 +162,17 @@
   }
 
   /* Overlay strike.png on the heading class */
-
-  /* Add strike.png using pseudo selector */
-
-  #photo {
+  .heading::before {
+    content: "";
     position: absolute;
-    top: 2rem;
-    right: -40%;
+    top: 25%;
+    left: -120%;
     background-image: url("/common/assets/resources/strike.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    min-width: 200px;
-   min-height: 10px;
-  }
-
-
-
-  .heading {
-    position: relative;
-    z-index: 1;
+    min-width: 400px;
+    min-height: 40px;
   }
  .anfscd  {
   font-size: 30pt;

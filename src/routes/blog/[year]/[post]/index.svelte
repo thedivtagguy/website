@@ -6,6 +6,7 @@
     import "/src/styles/tailwind.css";
     import wrapLastWord from "$utils/wrapLastWord";
 
+    export const router = false;
 
 
 // Get the matching post

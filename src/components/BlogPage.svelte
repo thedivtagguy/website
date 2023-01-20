@@ -76,9 +76,9 @@
   <section
     class="flex justify-between h-[150px] items-center mx-auto"
   >
-  <div class="text-5xl lg:text-6xl  text-white font-medium font-serif relative mx-auto py-4">
+  <div class="title-section" >
     <div id="strike" />
-    <h1 class="heading  ">Blog</h1>
+    <h1 class="heading ">Blog</h1>
   </div>
   </section>
 
@@ -110,15 +110,35 @@
 
 <style>
 
+  .title-section {
+
+    margin: 0 auto;
+  }
+
   .heading {
     position: relative;
     z-index: 1;
+    margin: 0 auto;
     text-align: center;
     font-size: 4rem;
     font-weight: 600;
     font-family: "Playfair Display", serif;
     color: #fff;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+    /* Overlay strike.png on the heading class */
+    .heading::before {
+    content: "";
+    position: absolute;
+    top: 35%;
+    left: -100%;
+    background-image: url("/common/assets/resources/strike.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 400px;
+    min-height: 40px;
   }
  
   #circle {
@@ -161,19 +181,7 @@
     }
   }
 
-  /* Overlay strike.png on the heading class */
-  .heading::before {
-    content: "";
-    position: absolute;
-    top: 25%;
-    left: -120%;
-    background-image: url("/common/assets/resources/strike.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-width: 400px;
-    min-height: 40px;
-  }
+
  .anfscd  {
   font-size: 30pt;
   color: #fff;

@@ -73,22 +73,15 @@
 
 <main>
   <div id="circle"><div class="image" /></div>
-  <section
-    class="flex justify-between h-[150px] items-center mx-auto"
-  >
-  <div class="title-section" >
-    <div id="strike" />
-    <h1 class="heading ">Blog</h1>
-  </div>
-  </section>
+
+
 
 <!-- Wavy text that says 'And now for something completely different' -->
 
-  <section class="heading-text w-2/3 mx-auto pb-8">
+  <section class="heading-text w-2/3 min-h-[200px] mx-auto pb-8">
         <h2 class="leading-tight anfscd text-white font-medium font-serif text-center ">
           And now for some things completely different
         </h2>
-        
   </section>
 
 
@@ -110,36 +103,7 @@
 
 <style>
 
-  .title-section {
-
-    margin: 0 auto;
-  }
-
-  .heading {
-    position: relative;
-    z-index: 1;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 4rem;
-    font-weight: 600;
-    font-family: "Playfair Display", serif;
-    color: #fff;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  }
-
-    /* Overlay strike.png on the heading class */
-    .heading::before {
-    content: "";
-    position: absolute;
-    top: 35%;
-    left: -100%;
-    background-image: url("/common/assets/resources/strike.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-width: 400px;
-    min-height: 40px;
-  }
+  
  
   #circle {
     /* Draw big blue circle */
@@ -185,6 +149,7 @@
  .anfscd  {
   font-size: 30pt;
   color: #fff;
+  padding: 80px 0px 10px 0px;
   /* letter-spacing: 10px; */
   text-transform: uppercase;
   transform: rotate(-8deg);

@@ -545,6 +545,12 @@ p {
 .min-h-screen {
   min-height: 100vh;
 }
+.min-h-\[400px\] {
+  min-height: 400px;
+}
+.min-h-\[200px\] {
+  min-height: 200px;
+}
 .w-full {
   width: 100%;
 }

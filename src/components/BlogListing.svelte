@@ -1,8 +1,5 @@
 <script>
   import colors from "$data/thumbnail-colors.json";
-  import Button from "./helpers/Button.svelte";
-  import { onMount } from "svelte";
-
 
   export let slug;
   export let heading;
@@ -59,7 +56,7 @@
 </script>
 
 <!-- Display blogpost info -->
-<a href={url}  rel={isExternal ? "" : 'external'}>
+<a href={url}  >
   <!-- If i is even, add border. If odd, no border -->
   <div
     class="w-full my-4 pb-8 group border-t-2 group border-black hover:cursor-pointer gap-4 flex flex-col md:flex-row lg:flex-row justify-between items-center"

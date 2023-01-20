@@ -1,0 +1,1 @@
+.svelte-ilussk:where(div.masonry){display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;overflow-wrap:anywhere;-webkit-box-sizing:border-box;box-sizing:border-box}.svelte-ilussk:where(div.masonry div.col){display:grid;height:-webkit-max-content;height:-moz-max-content;height:max-content;width:100%}

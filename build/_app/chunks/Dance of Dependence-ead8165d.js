@@ -1,0 +1,30 @@
+const e="How hurricane hunters fly into the eye of a storm",t="Scientists plunged through category 4 Hurricane Ian in specialised aircraft on Sept. 28, collecting data on the storm\u2019s inner workings",r="How hurricane hunters fly into the eye of a storm",n="Scientists plunged through category 4 Hurricane Ian in specialised aircraft on Sept. 28, collecting data on the storm\u2019s inner workings",a="images/reuters-graphics.jpg",i="Alt text for share image",o="In the eye of the storm",s="How specialised aircraft plunge into hurricanes to collect scientific data to help us understand their inner workings",h="",d="**Adolfo Arranz, Manas Sharma, Gerry Doyle,** and **Simon Scarr**",c="2022-10-11T11:30:00.000Z",l="",u=[{Type:"text",Text:`Satellites can capture hurricanes' full breadth, ground sensors can soak up data, but the best way to get a close-up look at the churning monsters is to fly into their dark hearts, according to the National Oceanic and Atmospheric Administration.\r
+ \r
+Using ex-military P-3 Orions - aircraft originally designed to hunt submarines during the Cold War - scientists record wind speeds, atmospheric pressure, humidity and other information, transmitting it to command centers on land.\r
+ \r
+The data help build a better understanding of the seaborne storms as well as assist disaster planners in dealing with them as they approach land, the administration said.\r
+ \r
+"The more that we can forewarn people that a storm is headed their way, the better they can prepare their homes, the better they can prepare their families," NOAA engineer Nick Underwood told Reuters.\r
+ \r
+Underwood said one of his flights through Hurricane Ian, which devastated Florida and caused flooding in parts of the eastern United States, was "the worst" he had ever been on.\r
+ \r
+"Never seen that much turbulence before," he said. "And the other thing was lightning, just tons of lightning, especially in and around the eyewall of the storm, which is something that you really just don't see all that often."\r
+\r
+Data from a ground-based global lightning detection network owned and operated by Vaisala, dubbed GLD360, indicated more than 34,000 lightning strikes in the area over Sept. 27 and 28.`},{Type:"ScrollerMap"},{Type:"text",Text:`The four-engine turboprop P-3, which was produced by Lockheed (now Lockheed Martin) until 1990, is being replaced in U.S. service by the jet-powered Boeing P-8 Poiseidon.\r
+\r
+\r
+But its sturdy airframe, efficient engines and plenty of space for sensors and instruments make it ideal for hurricane missions, according to NOAA. The administration flies two of the aircraft, nicknamed Kermit and Miss Piggy.`},{Type:"ai-graphic",Chart:"Orion",Width:"fluid",Title:"The Lockheed WP-3D Orion \u201CHurricane Hunter\u201D"},{Type:"text",Text:`High-tech radar systems on the aircraft provide researchers and forecasters an MRI-like look at the storm, allowing them to see the different layers and internal structures.\r
+ \r
+The aircraft are based at NOAA\u2019s Aircraft Operations Center in Lakeland, Florida, but have supported hurricane and tropical storm research in the Atlantic, Caribbean, Gulf of Mexico and the Eastern Pacific. Each mission lasts eight to 10 hours, with much of the flight time taking place inside the hurricane or in extreme conditions.`},{Type:"ai-graphic",Chart:"scene_1",Width:"fluid"},{Type:"ai-graphic",Chart:"altitude"},{Type:"text",Text:"Flight profiles can vary based on the strength of the storm and the specific goals of the mission. In some cases, the aircraft may descend to as low as 1,500 metres (5,000 feet) to measure airspeeds closer to the water\u2019s surface or in the storm\u2019s violent eyewalls."},{Type:"ai-graphic",Chart:"scene_2",Width:"fluid"},{Type:"text",Text:"During the mission, crews drop instruments called dropwindsondes, which float down through the hurricane on parachutes while sending data back to the aircraft. The systems for deploying them are similar to those used in military P-3s to drop sonobuoys, used to listen for submarines."},{Type:"ai-graphic",Chart:"scene_3",Width:"fluid"},{Type:"text",Text:`Hurricane Ian also presented an opportunity to deploy new technology. The Area-I Altius-600 unmanned drone was used for the first time in a storm.\r
+ \r
+This uncrewed aircraft system (UAS) is able to operate in areas too dangerous for humans. Its airframe is designed to handle considerable damage and can be controlled through onboard programming or by operators onboard the main aircraft, according to NOAA.`},{Type:"ai-graphic",Chart:"scene_4",Width:"fluid"},{Type:"text",Text:"On Sept. 28, the Orion aircraft plowed through hurricane Ian during a period of rapid intensification. The crew successfully launched the drone despite encountering extreme turbulence, according to the NOAA. The drone then completed a two-hour mission, gathering critical measurements to help researchers understand these complex storm systems."},{Type:"ai-graphic",Chart:"scene_5",Width:"fluid"},{Type:"text",Text:`The flights can be harrowing, but considering the stakes on the ground \u2013 Hurricane Ian killed more than 100 people \u2013 NOAA sees them as invaluable.\r
+\u201CEven if we are in, you know, extreme turbulence, it means something to people on the ground and it really makes an impact on people's lives,\u201D Underwood said. \u201CAnd so it is heavy to think about, it is a heavy weight to carry. But it's... a driving force for us."`}],p=`##### Sources\r
+National Oceanic and Atmospheric Administration (NOAA); Vaisala; FlightRadar24;\r
+\r
+\r
+##### Satellite images\r
+GOES-East, NOAA\r
+\r
+\r
+##### Edited by\r
+Edward Osmond`;var g={SEOTitle:e,SEODescription:t,ShareTitle:r,ShareDescription:n,ShareImgPath:a,ShareImgAlt:i,Hed:o,Dek:s,Kicker:h,Byline:d,Published:c,Updated:l,blocks:u,EndNotes:p};export{d as Byline,s as Dek,p as EndNotes,o as Hed,h as Kicker,c as Published,t as SEODescription,e as SEOTitle,n as ShareDescription,i as ShareImgAlt,a as ShareImgPath,r as ShareTitle,l as Updated,u as blocks,g as default};

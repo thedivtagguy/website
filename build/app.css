@@ -313,6 +313,23 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 /* custom CSS goes here */
+p {
+    font-size: 18px;
+    font-family: 'Source Sans Pro', 'sans-serif';
+    line-height: 1.85rem;
+  }
+.link {
+  --tw-text-opacity: 1;
+  color: rgb(30 64 175 / var(--tw-text-opacity));
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  -webkit-text-decoration-style: dashed;
+          text-decoration-style: dashed;
+}
+.link:hover {
+  --tw-text-opacity: 1;
+  color: rgb(98 60 234 / var(--tw-text-opacity));
+}
 *, ::before, ::after {
   --tw-translate-x: 0;
   --tw-translate-y: 0;
@@ -381,14 +398,55 @@ Ensure the default browser behavior of the `hidden` attribute.
   white-space: nowrap;
   border-width: 0;
 }
+.absolute {
+  position: absolute;
+}
 .relative {
   position: relative;
+}
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
+.top-0 {
+  top: 0px;
+}
+.right-0 {
+  right: 0px;
+}
+.bottom-0 {
+  bottom: 0px;
+}
+.top-8 {
+  top: 2rem;
+}
+.top-\[50\%\] {
+  top: 50%;
+}
+.z-10 {
+  z-index: 10;
 }
 .z-20 {
   z-index: 20;
 }
-.col-span-1 {
-  grid-column: span 1 / span 1;
+.col-span-5 {
+  grid-column: span 5 / span 5;
+}
+.col-span-7 {
+  grid-column: span 7 / span 7;
+}
+.col-span-4 {
+  grid-column: span 4 / span 4;
+}
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+.float-left {
+  float: left;
+}
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .mx-auto {
   margin-left: auto;
@@ -398,21 +456,48 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
-.mx-1 {
-  margin-left: 0.25rem;
-  margin-right: 0.25rem;
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 .mb-10 {
   margin-bottom: 2.5rem;
 }
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+.mt-4 {
+  margin-top: 1rem;
+}
+.mb-4 {
+  margin-bottom: 1rem;
+}
+.mt-6 {
+  margin-top: 1.5rem;
+}
+.mt-1 {
+  margin-top: 0.25rem;
+}
+.mr-2 {
+  margin-right: 0.5rem;
+}
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+.mt-2 {
+  margin-top: 0.5rem;
+}
 .mb-2 {
   margin-bottom: 0.5rem;
 }
-.mb-20 {
-  margin-bottom: 5rem;
+.mb-6 {
+  margin-bottom: 1.5rem;
 }
 .block {
   display: block;
+}
+.inline-block {
+  display: inline-block;
 }
 .flex {
   display: -webkit-box;
@@ -427,8 +512,20 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hidden {
   display: none;
 }
-.h-full {
-  height: 100%;
+.h-\[150px\] {
+  height: 150px;
+}
+.h-auto {
+  height: auto;
+}
+.h-5 {
+  height: 1.25rem;
+}
+.h-\[600px\] {
+  height: 600px;
+}
+.h-40 {
+  height: 10rem;
 }
 .h-6 {
   height: 1.5rem;
@@ -436,8 +533,35 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-1\/2 {
   height: 50%;
 }
+.h-full {
+  height: 100%;
+}
+.min-h-\[90vh\] {
+  min-height: 90vh;
+}
+.min-h-screen {
+  min-height: 100vh;
+}
 .w-full {
   width: 100%;
+}
+.w-2\/3 {
+  width: 66.666667%;
+}
+.w-\[220px\] {
+  width: 220px;
+}
+.w-8 {
+  width: 2rem;
+}
+.w-3\/5 {
+  width: 60%;
+}
+.w-\[40px\] {
+  width: 40px;
+}
+.w-5 {
+  width: 1.25rem;
 }
 .w-\[50px\] {
   width: 50px;
@@ -448,18 +572,62 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-1\/2 {
   width: 50%;
 }
-.max-w-6xl {
-  max-width: 72rem;
+.w-4\/5 {
+  width: 80%;
+}
+.min-w-\[70px\] {
+  min-width: 70px;
+}
+.min-w-\[100px\] {
+  min-width: 100px;
+}
+.max-w-\[400px\] {
+  max-width: 400px;
+}
+.max-w-\[150px\] {
+  max-width: 150px;
 }
 .max-w-5xl {
   max-width: 64rem;
 }
+.max-w-\[100ch\] {
+  max-width: 100ch;
+}
+.max-w-lg {
+  max-width: 32rem;
+}
+.max-w-7xl {
+  max-width: 80rem;
+}
+.flex-grow {
+  -webkit-box-flex: 1;
+          flex-grow: 1;
+}
 .basis-1\/2 {
   flex-basis: 50%;
+}
+.rotate-90 {
+  --tw-rotate: 90deg;
+  -webkit-transform: var(--tw-transform);
+          transform: var(--tw-transform);
 }
 .transform {
   -webkit-transform: var(--tw-transform);
           transform: var(--tw-transform);
+}
+@-webkit-keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+@keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+.animate-pulse {
+  -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 .cursor-pointer {
   cursor: pointer;
@@ -467,8 +635,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 .list-none {
   list-style-type: none;
 }
+.appearance-none {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.flex-row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
 }
 .flex-col {
   -webkit-box-orient: vertical;
@@ -481,6 +659,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .items-start {
   -webkit-box-align: start;
           align-items: flex-start;
+}
+.items-end {
+  -webkit-box-align: end;
+          align-items: flex-end;
 }
 .items-center {
   -webkit-box-align: center;
@@ -498,22 +680,43 @@ Ensure the default browser behavior of the `hidden` attribute.
   -webkit-box-pack: justify;
           justify-content: space-between;
 }
+.justify-around {
+  justify-content: space-around;
+}
 .justify-items-start {
   justify-items: start;
+}
+.justify-items-end {
+  justify-items: end;
+}
+.justify-items-center {
+  justify-items: center;
 }
 .gap-4 {
   gap: 1rem;
 }
-.gap-6 {
-  gap: 1.5rem;
-}
 .gap-2 {
   gap: 0.5rem;
+}
+.gap-8 {
+  gap: 2rem;
+}
+.gap-6 {
+  gap: 1.5rem;
 }
 .space-y-3 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+}
+.self-center {
+  align-self: center;
+}
+.justify-self-start {
+  justify-self: start;
+}
+.overflow-auto {
+  overflow: auto;
 }
 .truncate {
   overflow: hidden;
@@ -521,8 +724,19 @@ Ensure the default browser behavior of the `hidden` attribute.
      text-overflow: ellipsis;
   white-space: nowrap;
 }
+.text-ellipsis {
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+}
 .whitespace-pre-wrap {
   white-space: pre-wrap;
+}
+.break-normal {
+  overflow-wrap: normal;
+  word-break: normal;
+}
+.rounded-sm {
+  border-radius: 0.125rem;
 }
 .rounded-md {
   border-radius: 0.375rem;
@@ -533,26 +747,51 @@ Ensure the default browser behavior of the `hidden` attribute.
 .rounded {
   border-radius: 0.25rem;
 }
-.rounded-none {
-  border-radius: 0px;
+.border {
+  border-width: 1px;
+}
+.border-\[3px\] {
+  border-width: 3px;
 }
 .border-4 {
   border-width: 4px;
 }
-.border {
-  border-width: 1px;
+.border-2 {
+  border-width: 2px;
 }
-.border-b-4 {
-  border-bottom-width: 4px;
+.border-t-2 {
+  border-top-width: 2px;
 }
 .border-b-2 {
   border-bottom-width: 2px;
+}
+.border-b {
+  border-bottom-width: 1px;
+}
+.border-r-\[1px\] {
+  border-right-width: 1px;
+}
+.border-l-\[1px\] {
+  border-left-width: 1px;
+}
+.border-t {
+  border-top-width: 1px;
 }
 .border-solid {
   border-style: solid;
 }
 .border-dashed {
   border-style: dashed;
+}
+.border-double {
+  border-style: double;
+}
+.border-none {
+  border-style: none;
+}
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 .border-indigo-900 {
   --tw-border-opacity: 1;
@@ -561,13 +800,40 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-transparent {
   border-color: transparent;
 }
+.border-gray-100 {
+  --tw-border-opacity: 1;
+  border-color: rgb(243 244 246 / var(--tw-border-opacity));
+}
+.border-gray-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity));
+}
 .border-gray-900 {
   --tw-border-opacity: 1;
   border-color: rgb(17 24 39 / var(--tw-border-opacity));
 }
-.border-black {
+.border-zinc-200 {
   --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  border-color: rgb(228 228 231 / var(--tw-border-opacity));
+}
+.border-gray-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity));
+}
+.border-gray-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(75 85 99 / var(--tw-border-opacity));
+}
+.border-opacity-40 {
+  --tw-border-opacity: 0.4;
+}
+.bg-gray-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+}
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 .bg-divpurple {
   --tw-bg-opacity: 1;
@@ -577,20 +843,28 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(248 94 0 / var(--tw-bg-opacity));
 }
-.bg-white {
+.bg-green-600 {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: rgb(22 163 74 / var(--tw-bg-opacity));
 }
-.bg-transparent {
-  background-color: transparent;
-}
-.bg-slate-800 {
+.bg-red-600 {
   --tw-bg-opacity: 1;
-  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
 }
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+.bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+.bg-transparent {
+  background-color: transparent;
+}
+.bg-zinc-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(39 39 42 / var(--tw-bg-opacity));
 }
 .bg-gradient-to-l {
   background-image: -webkit-gradient(linear, right top, left top, from(var(--tw-gradient-stops)));
@@ -607,23 +881,35 @@ Ensure the default browser behavior of the `hidden` attribute.
 .to-purple-800 {
   --tw-gradient-to: #6b21a8;
 }
+.bg-contain {
+  background-size: contain;
+}
 .bg-clip-text {
   -webkit-background-clip: text;
           background-clip: text;
 }
+.bg-center {
+  background-position: center;
+}
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+.stroke-black {
+  stroke: #000;
+}
+.p-4 {
+  padding: 1rem;
+}
 .p-2 {
   padding: 0.5rem;
 }
-.p-1 {
-  padding: 0.25rem;
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-.px-12 {
-  padding-left: 3rem;
-  padding-right: 3rem;
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .px-8 {
   padding-left: 2rem;
@@ -633,21 +919,29 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
 }
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 .py-3 {
   padding-top: 0.75rem;
@@ -657,18 +951,23 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 0.75rem;
   padding-right: 0.75rem;
 }
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+.pb-8 {
+  padding-bottom: 2rem;
 }
 .pb-4 {
   padding-bottom: 1rem;
 }
+.pb-5 {
+  padding-bottom: 1.25rem;
+}
 .pb-2 {
   padding-bottom: 0.5rem;
 }
-.pl-4 {
-  padding-left: 1rem;
+.pt-4 {
+  padding-top: 1rem;
+}
+.pl-0 {
+  padding-left: 0px;
 }
 .pt-2 {
   padding-top: 0.5rem;
@@ -679,18 +978,40 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-center {
   text-align: center;
 }
+.align-top {
+  vertical-align: top;
+}
 .font-mono {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+.font-serif {
+  font-family: Evagrande, serif;
 }
 .font-sans {
   font-family: "Source Sans Pro", sans-serif;
 }
-.font-serif {
-  font-family: "Playfair Display", serif;
+.font-drops {
+  font-family: "PF Goudy Initials Pro", serif;
 }
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
 }
 .text-lg {
   font-size: 1.125rem;
@@ -700,31 +1021,32 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 1rem;
   line-height: 1.5rem;
 }
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
-.text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
-.font-extrabold {
-  font-weight: 800;
+.text-\[0\.65rem\] {
+  font-size: 0.65rem;
 }
-.font-medium {
-  font-weight: 500;
+.text-\[15px\] {
+  font-size: 15px;
+}
+.text-\[9px\] {
+  font-size: 9px;
+}
+.text-\[8px\] {
+  font-size: 8px;
+}
+.text-\[9rem\] {
+  font-size: 9rem;
 }
 .font-bold {
   font-weight: 700;
@@ -732,14 +1054,26 @@ Ensure the default browser behavior of the `hidden` attribute.
 .font-semibold {
   font-weight: 600;
 }
+.font-medium {
+  font-weight: 500;
+}
+.font-extrabold {
+  font-weight: 800;
+}
+.font-normal {
+  font-weight: 400;
+}
 .uppercase {
   text-transform: uppercase;
+}
+.capitalize {
+  text-transform: capitalize;
 }
 .italic {
   font-style: italic;
 }
-.leading-10 {
-  line-height: 2.5rem;
+.leading-tight {
+  line-height: 1.25;
 }
 .leading-6 {
   line-height: 1.5rem;
@@ -747,11 +1081,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .leading-5 {
   line-height: 1.25rem;
 }
+.leading-snug {
+  line-height: 1.375;
+}
 .leading-none {
   line-height: 1;
 }
-.leading-snug {
-  line-height: 1.375;
+.leading-normal {
+  line-height: 1.5;
 }
 .tracking-tight {
   letter-spacing: -0.025em;
@@ -768,23 +1105,55 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
 }
-.text-transparent {
-  color: transparent;
-}
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+.text-transparent {
+  color: transparent;
+}
+.text-gray-700 {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
+}
+.text-gray-900 {
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+.underline {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+.decoration-black {
+  -webkit-text-decoration-color: #000;
+          text-decoration-color: #000;
 }
 .decoration-dashed {
   -webkit-text-decoration-style: dashed;
           text-decoration-style: dashed;
 }
+.decoration-wavy {
+  -webkit-text-decoration-style: wavy;
+          text-decoration-style: wavy;
+}
 .underline-offset-2 {
   text-underline-offset: 2px;
+}
+.underline-offset-1 {
+  text-underline-offset: 1px;
+}
+.opacity-30 {
+  opacity: 0.3;
 }
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  -webkit-box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+          box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-xl {
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
   -webkit-box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
           box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
@@ -795,9 +1164,25 @@ Ensure the default browser behavior of the `hidden` attribute.
 .outline {
   outline-style: solid;
 }
+.grayscale {
+  --tw-grayscale: grayscale(100%);
+  -webkit-filter: var(--tw-filter);
+          filter: var(--tw-filter);
+}
 .filter {
   -webkit-filter: var(--tw-filter);
           filter: var(--tw-filter);
+}
+.transition-all {
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+       -o-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-duration: 150ms;
+       -o-transition-duration: 150ms;
+          transition-duration: 150ms;
 }
 .transition {
   -webkit-transition-property: color, background-color, border-color, fill, stroke, opacity, -webkit-text-decoration-color, -webkit-box-shadow, -webkit-transform, -webkit-filter, -webkit-backdrop-filter;
@@ -817,6 +1202,11 @@ Ensure the default browser behavior of the `hidden` attribute.
        -o-transition-duration: 150ms;
           transition-duration: 150ms;
 }
+.duration-200 {
+  -webkit-transition-duration: 200ms;
+       -o-transition-duration: 200ms;
+          transition-duration: 200ms;
+}
 .ease-in-out {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
        -o-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -825,6 +1215,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 /* custom CSS goes here */
 /* Directive controlling where Tailwind injects responsive variations of utilities.
    By default Tailwind normally append these at the end of your stylesheet. */
+.checked\:border-blue-600:checked {
+  --tw-border-opacity: 1;
+  border-color: rgb(37 99 235 / var(--tw-border-opacity));
+}
+.checked\:bg-blue-600:checked {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
 .hover\:cursor-pointer:hover {
   cursor: pointer;
 }
@@ -836,6 +1234,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(248 94 0 / var(--tw-bg-opacity));
 }
+.hover\:bg-gray-100:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -843,6 +1245,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hover\:text-purple-800:hover {
   --tw-text-opacity: 1;
   color: rgb(107 33 168 / var(--tw-text-opacity));
+}
+.hover\:text-gray-600:hover {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 .hover\:underline:hover {
   -webkit-text-decoration-line: underline;
@@ -863,7 +1269,77 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+.group:hover .group-hover\:text-divpurple {
+  --tw-text-opacity: 1;
+  color: rgb(98 60 234 / var(--tw-text-opacity));
+}
+.group:hover .group-hover\:text-gray-700 {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
+}
+.group:hover .group-hover\:underline {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+.group:hover .group-hover\:grayscale-0 {
+  --tw-grayscale: grayscale(0);
+  -webkit-filter: var(--tw-filter);
+          filter: var(--tw-filter);
+}
 @media (min-width: 640px) {
+  .sm\:sticky {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+  .sm\:col-span-3 {
+    grid-column: span 3 / span 3;
+  }
+  .sm\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+  .sm\:block {
+    display: block;
+  }
+  .sm\:inline {
+    display: inline;
+  }
+  .sm\:flex {
+    display: -webkit-box;
+    display: flex;
+  }
+  .sm\:hidden {
+    display: none;
+  }
+  .sm\:h-\[150px\] {
+    height: 150px;
+  }
+  .sm\:w-4\/5 {
+    width: 80%;
+  }
+  .sm\:w-2\/3 {
+    width: 66.666667%;
+  }
+  .sm\:grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  .sm\:grid-cols-7 {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+  }
+  .sm\:flex-row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+  }
+  .sm\:bg-transparent {
+    background-color: transparent;
+  }
+  .sm\:py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+  .sm\:pt-0 {
+    padding-top: 0px;
+  }
   .sm\:text-5xl {
     font-size: 3rem;
     line-height: 1;
@@ -876,16 +1352,64 @@ Ensure the default browser behavior of the `hidden` attribute.
     font-size: 2.25rem;
     line-height: 2.5rem;
   }
+  .sm\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
   .sm\:leading-none {
     line-height: 1;
   }
+  .sm\:tracking-tight {
+    letter-spacing: -0.025em;
+  }
 }
 @media (min-width: 768px) {
+  .md\:sticky {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+  .md\:col-span-3 {
+    grid-column: span 3 / span 3;
+  }
+  .md\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
   .md\:mb-0 {
     margin-bottom: 0px;
   }
+  .md\:block {
+    display: block;
+  }
+  .md\:inline {
+    display: inline;
+  }
+  .md\:flex {
+    display: -webkit-box;
+    display: flex;
+  }
+  .md\:hidden {
+    display: none;
+  }
+  .md\:h-\[150px\] {
+    height: 150px;
+  }
+  .md\:w-4\/5 {
+    width: 80%;
+  }
+  .md\:w-2\/3 {
+    width: 66.666667%;
+  }
   .md\:w-1\/2 {
     width: 50%;
+  }
+  .md\:grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  .md\:grid-cols-7 {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+  }
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .md\:flex-row {
     -webkit-box-orient: horizontal;
@@ -897,13 +1421,26 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
   }
-  .md\:px-6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+  .md\:bg-transparent {
+    background-color: transparent;
+  }
+  .md\:py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .md\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .md\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
+  }
+  .md\:pt-0 {
+    padding-top: 0px;
+  }
+  .md\:pl-4 {
+    padding-left: 1rem;
   }
   .md\:text-6xl {
     font-size: 3.75rem;
@@ -918,14 +1455,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   .lg\:static {
     position: static;
   }
-  .lg\:mb-0 {
-    margin-bottom: 0px;
+  .lg\:sticky {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+  .lg\:col-span-3 {
+    grid-column: span 3 / span 3;
+  }
+  .lg\:col-span-2 {
+    grid-column: span 2 / span 2;
   }
   .lg\:ml-auto {
     margin-left: auto;
   }
   .lg\:block {
     display: block;
+  }
+  .lg\:inline {
+    display: inline;
   }
   .lg\:flex {
     display: -webkit-box;
@@ -934,18 +1481,36 @@ Ensure the default browser behavior of the `hidden` attribute.
   .lg\:hidden {
     display: none;
   }
+  .lg\:h-\[150px\] {
+    height: 150px;
+  }
+  .lg\:min-h-\[20rem\] {
+    min-height: 20rem;
+  }
   .lg\:w-1\/2 {
     width: 50%;
   }
   .lg\:w-2\/3 {
     width: 66.666667%;
   }
+  .lg\:w-4\/5 {
+    width: 80%;
+  }
   .lg\:w-auto {
     width: auto;
+  }
+  .lg\:w-1\/4 {
+    width: 25%;
   }
   .lg\:flex-grow {
     -webkit-box-flex: 1;
             flex-grow: 1;
+  }
+  .lg\:grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  .lg\:grid-cols-7 {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
   }
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -955,9 +1520,44 @@ Ensure the default browser behavior of the `hidden` attribute.
     -webkit-box-direction: normal;
             flex-direction: row;
   }
+  .lg\:flex-col {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+  }
   .lg\:justify-start {
     -webkit-box-pack: start;
             justify-content: flex-start;
+  }
+  .lg\:overflow-y-auto {
+    overflow-y: auto;
+  }
+  .lg\:overflow-x-hidden {
+    overflow-x: hidden;
+  }
+  .lg\:border-solid {
+    border-style: solid;
+  }
+  .lg\:bg-transparent {
+    background-color: transparent;
+  }
+  .lg\:py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+  .lg\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .lg\:pt-0 {
+    padding-top: 0px;
+  }
+  .lg\:pl-4 {
+    padding-left: 1rem;
+  }
+  .lg\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
   }
   .lg\:text-5xl {
     font-size: 3rem;
@@ -967,8 +1567,55 @@ Ensure the default browser behavior of the `hidden` attribute.
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
+  .lg\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+  .lg\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+  .lg\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
 }
 @media (min-width: 1280px) {
+  .xl\:sticky {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+  .xl\:col-span-3 {
+    grid-column: span 3 / span 3;
+  }
+  .xl\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+  .xl\:block {
+    display: block;
+  }
+  .xl\:inline {
+    display: inline;
+  }
+  .xl\:flex {
+    display: -webkit-box;
+    display: flex;
+  }
+  .xl\:hidden {
+    display: none;
+  }
+  .xl\:h-\[150px\] {
+    height: 150px;
+  }
+  .xl\:w-4\/5 {
+    width: 80%;
+  }
+  .xl\:w-2\/3 {
+    width: 66.666667%;
+  }
+  .xl\:grid-cols-7 {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+  }
   .xl\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -977,9 +1624,11 @@ Ensure the default browser behavior of the `hidden` attribute.
     -webkit-box-direction: normal;
             flex-direction: row;
   }
-  .xl\:px-6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+  .xl\:bg-transparent {
+    background-color: transparent;
+  }
+  .xl\:pl-4 {
+    padding-left: 1rem;
   }
   .xl\:text-6xl {
     font-size: 3.75rem;

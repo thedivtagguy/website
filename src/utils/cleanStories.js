@@ -1,6 +1,5 @@
 import { timeParse, timeFormat } from "d3";
 import monthShortName from "./monthShort";
-
 const makeArray = (str) => {
   if (str) {
     // Split and trim

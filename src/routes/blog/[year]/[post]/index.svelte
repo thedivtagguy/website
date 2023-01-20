@@ -1,12 +1,10 @@
 <script context="module">
-    export const prerender = true;
     import "/src/styles/tailwind.css";
   
     import Meta from "$components/Meta.svelte";
     import styles from "$styles/blog.css"
     import "/src/styles/tailwind.css";
     import wrapLastWord from "$utils/wrapLastWord";
-    export const router = true;
 
 
 
@@ -56,7 +54,7 @@ let date = new Date(metadata.date).toLocaleDateString("en-US", {
 </script>
 <Meta />
 <main class="max-w-5xl mx-auto">
-   <div class="mx-auto flex justify-center"><a href="/blog" data-sveltekit-preload-data="hover" class="flex underlineTransition flex-row justify-center items-center  gap-2 hover:underline">← Blog</a></div>
+   <div class="mx-auto flex justify-center"><a href="/blog" class="flex underlineTransition flex-row justify-center items-center  gap-2 hover:underline">← Blog</a></div>
    <section class="meta">
       <hr />
       <h1 class="heading">{@html heading}</h1>

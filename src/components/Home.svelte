@@ -1,3 +1,6 @@
+<script context = "module">
+  export const prerender = true;
+</script>
 <script>
 import Projects from "./Projects.svelte";
 import Header from "./Header.svelte";

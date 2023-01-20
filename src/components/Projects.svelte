@@ -1,3 +1,7 @@
+<script context = "module">
+  export const prerender = true;
+</script>
+
 <script>
   import storiesData from "$data/stories.csv";
   import parseStories from "$utils/cleanStories";

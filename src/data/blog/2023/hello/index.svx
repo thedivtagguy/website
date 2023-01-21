@@ -34,6 +34,8 @@ Use 3 dashes for an em-dash. Use 2 dashes for ranges (ex., "it's all
 in chapters 12--14"). Three dots ... will be converted to an ellipsis.
 Unicode is supported. ☺
 
+<!-- Image upscaled.jpeg from the same folder -->
+![my image](./upscaled.jpeg)
 
 An h2 header
 ------------

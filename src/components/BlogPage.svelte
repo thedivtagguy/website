@@ -1,13 +1,11 @@
 <script context = "module">
   export const prerender = true;
-  import styles from '$styles/tailwind.css'
-
-
 </script>
 <script>
   import storiesData from "$data/stories.csv";
   import parseStories from "$utils/cleanStories";
   import BlogListing from "./BlogListing.svelte";
+  import styles from '$styles/tailwind.css';
 
 
 

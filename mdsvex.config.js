@@ -3,7 +3,7 @@ import remarkAbbr from "remark-abbr";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import { defineMDSveXConfig as defineConfig } from "mdsvex";
-
+import relativeImages from "mdsvex-relative-images";
 const config = defineConfig({
   extensions: [".svelte.md", ".md", ".svx"],
   smartypants: {
@@ -18,7 +18,8 @@ const config = defineConfig({
         repository: "https://github.com/thedivtagguy/website.git"
       }
     ],
-    remarkAbbr
+    remarkAbbr,
+    relativeImages
   ],
   rehypePlugins: [
     rehypeSlug,

@@ -17,8 +17,8 @@ import Publications from "./Publications.svelte";
 
   <div class="pb-2 border-b-2 mb-2 border-black">
     <h2 class="font-sans text-[15px]">
-      Visual designer, developer and data enthusiast who does all three things with the varying
-      levels of silliness. 
+      Designer, developer and data enthusiast juggling things with the varying
+      levels of tomfoolery. 
     </h2>
   </div>
 

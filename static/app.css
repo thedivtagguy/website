@@ -512,9 +512,6 @@ p {
 .hidden {
   display: none;
 }
-.h-\[150px\] {
-  height: 150px;
-}
 .h-auto {
   height: auto;
 }
@@ -539,17 +536,14 @@ p {
 .min-h-\[120px\] {
   min-height: 120px;
 }
+.min-h-\[200px\] {
+  min-height: 200px;
+}
 .min-h-\[90vh\] {
   min-height: 90vh;
 }
 .min-h-screen {
   min-height: 100vh;
-}
-.min-h-\[400px\] {
-  min-height: 400px;
-}
-.min-h-\[200px\] {
-  min-height: 200px;
 }
 .w-full {
   width: 100%;
@@ -1005,12 +999,12 @@ p {
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
-}
 .text-6xl {
   font-size: 3.75rem;
+  line-height: 1;
+}
+.text-5xl {
+  font-size: 3rem;
   line-height: 1;
 }
 .text-lg {
@@ -1585,10 +1579,6 @@ p {
   .lg\:pl-4 {
     padding-left: 1rem;
   }
-  .lg\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
-  }
   .lg\:text-5xl {
     font-size: 3rem;
     line-height: 1;
@@ -1596,6 +1586,10 @@ p {
   .lg\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+  .lg\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
   }
   .lg\:text-sm {
     font-size: 0.875rem;

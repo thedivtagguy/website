@@ -48,7 +48,12 @@
   status = 200
   force = true
 
-  
+[[redirects]]
+  from = "/qgis"
+  to = "https://qgismasterclass.netlify.app/"
+  status = 200
+  force = true
+
   
 [[headers]]
   # Define which paths this specific [[headers]] block will cover.

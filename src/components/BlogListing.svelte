@@ -74,7 +74,12 @@
 {:else if image === 'FALSE' || image === 'false'}
 <img width="240" height="500" src="/common/assets/thumbnails/960/undefined.jpg" class="thumbnail min-h-[120px] w-full md:w-[240px] grayscale group-hover:grayscale-0 transition-all duration-900 ease-in-out" alt="thumbnail forfgff  story" />
 {:else}
-<img width="640" height="500" src={image} alt="thumbnail story" />
+<img width="240" height="500" src="/common/assets/thumbnails/32/{slug}.jpg"
+alt="thumbnail for story" class="thumbnail min-h-[120px] w-full md:w-[240px] grayscale group-hover:grayscale-0 transition-all duration-900 ease-in-out"
+srcset="/common/assets/thumbnails/1280/{slug}.jpg 1280w,
+        /common/assets/thumbnails/960/{slug}.jpg 960w,
+        /common/assets/thumbnails/640/{slug}.jpg 640w"
+sizes="(max-width: 320px) 640px, (max-width: 480px) 960px, 1280px" />
 {/if}
 
     <div class="flex gap-2 flex-col w-full">

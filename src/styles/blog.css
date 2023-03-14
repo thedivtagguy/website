@@ -24,6 +24,36 @@ h1.heading > span {
   padding: 0.5rem 0 1rem 0;
 }
 
+h2 {
+  font-size: 1.5em;
+  font-family: "Playfair Display SC", "serif";
+  font-weight: 700;
+  color: #000;
+  text-align: left;
+  text-transform: capitalize;
+  line-height: 1;
+  margin: 1rem 0;
+}
+
+/* Before after h2 is a divider */
+h2:before {
+  content: "";
+  display: block;
+  width: 20%;
+  height: 1px;
+  background-color: #0000001c;
+  margin: 1rem 0;
+}
+
+h2:after {
+  content: "";
+  display: block;
+  width: 20%;
+  height: 1px;
+  background-color: #0000001c;
+  margin: 1rem 0;
+}
+
 .date {
   font-size: 1.1em;
   font-family: "Source Sans Pro", "sans-serif";
@@ -66,6 +96,7 @@ p {
   text-align: justify;
   line-height: 1.5;
   padding: 1rem 0;
+  display: block;
 }
 
 .text {
@@ -83,8 +114,9 @@ p {
 
 /* Active, hover states */
 
-a.text {
-  color: #000;
+.text > p > a {
+  color: #623cea;
+  font-weight: 600;
   text-decoration: none;
 }
 
@@ -97,8 +129,6 @@ pre {
   background-color: #f5f5f5;
   border: 1px solid #e5e5e5;
   border-radius: 3px;
-  padding: 1rem;
-  margin: 1rem 0;
   font-size: 0.9em;
   font-family: "Source Code Pro", "monospace";
   font-weight: 400;
@@ -169,19 +199,6 @@ ul.flex a {
   transform-origin: bottom left;
 }
 
-.text > p:nth-of-type(1):first-letter {
-  color: #623cea;
-  float: left;
-  margin: 0 0;
-  padding: 0 0.3rem;
-  height: 100%;
-  font-family: "serif";
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1.2;
-  font-size: 9rem;
-}
-
 @media only screen and (max-width: 600px) {
   h1.heading {
     font-size: 2em;
@@ -199,4 +216,70 @@ ul.flex a {
   }
 }
 
+blockquote {
+  font-size: 1em;
+  font-family: "Source Sans Pro", "sans-serif";
+  font-weight: 400;
+  color: #000;
+  text-align: justify;
+  line-height: 1.5;
+  padding: 0.3rem 1em;
+  display: block;
+  border-left: 3px solid #623cea;
+  background-color: #f5f5f5;
+  margin: 1rem 0;
+}
+
 /* Syntax highlighting */
+
+:not(pre) > code {
+  background-color: #f5f5f5;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  font-size: 0.9em;
+  font-family: "Source Code Pro", "monospace";
+  font-weight: 400;
+  color: #000;
+  text-align: left;
+  line-height: 1.5;
+  padding: 0.2rem 0.5rem;
+}
+
+/*  Lists */
+
+.text ul {
+  list-style: disc;
+  padding: 0 0 0 1.5rem;
+}
+
+.text ol {
+  list-style: decimal;
+  padding: 0 0 0 1.5rem;
+}
+
+.text li {
+  font-size: 1.1em;
+  font-family: "Source Sans Pro", "sans-serif";
+  font-weight: 400;
+  color: #000;
+  text-align: justify;
+  line-height: 1.5;
+  padding: 0.5rem 0;
+  display: block;
+}
+
+.text li {
+  counter-increment: list-number;
+}
+
+.text li:before {
+  content: counter(list-number) ". ";
+  font-weight: 600;
+}
+
+/* End of text is a divider */
+
+.text > p:last-child {
+  border-bottom: 1px solid #919191;
+  padding-bottom: 4rem;
+}

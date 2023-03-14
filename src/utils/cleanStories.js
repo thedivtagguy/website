@@ -44,7 +44,6 @@ const parseStories = (story, key) => {
     output.monthNo = timeFormat("%m")(output.date);
     output.monthShort = monthShortName(output.monthNo);
     output.year = timeFormat("%Y")(output.date);
-    output.date = timeFormat("%d %B %Y")(output.date);
 
     // If null date, set to null
     if (output.date === "01 January 1970") {

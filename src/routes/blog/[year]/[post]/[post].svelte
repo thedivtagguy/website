@@ -50,9 +50,11 @@ let date = new Date(metadata.date).toLocaleDateString("en-US", {
         year: "numeric"
         })
 
+        console.log(page.params.post)
+
 
 </script>
-<Meta />
+<Meta slug="{slug}" />
 <main class="max-w-5xl mx-auto">
    <div class="mx-auto flex justify-center"><a href="/blog" class="flex underlineTransition flex-row justify-center items-center  gap-2 hover:underline">← Blog</a></div>
    <section class="meta">

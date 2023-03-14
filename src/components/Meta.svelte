@@ -4,61 +4,55 @@
     "Aman's platform for a regular mishmash of design and code gimmickry";
   export let url = "https://thedivtagguy.com";
   export let slug = 
-    "common/assets/thumbnails/960/social.jpg"
+    "social.jpg"
 
     
-  // const orgLdJson = {
-  //   "@context": "http://schema.org",
-  //   "@type": "CreativeWork",
-  //   "@id": "https://www.thedivtagguy.com",
-  //   name: "Aman Bhargava",
-  //   logo: {
-  //     "@type": "ImageObject",
-  //     url: "https://thedivtagguy.com/common/assets/resources/favicon/apple-touch-icon.png",
-  //     width: "200",
-  //     height: "200",
-  //   },
-  //   url: "https://www.thedivtagguy.com/",
-  // };
-  // const articleLdJson = {
-  //   "@context": "http://schema.org",
-  //   "@type": "CreativeWork",
-  //   headline: title,
-  //   url: url,
-  //   mainEntityOfPage: {
-  //     "@type": "WebPage",
-  //     "@id": url,
-  //   },
-  //   thumbnailUrl: slug,
-  //   image: [
-  //     {
-  //       "@context": "http://schema.org",
-  //       "@type": "ImageObject",
-  //       url: slug,
-  //     },
-  //   ],
-  //   publisher: { "@id": "https://www.thedivtagguy.com" },
-  //   copyrightHolder: { "@id": "https://www.thedivtagguy.com" },
-  //   sourceOrganization: { "@id": "https://www.thedivtagguy.com" },
-  //   copyrightYear: new Date().getFullYear(),
-  //   dateCreated: publishTime,
-  //   datePublished: publishTime,
-  //   dateModified: updateTime,
-  //   author: authors.map(({ name, url }) => ({
-  //     "@type": "Person",
-  //     name,
-  //     url,
-  //   })),
-  //   articleSection: "Projects",
-  //   isAccessibleForFree: true,
-  //   creator: ["Aman Bhargava"],
-  //   keywords: [
-  //     "Aman Bhargava",
-  //     "thedivtagguy",
-  //     "data visualization",
-  //     "Interactives",
-  //   ],
-  // };
+  const orgLdJson = {
+    "@context": "http://schema.org",
+    "@type": "CreativeWork",
+    "@id": "https://www.thedivtagguy.com",
+    name: "Aman Bhargava",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://thedivtagguy.com/common/assets/resources/favicon/apple-touch-icon.png",
+      width: "200",
+      height: "200",
+    },
+    url: "https://www.thedivtagguy.com/",
+  };
+  const articleLdJson = {
+    "@context": "http://schema.org",
+    "@type": "CreativeWork",
+    headline: title,
+    url: url,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": url,
+    },
+    thumbnailUrl: slug,
+    image: [
+      {
+        "@context": "http://schema.org",
+        "@type": "ImageObject",
+        url: slug,
+      },
+    ],
+    publisher: { "@id": "https://www.thedivtagguy.com" },
+    copyrightHolder: { "@id": "https://www.thedivtagguy.com" },
+    sourceOrganization: { "@id": "https://www.thedivtagguy.com" },
+    copyrightYear: new Date().getFullYear(),
+
+   
+    articleSection: "Projects",
+    isAccessibleForFree: true,
+    creator: ["Aman Bhargava"],
+    keywords: [
+      "Aman Bhargava",
+      "thedivtagguy",
+      "data visualization",
+      "Interactives",
+    ],
+  };
 </script>
 
 <svelte:head>
@@ -77,7 +71,7 @@
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="en_US" />
 
-  <meta property="og:image" content="https://thedivtagguy.com/{slug}" />
+  <meta property="og:image" content="https://thedivtagguy.com/common/assets/thumbnails/960/{slug}" />
   <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="600" />
@@ -87,7 +81,7 @@
   <meta name="twitter:creator" content="@thedivtagguy" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
-  <meta name="twitter:image:src" content="https://thedivtagguy.com/{slug}" />
+  <meta name="twitter:image:src" content="https://thedivtagguy.com/common/assets/thumbnails/960/{slug}" />
 
   <meta name="robots" content="max-image-preview:large" />
 

@@ -18,6 +18,7 @@ const config = {
   preprocess: [
     mdsvex(mdsvexConfig),
     sveltePreprocess({
+      preserve: ["ld+json"],
       postcss: {
         plugins: [autoprefixer]
       }

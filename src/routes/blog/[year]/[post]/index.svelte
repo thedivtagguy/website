@@ -20,7 +20,8 @@ export async function load({ page }) {
     return {
       props: {
         post: post.default,
-        metadata: post.metadata
+        metadata: post.metadata,
+        slug: page.params.post
       }
     };
   } catch (error) {
@@ -37,6 +38,13 @@ export async function load({ page }) {
 <script>
 export let post;
 export let metadata;
+export let slug;
+
+console.log(slug)
+
+// Convert slug to slug with underscores
+slug = slug.replace(/-/g, "_");
+
 
 
 // Show page params
@@ -50,9 +58,8 @@ let date = new Date(metadata.date).toLocaleDateString("en-US", {
         year: "numeric"
         })
 
-
 </script>
-<Meta />
+<Meta slug={`blog_${slug}.jpg`} />
 <main class="max-w-5xl mx-auto">
    <div class="mx-auto flex justify-center"><a href="/blog" class="flex underlineTransition flex-row justify-center items-center  gap-2 hover:underline">← Blog</a></div>
    <section class="meta">

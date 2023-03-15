@@ -67,13 +67,18 @@ for _, row in selectedTile.iterrows():
 It will take a while to download, so be patient! Have a drink of water or something.
 
 
-## Visualizing the data
+## Cleaning up the data
 
 Now that we have the data, we can visualize it using QGIS. If you're unfamiliar with QGIS, it's a free and open source GIS software that's available for Windows, Mac and Linux. It's a great tool for visualizing and analyzing geospatial data.
 
 I have a starter course on getting familiar with QGIS if these things are new to you. You can check it out [here](https://thedivtagguy.com/qgis), and then come back to make these sweet, sweet maps.
 
-Once you import the GeoJSON, the first thing you need to do is to create some categories for the buildings. This is because the dataset doesn't have any information about anything so it isn't possible to color it that way.
+Once you import the GeoJSON, the first thing you need to do is clip it to your region of interest. I've written how to do this [in my course](https://thedivtagguy.com/qgis#/54), the only thing you need from your end is a shapefile of your region of interest. You can even just select `Canvas Extent` if you want to clip it to the extent of your viewport.
+
+
+## Generating categories
+
+We need create some categories for the buildings. This is because the dataset doesn't have any information about anything so it isn't possible to color it _according_ to something.
 
 The simplest way to do this is to create a new column in the attribute table and assign a number to each building. You can do this by going to `Layer > Open Attribute Table` and then clicking on the `Toggle Editing` button. Once you're in editing mode, click on the `Add Field` button and add a new column called `id`. In the expression box, type `$id` and click `OK`. This will assign a unique ID to each building.
 
@@ -83,7 +88,7 @@ Now that we have something to build on for each building, we can use it to creat
 
 Now go to the layer properties and in the `Symbology` tab, select `Categorized`. 
 
-## Classifying the data
+## Visualizing the data
 
 We can't just categorize the buildings by id, there are wayyyyy too many of them. 
 

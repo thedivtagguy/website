@@ -60,7 +60,8 @@ let date = new Date(metadata.date).toLocaleDateString("en-US", {
 
 </script>
 <Meta slug={`blog_${slug}.jpg`}
-      description={metadata.description} />
+      description={metadata.description}
+      title={metadata.title} />
 <main class="max-w-5xl mx-auto">
    <div class="mx-auto flex justify-center"><a href="/blog" class="flex underlineTransition flex-row justify-center items-center  gap-2 hover:underline">← Blog</a></div>
    <section class="meta">

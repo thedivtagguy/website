@@ -1,4 +1,5 @@
 <script>
+  import { onMount } from "svelte";
   function loadMap() {
     mapboxgl.accessToken =
       "pk.eyJ1IjoidGhlZGl2dGFnZ3V5IiwiYSI6ImNpcWM4N3FlaDAxd2Nmd20xejdwdmVoNmwifQ.Toi-P83h-0tC_mj60h25rg";
@@ -52,6 +53,8 @@
       });
     });
   }
+
+  onMount(loadMap);
 </script>
 
 <svelte:head>
@@ -59,7 +62,7 @@
   <script src="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js"></script>
 </svelte:head>
 
-<div use:loadMap class="container">
+<div class="container">
   <div id="map" />
 </div>
 

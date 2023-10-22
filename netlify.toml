@@ -54,6 +54,18 @@
   status = 200
   force = true
 
+[[redirects]]
+  from = "/tidytuesday/taylor-swift/process"
+  to = "https://beautiful-begonia-731614.netlify.app/"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/tidytuesday/taylor-swift"
+  to = "https://silly-raindrop-178eeb.netlify.app/"
+  status = 200
+  force = true
+
   
 [[headers]]
   # Define which paths this specific [[headers]] block will cover.
